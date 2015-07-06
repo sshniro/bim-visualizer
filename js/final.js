@@ -204,13 +204,101 @@ $(function()
 
     function loadProject(project) {
         o.model = o.bimServerApi.getModel(project.oid, project.lastRevisionId, project.schema, false, function(model){
+
+//            Edit by Niro
+            var preLoadQuery = {
+                defines: {
+                    Representation: {
+                        field: "Representation"
+                    },
+                    ContainsElementsDefine: {
+                        field: "ContainsElements",
+                        include: {
+                            field: "RelatedElements",
+                            include: [
+                                "IsDecomposedByDefine",
+                                "ContainsElementsDefine",
+                                "Representation"
+                            ]
+                        }
+                    },
+                    IsDecomposedByDefine: {
+                        field: "IsDecomposedBy",
+                        include: {
+                            field: "RelatedObjects",
+                            include: [
+                                "IsDecomposedByDefine",
+                                "ContainsElementsDefine",
+                                "Representation"
+                            ]
+                        }
+                    }
+                },
+                queries: [
+                    {
+                        type: "IfcProject",
+                        include: [
+                            "IsDecomposedByDefine",
+                            "ContainsElementsDefine"
+                        ]
+                    },
+                    {
+                        type: "IfcRepresentation",
+                        includeAllSubtypes: true
+                    },
+                    {
+                        type: "IfcProductRepresentation"
+                    },
+                    {
+                        type: "IfcPresentationLayerWithStyle"
+                    },
+                    {
+                        type: "IfcProduct",
+                        includeAllSubTypes: true
+                    },
+                    {
+                        type: "IfcProductDefinitionShape"
+                    },
+                    {
+                        type: "IfcPresentationLayerAssignment"
+                    },
+                    {
+                        type: "IfcRelAssociatesClassification",
+                        include: [
+                            {
+                                field: "RelatedObjects"
+                            },
+                            {
+                                field: "RelatingClassification"
+                            }
+                        ]
+                    },
+                    {
+                        type: "IfcSIUnit"
+                    },
+                    {
+                        type: "IfcPresentationLayerAssignment"
+                    }
+                ]
+            };
+
+            testModel = model;
+
+//            testModel.query(preLoadQuery, function(loaded){
+//
+//
+//            })
+
             model.getAllOfType("IfcProject", true, function(project){
-                testProject = project;
-                //buildDecomposedJsonTree(testProject, $(".test"), 0);
-                //buildDecomposedTree(project, $(".treeClass"), 0);
-                //buildDecomposedTreeEdit(project, $(".treeClass"), 0,"#",project.object.oid);
+            ifcProject = project;
+            //buildDecomposedJsonTree(testProject, $(".test"), 0);
+            //buildDecomposedTree(project, $(".treeClass"), 0);
+            //buildDecomposedTreeEdit(project, $(".treeClass"), 0,"#",project.object.oid);
 
             });
+
+
+
         });
 
         /* Initialize variables for each project load*/
@@ -240,6 +328,9 @@ $(function()
                     }
 
                     $(window).resize(resize);
+
+                    /* TODO Remove after testing */
+                    ifcTypes = toLoad;
 
                     var models = {};
 
