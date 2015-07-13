@@ -1,6 +1,6 @@
 "use strict"
 
-function BimServerApi(baseUrl, notifier) {
+bimapi = function BimServerApi(baseUrl, notifier) {
 	var othis = this;
 	othis.interfaceMapping = {
 		"ServiceInterface": "org.bimserver.ServiceInterface",

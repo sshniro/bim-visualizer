@@ -37,26 +37,22 @@ function loadBimServerApi(address, notifier, callback, errorCallback) {
 	if (address.endsWith("/")) {
 		address = address.substring(0, address.length - 1);
 	}
-	$.getScript(address + "/js/bimserverapi.js").done(function(){
-		window.clearTimeout(timeoutId);
-		if (typeof BimServerApi != 'function') {
-			notifier.setError("Could not connect");
-			errorCallback();
-		} else {
-			if (BimServerApi != null) {
-				var bimServerApi = new BimServerApi(address, notifier);
-				bimServerApi.init(function(api, serverInfo){
-					callback(bimServerApi, serverInfo);
-				});
-			} else {
-				window.clearTimeout(timeoutId);
-				notifier.setError("Could not find BIMserver API");
-				errorCallback();
-			}
-		}
-	}).fail(function(jqxhr, settings, exception){
-		window.clearTimeout(timeoutId);
-		notifier.setError("Could not connect");
-		errorCallback();
-	});
+    
+
+    window.clearTimeout(timeoutId);
+    if (typeof bimapi != 'function') {
+        notifier.setError("Could not connect");
+        errorCallback();
+    } else {
+        if (bimapi != null) {
+            var bimServerApi = new bimapi(address, notifier);
+            bimServerApi.init(function(api, serverInfo){
+                callback(bimServerApi, serverInfo);
+            });
+        } else {
+            window.clearTimeout(timeoutId);
+            notifier.setError("Could not find BIMserver API");
+            errorCallback();
+        }
+    }
 }
