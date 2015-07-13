@@ -262,12 +262,16 @@ BIMSURFER.Viewer = BIMSURFER.Class({
 									div.append('<p>'+ key + ' -> '+ jsonData['core']['data'][i][key] + '</p>')
 								}
 							}
-							//div.append(JSON.stringify(jsonData['core']['data'][i]));
 
                             /* Auto open the tree node */
                             $('#treeViewDiv').jstree('open_node', jsonData['core']['data'][i]['parent'], function(e, data) {
                                 $('#treeViewDiv').jstree(('select_node'), jsonData['core']['data'][i]['id']);
                             }, true);
+							//TODO Auto close the Tree Node
+
+                            var selectedNode = {'id':jsonData['core']['data'][i]['id']};
+                            //call selected node function to add the property details
+
                         }
                     }
                 }

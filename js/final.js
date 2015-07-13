@@ -63,8 +63,8 @@ $(function()
                             div.append('<p>'+ key + ' -> '+ jsonData['core']['data'][i][key] + '</p>')
                         }
                     }
-                    var seleectedNode = {'id':jsonData['core']['data'][i]['id']};
-                    nodeSelected(seleectedNode);
+                    var selectedNode = {'id':jsonData['core']['data'][i]['id']};
+                    nodeSelected(selectedNode);
                 }
             }
         }
