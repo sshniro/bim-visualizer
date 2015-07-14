@@ -13,6 +13,7 @@ $(function()
     /* Connects to the server and loads the BIM Server API */
     connect(serverUrl,username,pass);
 
+    /* Function is used to retreives the url parameters (productId and revisonId )*/
     function getUrlParamValue(name){
         name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
         var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
@@ -31,8 +32,8 @@ $(function()
                     parentId = "#";
                 }
 
-                var id = parseInt(projectId);
-                var pId = parseInt(project.oid )
+                //var id = parseInt(projectId);
+                var pId = parseInt(project.oid );
                 if( id === pId){
                     /* Set the project structure to the json tree */
                     //var subProjects = project.subProjects;
@@ -52,16 +53,13 @@ $(function()
     }
 
     function showSelectProject() {
-
         o.bimServerApi.call("Bimsie1ServiceInterface", "getAllProjects", {onlyActive: true, onlyTopLevel: false}, function(projects){
-
             /* Read the parameters from the URL provided */
-
-            // code to get the projectId parameter from the url
             var projectId = getUrlParamValue("projectId");
 
             //If the attribute is not empty then load the project
             if(projectId != ""){
+                projectId = parseInt(projectId);
                 setAllRelatedProjects(projects,projectId);
             }else{
                 /* TODO Add an alert if no project Id is given  */
@@ -80,15 +78,6 @@ $(function()
                     }
                 });
             }
-            //
-            //var jsTreeConfig = {
-            //    "core" : {
-            //        jsonTree['core']
-            //        // so that create works
-            //        "check_callback" : true
-            //    },
-            //    "plugins" : [ "checkbox" ]
-            //}
 
             /* Initiate the json tree drawing */
             $('#treeViewDiv').jstree(jsonTree);
@@ -106,8 +95,8 @@ $(function()
                     if(jsonData['core']['data'][i]['isProject'] == true)
                         loadProject(jsonTree['core']['data'][i]['data'],obj.id);
 
-                    /* */
-                    /* TO DO open only once  */
+
+                    /* TODO open only once  */
                     $("#tenant").dialog("open");
                     var div = $('#tenant_details');
                     div.empty();
@@ -161,12 +150,9 @@ $(function()
             });
         });
 
-
-
         o.bimServerApi.call("ServiceInterface", "getRevisionSummary", {roid: project.lastRevisionId}, function(summary){
             summary.list.forEach(function(item){
                 if (item.name == "IFC Entities") {
-                    var _this = this;
                     var toLoad = {};
 
                     item.types.forEach(function(type){
@@ -178,12 +164,6 @@ $(function()
                         if(BIMSURFER.Constants.defaultTypes.indexOf(type.name) != -1) {
                         }
                     });
-
-                    //
-                    var layerLists = $('div#leftbar').find('div#layer_list').find('.data');
-                    if($(layerLists).is('.empty')) {
-                        $(layerLists).empty();
-                    }
 
                     $(window).resize(resize);
 

@@ -16,13 +16,14 @@ var bimapi;
 // More global Variables
 //TODO more comments on the variables
 var selectedNode;
-var jsonTree = {
-    "core": {
-        "data": []
-    }
-};
 var jsonData = {
     "core": {
         "data": []
     }
+};
+var jsonTree = {
+    "core" : {
+        'data' : []
+    }
+    ,"plugins" : [ "checkbox" ]
 };
