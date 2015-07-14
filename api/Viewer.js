@@ -269,8 +269,8 @@ BIMSURFER.Viewer = BIMSURFER.Class({
                             }, true);
 							//TODO Auto close the Tree Node
 
-                            var selectedNode = {'id':jsonData['core']['data'][i]['id']};
-                            //call selected node function to add the property details
+                            //var selectedNode = {'id':jsonData['core']['data'][i]['id']};
+                            ////call selected node function to add the property details
 
                         }
                     }

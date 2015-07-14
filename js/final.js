@@ -2,7 +2,6 @@
 $(function()
 {
     var o = this;
-
     var objCount = 0;
 
     o.server = null;
@@ -11,33 +10,88 @@ $(function()
 
     SceneJS.configure({ pluginPath: "lib/scenejs/plugins" });
 
-
-
     /* Connects to the server and loads the BIM Server API */
     connect(serverUrl,username,pass);
+
+    function getUrlParamValue(name){
+        name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+        var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+            results = regex.exec(location.search);
+        return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+    }
+
+    function setAllRelatedProjects(projects,projectId){
+
+        projects.forEach(function(project){
+            if(project.lastRevisionId != -1)
+            {
+                var parentId = project.parentId;
+                /* If parent id is -1 its a main project so replace with # for the js tree */
+                if(parentId == -1){
+                    parentId = "#";
+                }
+
+                var id = parseInt(projectId);
+                var pId = parseInt(project.oid )
+                if( id === pId){
+                    /* Set the project structure to the json tree */
+                    //var subProjects = project.subProjects;
+                    var length = project.subProjects.length
+                    jsonTree['core']['data'].push({'id': project.oid, 'parent' : parentId, "text":project.name,'data':project,"icon":"fa fa-home"});
+                    jsonData['core']['data'].push({'id': project.oid, 'parent' : parentId, "text":project.name,'data':project,'isProject':true});
+
+                    if( length != 0 ){
+                        /* Again loop through all the elements to get the sub projects */
+                        for(var j =0 ; j < length ; j++){
+                            setAllRelatedProjects(projects,project.subProjects[j]);
+                        }
+                    }
+                }
+            }
+        });
+    }
 
     function showSelectProject() {
 
         o.bimServerApi.call("Bimsie1ServiceInterface", "getAllProjects", {onlyActive: true, onlyTopLevel: false}, function(projects){
-            projects.forEach(function(project){
-                if(project.lastRevisionId != -1)
-                {
-                    var identifier = $(this).parent().data('project');
-                    var parentId = project.parentId;
-                    /* If parent id is -1 its a main project so replace with # for the js tree */
-                    if(parentId == -1){
-                        parentId = "#";
-                    }
 
-                    /* Set the project structure to the json tree */
-                    jsonTree['core']['data'].push({'id': project.oid, 'parent' : parentId, "text":project.name,'data':project,"icon":"fa fa-home"});
-                    jsonData['core']['data'].push({'id': project.oid, 'parent' : parentId, "text":project.name,'data':project,'isProject':true});
-                }
-            });
+            /* Read the parameters from the URL provided */
+
+            // code to get the projectId parameter from the url
+            var projectId = getUrlParamValue("projectId");
+
+            //If the attribute is not empty then load the project
+            if(projectId != ""){
+                setAllRelatedProjects(projects,projectId);
+            }else{
+                /* TODO Add an alert if no project Id is given  */
+                projects.forEach(function(project){
+                    if(project.lastRevisionId != -1)
+                    {
+                        var parentId = project.parentId;
+                        /* If parent id is -1 its a main project so replace with # for the js tree */
+                        if(parentId == -1){
+                            parentId = "#";
+                        }
+
+                        /* Set the project structure to the json tree */
+                        jsonTree['core']['data'].push({'id': project.oid, 'parent' : parentId, "text":project.name,'data':project,"icon":"fa fa-home"});
+                        jsonData['core']['data'].push({'id': project.oid, 'parent' : parentId, "text":project.name,'data':project,'isProject':true});
+                    }
+                });
+            }
+            //
+            //var jsTreeConfig = {
+            //    "core" : {
+            //        jsonTree['core']
+            //        // so that create works
+            //        "check_callback" : true
+            //    },
+            //    "plugins" : [ "checkbox" ]
+            //}
 
             /* Initiate the json tree drawing */
             $('#treeViewDiv').jstree(jsonTree);
-
         });
     }
 
@@ -119,7 +173,6 @@ $(function()
                         /* get the total count of the IFC Entities */
                         var _t = type.name;
                         totObjects += type.count;
-
 
                         toLoad[type.name] = {mode: 0};
                         if(BIMSURFER.Constants.defaultTypes.indexOf(type.name) != -1) {
