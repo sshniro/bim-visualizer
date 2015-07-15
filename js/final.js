@@ -152,170 +152,6 @@ $(function()
         });
     }
 
-    //function toggleModel(){
-    //
-    //    o.bimServerApi.call("ServiceInterface", "getRevisionSummary", {roid: project.lastRevisionId}, function(summary){
-    //        summary.list.forEach(function(item){
-    //            if (item.name == "IFC Entities") {
-    //                var toLoad = {};
-    //
-    //                item.types.forEach(function(type){
-    //                    /* get the total count of the IFC Entities */
-    //                    totObjects += type.count;
-    //
-    //                    toLoad[type.name] = {mode: 0};
-    //                    if(BIMSURFER.Constants.defaultTypes.indexOf(type.name) != -1) {
-    //                    }
-    //                });
-    //
-    //                $(window).resize(resize);
-    //
-    //                var models = {};
-    //
-    //                models[project.lastRevisionId] = o.model;
-    //                for (var key in toLoad) {
-    //                    o.model.getAllOfType(key, true, function(object){
-    //                        object.trans.mode = 0;
-    //                    });
-    //                }
-    //                var geometryLoader = new GeometryLoader(o.bimServerApi, models, o.viewer);
-    //
-    //                var progressdiv = $("<div class=\"progressdiv\">");
-    //                var text = $("<div class=\"text\">");
-    //                text.html(project.name);
-    //                var progress = $("<div class=\"progress progress-striped\">");
-    //                var progressbar = $("<div class=\"progress-bar\">");
-    //                progressdiv.append(text);
-    //                progressdiv.append(progress);
-    //                progress.append(progressbar);
-    //
-    //                //containerDiv.find(".progressbars").append(progressdiv);
-    //
-    //                geometryLoader.addProgressListener(function(progress){
-    //                    progressbar.css("width", progress + "%");
-    //                    if (progress == 100) {
-    //                        progressdiv.fadeOut(800);
-    //                    }
-    //                });
-    //                geometryLoader.setLoadTypes(project.lastRevisionId, project.schema, toLoad);
-    //                o.viewer.loadGeometry(geometryLoader);
-    //
-    //
-    //                ////////////////////// Testing  /////////////////////////////////////////
-    //
-    //                var queryModel = function () {
-    //                    // create a deferred object
-    //                    var r = $.Deferred();
-    //
-    //                    var countingPromise = new CountingPromise();
-    //                    var promise = new Promise();
-    //
-    //                    var preLoadQuery = {
-    //                        defines: {
-    //                            Representation: {
-    //                                field: "Representation"
-    //                            },
-    //                            ContainsElementsDefine: {
-    //                                field: "ContainsElements",
-    //                                include: {
-    //                                    field: "RelatedElements",
-    //                                    include: [
-    //                                        "IsDecomposedByDefine",
-    //                                        "ContainsElementsDefine",
-    //                                        "Representation"
-    //                                    ]
-    //                                }
-    //                            },
-    //                            IsDecomposedByDefine: {
-    //                                field: "IsDecomposedBy",
-    //                                include: {
-    //                                    field: "RelatedObjects",
-    //                                    include: [
-    //                                        "IsDecomposedByDefine",
-    //                                        "ContainsElementsDefine",
-    //                                        "Representation"
-    //                                    ]
-    //                                }
-    //                            }
-    //                        },
-    //                        queries: [
-    //                            {
-    //                                type: "IfcProject",
-    //                                include: [
-    //                                    "IsDecomposedByDefine",
-    //                                    "ContainsElementsDefine"
-    //                                ]
-    //                            },
-    //                            {
-    //                                type: "IfcRepresentation",
-    //                                includeAllSubtypes: true
-    //                            },
-    //                            {
-    //                                type: "IfcProductRepresentation"
-    //                            },
-    //                            {
-    //                                type: "IfcPresentationLayerWithStyle"
-    //                            },
-    //                            {
-    //                                type: "IfcProduct",
-    //                                includeAllSubTypes: true
-    //                            },
-    //                            {
-    //                                type: "IfcProductDefinitionShape"
-    //                            },
-    //                            {
-    //                                type: "IfcPresentationLayerAssignment"
-    //                            },
-    //                            {
-    //                                type: "IfcRelAssociatesClassification",
-    //                                include: [
-    //                                    {
-    //                                        field: "RelatedObjects"
-    //                                    },
-    //                                    {
-    //                                        field: "RelatingClassification"
-    //                                    }
-    //                                ]
-    //                            },
-    //                            {
-    //                                type: "IfcSIUnit"
-    //                            },
-    //                            {
-    //                                type: "IfcPresentationLayerAssignment"
-    //                            }
-    //                        ]
-    //                    };
-    //
-    //                    ifcModel.query(preLoadQuery, function(loaded){}).done(function(){
-    //                        setTimeout(function(){
-    //                            /* To Do add some flags to optimize the code */
-    //                            promise.fire();
-    //                        }, 0);
-    //                    });
-    //                    return promise;
-    //                };
-    //
-    //                //var loadTree = function () {
-    //                //    console.log('FunctionTwo');
-    //                //    loadTheTree(ifcProject,nodeId,ifcProject.oid);
-    //                //};
-    //
-    //                queryModel().done(function(){
-    //                    loadTheTree(ifcProject,nodeId,ifcProject.oid);
-    //                });
-    //
-    //                setTimeout(function(){
-    //                    /* To Do add some flags to optimize the code */
-    //                    refreshTree();
-    //                }, 2000);
-    //
-    //                /////////////////////////////////////////////////////////////////////////
-    //            }
-    //        });
-    //    });
-    //
-    //}
-
     function resize(){
         $("#viewport").width($(window).width() + "px");
         $("#viewport").height(($(window).height() - 98) + "px");
@@ -323,6 +159,98 @@ $(function()
         $("#viewport").css("height", ($(window).height() - 98) + "px");
         o.viewer.resize($('div#viewport').width(), $('div#viewport').height());
     }
+
+    var queryModel = function () {
+        // create a deferred object
+        var r = $.Deferred();
+
+        var countingPromise = new CountingPromise();
+        var promise = new Promise();
+
+        var preLoadQuery = {
+            defines: {
+                Representation: {
+                    field: "Representation"
+                },
+                ContainsElementsDefine: {
+                    field: "ContainsElements",
+                    include: {
+                        field: "RelatedElements",
+                        include: [
+                            "IsDecomposedByDefine",
+                            "ContainsElementsDefine",
+                            "Representation"
+                        ]
+                    }
+                },
+                IsDecomposedByDefine: {
+                    field: "IsDecomposedBy",
+                    include: {
+                        field: "RelatedObjects",
+                        include: [
+                            "IsDecomposedByDefine",
+                            "ContainsElementsDefine",
+                            "Representation"
+                        ]
+                    }
+                }
+            },
+            queries: [
+                {
+                    type: "IfcProject",
+                    include: [
+                        "IsDecomposedByDefine",
+                        "ContainsElementsDefine"
+                    ]
+                },
+                {
+                    type: "IfcRepresentation",
+                    includeAllSubtypes: true
+                },
+                {
+                    type: "IfcProductRepresentation"
+                },
+                {
+                    type: "IfcPresentationLayerWithStyle"
+                },
+                {
+                    type: "IfcProduct",
+                    includeAllSubTypes: true
+                },
+                {
+                    type: "IfcProductDefinitionShape"
+                },
+                {
+                    type: "IfcPresentationLayerAssignment"
+                },
+                {
+                    type: "IfcRelAssociatesClassification",
+                    include: [
+                        {
+                            field: "RelatedObjects"
+                        },
+                        {
+                            field: "RelatingClassification"
+                        }
+                    ]
+                },
+                {
+                    type: "IfcSIUnit"
+                },
+                {
+                    type: "IfcPresentationLayerAssignment"
+                }
+            ]
+        };
+
+        ifcModel.query(preLoadQuery, function(loaded){}).done(function(){
+            setTimeout(function(){
+                /* To Do add some flags to optimize the code */
+                promise.fire();
+            }, 0);
+        });
+        return promise;
+    };
 
     function loadProject(project,nodeId) {
         o.model = o.bimServerApi.getModel(project.oid, project.lastRevisionId, project.schema, false, function(model){
@@ -377,102 +305,10 @@ $(function()
                     });
                     geometryLoader.setLoadTypes(project.lastRevisionId, project.schema, toLoad);
                     o.viewer.loadGeometry(geometryLoader);
-                    //o.viewer.hideType("IfcDoor",summary);
-
 
                     ////////////////////// Testing  /////////////////////////////////////////
 
-                    var queryModel = function () {
-                        // create a deferred object
-                        var r = $.Deferred();
 
-                        var countingPromise = new CountingPromise();
-                        var promise = new Promise();
-
-                        var preLoadQuery = {
-                            defines: {
-                                Representation: {
-                                    field: "Representation"
-                                },
-                                ContainsElementsDefine: {
-                                    field: "ContainsElements",
-                                    include: {
-                                        field: "RelatedElements",
-                                        include: [
-                                            "IsDecomposedByDefine",
-                                            "ContainsElementsDefine",
-                                            "Representation"
-                                        ]
-                                    }
-                                },
-                                IsDecomposedByDefine: {
-                                    field: "IsDecomposedBy",
-                                    include: {
-                                        field: "RelatedObjects",
-                                        include: [
-                                            "IsDecomposedByDefine",
-                                            "ContainsElementsDefine",
-                                            "Representation"
-                                        ]
-                                    }
-                                }
-                            },
-                            queries: [
-                                {
-                                    type: "IfcProject",
-                                    include: [
-                                        "IsDecomposedByDefine",
-                                        "ContainsElementsDefine"
-                                    ]
-                                },
-                                {
-                                    type: "IfcRepresentation",
-                                    includeAllSubtypes: true
-                                },
-                                {
-                                    type: "IfcProductRepresentation"
-                                },
-                                {
-                                    type: "IfcPresentationLayerWithStyle"
-                                },
-                                {
-                                    type: "IfcProduct",
-                                    includeAllSubTypes: true
-                                },
-                                {
-                                    type: "IfcProductDefinitionShape"
-                                },
-                                {
-                                    type: "IfcPresentationLayerAssignment"
-                                },
-                                {
-                                    type: "IfcRelAssociatesClassification",
-                                    include: [
-                                        {
-                                            field: "RelatedObjects"
-                                        },
-                                        {
-                                            field: "RelatingClassification"
-                                        }
-                                    ]
-                                },
-                                {
-                                    type: "IfcSIUnit"
-                                },
-                                {
-                                    type: "IfcPresentationLayerAssignment"
-                                }
-                            ]
-                        };
-
-                        ifcModel.query(preLoadQuery, function(loaded){}).done(function(){
-                            setTimeout(function(){
-                                /* To Do add some flags to optimize the code */
-                                promise.fire();
-                            }, 0);
-                        });
-                        return promise;
-                    };
 
                     //var loadTree = function () {
                     //    console.log('FunctionTwo');
@@ -493,12 +329,6 @@ $(function()
                 }
             });
         });
-
-        o.bimServerApi.call("Bimsie1ServiceInterface", "getRevision", {roid: project.lastRevisionId}, function(revison) {
-            var summary = revison;
-        })
-
-
         }
 
     // Build the Decomposed Tree
