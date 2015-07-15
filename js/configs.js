@@ -25,5 +25,12 @@ var jsonTree = {
     "core" : {
         'data' : []
     }
-    ,"plugins" : [ "checkbox" ]
+    //,"checkbox" : {
+    //    "keep_selected_style" : false
+    //    //"whole_node" : false
+    //    //"three_state" : true,
+    //    //"tie_selection" : false
+    //}
+    //,"plugins" : [ "checkbox" ]
 };
+var hiddenElements=[];
