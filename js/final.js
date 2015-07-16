@@ -73,12 +73,12 @@ $(function()
                         }
 
                         /* Set the project structure to the json tree */
-                        jsonTree['core']['data'].push({'id': project.oid, 'parent' : parentId,'data':project,
+                        jsonTree['core']['data'].push({'id': project.oid, 'parent' : parentId,'data':project,'type':'project',
                             "text":project.name + '&nbsp; <button  type="button" class="btn btn-default btn-xs treeButton" data-id="'
                             + project.oid +'" aria-label="Right Align"><span class="fa fa-eye" aria-hidden="true"></span> </button>',
                             "icon":"fa fa-home"});
                         //jsonTree['core']['data'].push({'id': project.oid, 'parent' : parentId, "text":project.name ,'data':project,"icon":"fa fa-home"});
-                        jsonData['core']['data'].push({'id': project.oid, 'parent' : parentId, "text":project.name,'data':project,'isProject':true});
+                        jsonData['core']['data'].push({'id': project.oid, 'parent' : parentId, "text":project.name,'data':project,'type':'project'});
                     }
                 });
             }
@@ -104,6 +104,9 @@ $(function()
                 if(state == true){
                     sceneNode.findParentByType("enable").setEnabled(false);
                     $(this).data('state',"false");
+                    $(this).find('span')
+                        .removeClass('fa-eye')
+                        .addClass('fa-eye-slash');
                 }else{
                     sceneNode.findParentByType("enable").setEnabled(true);
                     $(this).data('state',true);
@@ -116,6 +119,20 @@ $(function()
             if(state == true){
                 hideElements(childElements);
                 $(this).data('state',"false");
+                $(this).find('span.')
+                    .removeClass('fa-eye')
+                    .addClass('fa-eye-slash');
+
+
+                $('.treeDevView').find('#ID');
+
+
+                //alert($(this).attr('class'));
+                // toggle Icon
+                //$(this).
+                //alert($('"#"'+id+'""').attr("class"));
+                //$('.treeButton .info-box-icon.bg-aqua').removeClass('bg-aqua').addClass('bg-green');
+                //$('.example_infobox .info-box-icon.bg-aqua').toggleClass('bg-aqua bg-green');
             }else{
                 showElements(childElements);
                 $(this).data('state',true);
@@ -124,23 +141,90 @@ $(function()
 
         }else if(type == 'buildingStorey'){
             // Get All Types initially
-            var types = getAllChildElements(id);
-            if(state == true){
+            toggleBuildingStorey(id,state,this);
+        }else if(type == "IfcBuilding"){
+            // get all Ifc Storeys
+            toggleBuildingVisibility(id,state,this);
+        }else if(type == "IfcSite"){
+            toggleIfcSiteVisibility(id,state,this);
+        }else if(type == "IfcProject"){
+            console.log("came here");
+            toggleProjectVisibility(id,state,this);
+            //toggleBuildingVisibility(id,state,this);
+        }
+    });
+
+    function toggleProjectVisibility(id,state,selectedDiv){
+        var sites = getAllChildElements(id);
+        for(var i=0;i<sites.length;i++){
+            toggleIfcSiteVisibility(sites[i],state,selectedDiv);
+            var buildings = getAllChildElements(sites[i]);
+            for(var j=0;j<buildings.length;j++){
+                toggleBuildingVisibility(buildings[j],state,selectedDiv);
+            }
+        }
+    }
+
+    function toggleIfcSiteVisibility(id,state,selectedDiv){
+        var sceneNode = o.viewer.scene.findNode(id);
+        if(sceneNode != null){
+
+            sceneNode.nodeId = sceneNode.id;
+
+            if( state == true ){
+                sceneNode.findParentByType("enable").setEnabled(false);
+                $(selectedDiv).data('state',"false");
+            }else{
+                sceneNode.findParentByType("enable").setEnabled(true);
+                $(selectedDiv).data('state',true);
+            }
+
+        }
+    }
+
+    function toggleBuildingVisibility(id,state,selectedDiv){
+        // get all Ifc Storeys
+        var storeys = getAllChildElements(id);
+        if(state== true){
+            for(var k=0;k<storeys.length;k++){
+                var types = getAllChildElements(storeys[k]);
                 for(var j=0; j< types.length;j++){
                     var childElements = getAllChildElements(types[j])
                     hideElements(childElements);
                 }
-                $(this).data('state',"false");
-            }else{
+            }
+            $(selectedDiv).data('state',"false");
+        }else{
+            for(var k=0;k<storeys.length;k++){
+                var types = getAllChildElements(storeys[k]);
                 for(var j=0; j< types.length;j++){
                     var childElements = getAllChildElements(types[j])
                     showElements(childElements);
                 }
-                $(this).data('state',true);
             }
+            $(selectedDiv).data('state',true);
         }
+    }
 
-    });
+    function toggleBuildingStorey(id,state,selectedDiv){
+        // Get All Types initially
+        var types = getAllChildElements(id);
+        if(state == true){
+            for(var j=0; j< types.length;j++){
+                var childElements = getAllChildElements(types[j])
+                hideElements(childElements);
+            }
+            $(selectedDiv).data('state',"false");
+        }else{
+            for(var j=0; j< types.length;j++){
+                var childElements = getAllChildElements(types[j])
+                showElements(childElements);
+            }
+            $(selectedDiv).data('state',true);
+        }
+    }
+
+
 
     function hideElements(childElements){
         for(var i=0;i<childElements.length;i++){
@@ -182,10 +266,6 @@ $(function()
         return childElements;
     }
 
-    /* */
-    function hideTheElement(id){
-
-    }
     /* If the tree node is selected */
     $('#treeViewDiv').on("changed.jstree", function (e, data) {
 
@@ -198,11 +278,25 @@ $(function()
             /* If the node selected is only one */
             else if(data.selected.length == 1 ){
                 /* Find the node of the project selected */
+
                 for(var i = 0; i < jsonTree['core']['data'].length; i++) {
                     var obj = jsonTree['core']['data'][i];
                     if(data.selected == obj.id){
-                        if(jsonData['core']['data'][i]['isProject'] == true)
-                            loadProject(jsonTree['core']['data'][i]['data'],obj.id);
+                        if(jsonData['core']['data'][i]['type'] == "project" ){
+                            refreshTree();
+                            var projectLoaded = false;
+                            // check if this project is already loaded in the canvas
+                            for(var k=0;k<loadedProjects.length;k++){
+                                if(obj.id == loadedProjects[k])
+                                    projectLoaded = true;
+                            }
+
+                            if(!projectLoaded){
+                                loadedProjects.push(obj.id);
+                                loadProject(jsonTree['core']['data'][i]['data'],obj.id);
+                            }
+                        }
+
 
                         /* TODO open only once  */
                         $("#tenant").dialog("open");
@@ -436,11 +530,11 @@ $(function()
                         loadTheTree(ifcProject,nodeId,ifcProject.oid);
                     });
 
-                    setTimeout(function(){
-                        /* To Do add some flags to optimize the code */
-                        refreshTree();
-                        o.viewer.refreshMask();
-                    }, 2000);
+                    //setTimeout(function(){
+                    //    /* To Do add some flags to optimize the code */
+                    //    refreshTree();
+                    //    o.viewer.refreshMask();
+                    //}, 2000);
                 }
             });
         });
@@ -499,8 +593,6 @@ $(function()
                 "icon":"fa fa-circle"});
 
             jsonData['core']['data'].push({'id':obId, 'parent' : testId, "type" : "ifcElement" , "text":name,'data':object.object,"icon":"fa fa-circle"})
-
-
             return;
         }
 
@@ -508,10 +600,6 @@ $(function()
             (function (obj){
 
                 var id = obj.oid;
-
-                /* Add this building element entry to the Json Tree */
-                //jsonTree['core']['data'].push({'id':id, 'parent' : parentId, "text":name + '&nbsp; <button type="button" class="btn btn-default btn-xs" aria-label="Right Align" onclick="hideTheElement()"><span class="fa fa-eye" aria-hidden="true"></span> </button>', "type" : "buildingStorey",
-                //                                "icon":"fa fa-sort-amount-desc"});
 
                 jsonTree['core']['data'].push({'id': id, 'parent' : parentId,"type" : "buildingStorey",
                     "text":name + '&nbsp; <button  type="button" class="btn btn-default btn-xs treeButton" data-id="'
@@ -549,7 +637,7 @@ $(function()
                             //jsonTree['core']['data'].push({'id':parentId, 'parent' : parent, "text":type + '&nbsp; <button type="button" class="btn btn-default btn-xs" aria-label="Right Align" onclick="hideTheElement(' + parentId + ')"><span class="fa fa-eye" aria-hidden="true"></span> </button>' , "type" : "ifcType" ,"icon":"fa fa-gear"});
 
                             jsonTree['core']['data'].push({'id': parentId, 'parent' : parent,"type" : "ifcType",
-                                "text": type + '&nbsp; <button  type="button" class="btn btn-default btn-xs treeButton" data-id="'
+                                "text": type + '&nbsp; <button  type="button" id="'+parentId+'" class="btn btn-default btn-xs treeButton" data-id="'
                                 + parentId +'" " data-state="true" data-type="ifcType" aria-label="Right Align"><span class="fa fa-eye" aria-hidden="true"></span> </button>',
                                 "icon":"fa fa-sort-amount-desc"});
 
@@ -578,9 +666,9 @@ $(function()
         if(type != "IfcBuildingStorey"){
             //jsonTree['core']['data'].push({'id': node, 'parent' : parent, "text":name + '&nbsp; <button type="button" class="btn btn-default btn-xs" aria-label="Right Align" onclick="hideTheElement('+node+')"><span class="fa fa-eye" aria-hidden="true"></span> </button>',"icon":"fa fa-sort-amount-desc"});
 
-            jsonTree['core']['data'].push({'id': node, 'parent' : parent,"type" : "ifcElement",
+            jsonTree['core']['data'].push({'id': node, 'parent' : parent,"type" : type,
                 "text": name + '&nbsp; <button  type="button" class="btn btn-default btn-xs treeButton" data-id="'
-                + node +'" aria-label="Right Align"><span class="fa fa-eye" aria-hidden="true"></span> </button>',
+                + node +'" data-state="true" data-type="'+type+'" " aria-label="Right Align"><span class="fa fa-eye" aria-hidden="true"></span> </button>',
                 "icon":"fa fa-sort-amount-desc"});
 
             jsonData['core']['data'].push({'id':node, 'parent' : parent, "text":name,"icon":"fa fa-circle",'data':object.object});

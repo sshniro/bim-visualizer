@@ -1,0 +1,39 @@
+
+a.ui-tabs-anchor { font-size:12px; padding: 0.5em 0.6em !important; }
+#tenant label { width:150px; font-weight:normal; }
+#tenant h3 { font-size:14px; font-weight:bold; }
+#tenant p, #tbl_info { font-size:12px; }
+
+/* Discussion Styles */
+.ui-progressbar { box-sizing: content-box; height: 1em; margin-top: 10px; } 
+.ui-progressbar-value {  margin: 0px !important; }
+.progress-label { float: left; font-size: 8px;font-weight: bold; margin-left:30px; }
+
+/* Discussion Styles */
+.direct-chat .box-body { border-bottom-left-radius: 0; border-bottom-right-radius: 0; overflow-x: hidden; padding: 0; position: relative; }
+.direct-chat.chat-pane-open .direct-chat-contacts { transform: translate(0px, 0px); }
+.direct-chat-messages { height: 250px; overflow: auto; padding: 10px; transform: translate(0px, 0px); }
+.direct-chat-msg, .direct-chat-text { display: block; }
+.direct-chat-msg { margin-bottom: 10px; }
+.direct-chat-msg::before, .direct-chat-msg::after { content: " "; display: table; }
+.direct-chat-msg::after { clear: both; }
+.direct-chat-messages, .direct-chat-contacts { transition: transform 0.5s ease-in-out 0s; }
+.direct-chat-text { background: #d2d6de none repeat scroll 0 0; border: 1px solid #d2d6de; border-radius: 5px; color: #444; margin: 5px 0 0 50px; padding: 5px 10px; position: relative; }
+.direct-chat-text::after, .direct-chat-text::before { -moz-border-bottom-colors: none; -moz-border-left-colors: none; -moz-border-right-colors: none; -moz-border-top-colors: none; border-color: transparent #d2d6de transparent transparent; border-image: none; border-style: solid; border-width: medium; content: " "; height: 0; pointer-events: none; position: absolute; right: 100%; top: 15px; width: 0; }
+.direct-chat-text::after { border-width: 5px; margin-top: -5px; }
+.direct-chat-text::before { border-width: 6px; margin-top: -6px; }
+.right .direct-chat-text { margin-left: 0; margin-right: 50px; }
+.right .direct-chat-text::after, .right .direct-chat-text::before { border-left-color: #d2d6de; border-right-color: transparent; left: 100%; right: auto; }
+.direct-chat-img { border-radius: 50%; float: left; height: 40px; width: 40px; }
+.right .direct-chat-img { float: right; }
+.direct-chat-info { display: block; font-size: 12px; margin-bottom: 2px; }
+.direct-chat-name { font-weight: 600; }
+.direct-chat-timestamp { color: #999; }
+.direct-chat-contacts-open .direct-chat-contacts { transform: translate(0px, 0px); }
+.direct-chat-contacts { background: #222d32 none repeat scroll 0 0; bottom: 0; color: #fff; height: 250px; overflow: auto; position: absolute; top: 0; transform: translate(101%, 0px); width: 100%; }
+.input-group-btn { font-size: 0; position: relative; white-space: nowrap; }
+.input-group { border-collapse: separate; }		
+.input-group .form-control, .input-group-addon, .input-group-btn { display: table-cell; }
+.input-group-addon, .input-group-btn { vertical-align: middle; white-space: nowrap; width: 1%; }
+#tenant_discussion .btn	{ font-size: 14px; }	
+.tbl_info th  { background-color: #b5bbc8 !important; border-bottom-width: 0; }

@@ -55,16 +55,11 @@ var debug = {};
     <script type="text/javascript" src="js/utils.js"></script>
 
     <link rel="stylesheet" href="./css/bootstrap.css" type="text/css" />
-	<link href="./css/dataTables.bootstrap.css" rel="stylesheet" type="text/css" />
 
     <link rel="stylesheet" href="./css/font-awesome.css" type="text/css" />
     <!-- Jquery UI css and js , needed for the dialog modal -->
-    <!--<link rel="stylesheet" href="./lib/jquery-ui-1.10.3.custom/css/custom-theme/jquery-ui-1.10.3.custom.css">-->
-	<!--<link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">-->
-	<link rel="stylesheet" href="./lib/jquery-ui-1.10.4.custom/css/smoothness/jquery-ui-1.10.4.custom.css">
-    <link rel="stylesheet" href="css/popup.css" />	
-	
-    <script type="text/javascript" src="./lib/jquery-ui-1.10.4.custom/js/jquery-ui-1.10.4.custom.js"></script>
+    <link rel="stylesheet" href="./lib/jquery-ui-1.10.3.custom/css/custom-theme/jquery-ui-1.10.3.custom.css">
+    <script type="text/javascript" src="./lib/jquery-ui-1.10.3.custom/js/jquery-ui-1.10.3.custom.js"></script>
 
 <!-- <script type="text/javascript" src="./js/example1.js"></script> -->
     <script>
@@ -228,247 +223,48 @@ var debug = {};
   	<!-- Div for the 3d renderer+ -->
   	<div class="col-xs-9">
 
-        <div id="parent" class="col-xs-12">
-            <div id="dialog" title="Selected Object">
-            </div>
-        </div>
+        <!--<div id="parent" class="col-xs-12">-->
+            <!--<div id="dialog" title="Selected Object">-->
+            <!--</div>-->
+        <!--</div>-->
+
         <div id="testing" class="col-xs-12">
             <div id="tenant">
                 <ul>
-                    <li><a href="#tenant_details_temp">General</a></li>
-                    <li><a href="#tenant_events_temp">Properties</a></li>
-                    <li><a href="#tenant_jobs">Planning</a></li>
-					<li><a href="#tenant_cost">Cost</a></li>
-					<li><a href="#tenant_maintenance">Maintenance</a></li>
-					<li><a href="#tenant_documents">Documents</a></li>
-					<li><a href="#tenant_discussion">Discussion</a></li>
-					<li class="ui-tab-dialog-close"> </li>
+                    <li><a href="#tenant_details">Basic Details</a></li>
+                    <li><a href="#tenant_events">Properties</a></li>
+                    <li><a href="#tenant_jobs">Time Dimension</a></li>
+                    <li><a href="#tenant_documents">Documents</a></li>
+                    <!--<li><a href="#tenant_docs">Documents</a></li>-->
+                    <!--<li class="ui-tab-dialog-close"></li>-->
                 </ul>
                 <div>
-                    <div id="tenant_details_temp">
-						<h3>File</h3>
-						<p>
-						<label>Project name:</label>	St. Jones University<br />
-						<label>IFC file name:</label> modelArc.ifc<br />
-						<label>File Revision:</label> 3<br />
-						<label>Checked In on:</label> 22-Jun-2015
-						</p>
-						<h3>Element</h3>
-						<p>
-						<label>IFC Line ID:</label>	333456<br />
-						<label>IFC Element type:</label> IFC Door<br />
-						<label>IFC Global ID:</label> 763273827_jdkf<br />
-						<label>Element Name:</label> sample
-						</p>
+                    <div id="tenant_details">
+                        some details
                     </div>
-                    <div id="tenant_events_temp">
-                        <div id="object_info_temp" class="col-lg-12">
-							<h3>Identity</h3>
-							<table  class="table table-bordered table-striped dataTable tbl_info"  role="grid" aria-describedby="example1_info" style="width: 100%">
-								<thead>
-									<tr role="row">
-										<th>Propery</th>
-										<th>Value</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr role="row" class="odd">
-										<td>Decipline</td>
-										<td>Architectuaral</td>
-									 </tr>
-									<tr role="row" class="even">
-										<td>Name</td>
-										<td>Sample</td>
-									 </tr>
-								</tbody>
-							</table>
-							<h3>PSet_Revit</h3>
-							<table  class="table table-bordered table-striped dataTable tbl_info" style="width: 100%">
-								<thead>
-									<tr role="row">
-										<th>Propery</th>
-										<th>Value</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr role="row" class="odd">
-										<td>Decipline</td>
-										<td>Architectuaral</td>
-									 </tr>
-									<tr role="row" class="even">
-										<td>Name</td>
-										<td>Sample</td>
-									 </tr>
-								</tbody>
-							</table>
-							<h3>Identity</h3>
-							<table class="table table-bordered table-striped dataTable tbl_info" id="example1" style="width: 100%">
-								<thead>
-									<tr role="row">
-										<th>Propery</th>
-										<th>Value</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr role="row" class="odd">
-										<td>Decipline</td>
-										<td>Architectuaral</td>
-									 </tr>
-									<tr role="row" class="even">
-										<td>Name</td>
-										<td>Sample</td>
-									 </tr>
-								</tbody>
-							</table>								
+                    <div id="tenant_events">
+                        <div id="object_info" class="col-lg-12">
+                            <table id="table_info">
+                                <thead>
+                                <!--<tr>-->
+                                <!--<th></th>-->
+                                <!--</tr>-->
+                                </thead>
+                                <tbody>
+                                <!--<tr>-->
+                                <!--<td></td>-->
+                                <!--</tr>-->
+                                </tbody>
+                            </table>
                         </div>
                    </div>
                     <div id="tenant_jobs">
-							<h3>Scheduled Related info: sample</h3>
-							<table class="table table-bordered table-striped dataTable tbl_info" style="width: 100%">
-								<thead>
-									<tr role="row">
-										<th>Task</th>
-										<th>Start Date</th>
-										<th>End Date</th>
-										<th>Progress</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr role="row" class="odd">
-										<td>Purchasing from company X</td>
-										<td>02-Jan-2015</td>
-										<td>03-Jan-2015</td>
-										<td><div id="progressbar1" class="progressbar"><div class="progress-label"></div></div></td>
-									 </tr>
-									<tr role="row" class="even">
-										<td>Fixing to floor</td>
-										<td>02-Jan-2015</td>
-										<td>03-Jan-2015</td>
-										<td><div id="progressbar2" class="progressbar"><div class="progress-label"></div></div></td>
-									</tr>
-								</tbody>
-							</table>
+                        <p>Last Serviced - 1 month ago</p>
+                        <p>Depreciation Period - 2 months left</p>
                     </div>
-					<div id="tenant_discussion">
-						<div class="box box-primary direct-chat direct-chat-primary">
-							<div class="box-header with-border">
-							  <h3 class="box-title">Direct Chat</h3>
-							</div><!-- /.box-header -->
-							<div class="box-body">
-							  <!-- Conversations are loaded here -->
-							  <div class="direct-chat-messages">
-								<!-- Message. Default to the left -->
-								<div class="direct-chat-msg">
-								  <div class="direct-chat-info clearfix">
-									<span class="direct-chat-name pull-left">Alexander Pierce</span>
-									<span class="direct-chat-timestamp pull-right">23 Jan 2:00 pm</span>
-								  </div><!-- /.direct-chat-info -->
-								  <img alt="message user image" src="images/user3-128x128.jpg" class="direct-chat-img"><!-- /.direct-chat-img -->
-								  <div class="direct-chat-text">
-									Is this template really for free? That's unbelievable!
-								  </div><!-- /.direct-chat-text -->
-								</div><!-- /.direct-chat-msg -->
-
-								<!-- Message to the right -->
-								<div class="direct-chat-msg right">
-								  <div class="direct-chat-info clearfix">
-									<span class="direct-chat-name pull-right">Sarah Bullock</span>
-									<span class="direct-chat-timestamp pull-left">23 Jan 2:05 pm</span>
-								  </div><!-- /.direct-chat-info -->
-								  <img alt="message user image" src="images/user5-128x128.jpg" class="direct-chat-img"><!-- /.direct-chat-img -->
-								  <div class="direct-chat-text">
-									You better believe it!
-								  </div><!-- /.direct-chat-text -->
-								</div><!-- /.direct-chat-msg -->
-							  </div><!--/.direct-chat-messages-->
-							</div><!-- /.box-body -->
-							<div class="box-footer">
-							  <form method="post" action="#">
-								<div class="input-group">
-								  <input type="text" class="form-control" placeholder="Type Message ..." name="message">
-								  <span class="input-group-btn">
-									<button class="btn btn-primary btn-flat" type="button">Send</button>
-								  </span>
-								</div>
-							  </form>
-							</div><!-- /.box-footer-->
-						 </div>						
-					</div>
-					<div id="tenant_documents">
-							<h3>Related Docuemnt For: sample</h3>
-							<table id="tbl_info" class="table table-bordered table-striped dataTable" style="width: 100%">
-								<thead>
-									<tr role="row">
-										<th>Updated on</th>
-										<th>Document</th>
-										<th>Uploaded by</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr role="row" class="odd">
-										<td>01-Dec-2014</td>
-										<td><a href="#">Evaluation reports on Safety 2014 Q4</a></td>
-										<td>Roger Gorden - ABC contruction</td>
-									 </tr>
-									<tr role="row" class="even">
-										<td>02-Jan-2014</td>
-										<td>Supplier Manual GoodWood doors V2.0</td>
-										<td>Derick Smith - Kepler Timer Corp</td>
-									</tr>
-								</tbody>
-							</table>	
-					</div>
-					<div id="tenant_maintenance">
-						<h3>Maintenance Information For: sample</h3>
-						<table id="tbl_info" class="table table-bordered table-striped dataTable" style="width: 100%">
-							<thead>
-								<tr role="row">
-									<th>Record Date</th>
-									<th>Maintenance Done By</th>
-									<th>Activity</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr role="row" class="odd">
-									<td>01-Dec-2014</td>
-									<td>Belfast Corp</td>
-									<td>Replaced dooe handle</td>
-								 </tr>
-								<tr role="row" class="even">
-									<td>02-Jan-2014</td>
-									<td>Belfast Corp</td>
-									<td>Routine check on all doors</td>
-								</tr>
-							</tbody>
-						</table>						
-					</div>
-					<div id="tenant_cost">
-						<h3>Cost Related Infomation For: Sample</h3>
-						<table id="tbl_info" class="table table-bordered table-striped dataTable" style="width: 100%">
-							<thead>
-								<tr role="row">
-									<th>Unit Cost</th>
-									<th>Supplier</th>
-									<th>Procument Date</th>
-									<th>Budget Allocated</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr role="row" class="odd">
-									<td>230$</td>
-									<td>Kepler Timber Corporation</td>
-									<td>03-Mar-2015</td>
-									<td>122,000$</td>
-								 </tr>
-								<tr role="row" class="even">
-									<td></td>
-									<td></td>
-									<td></td>
-									<td></td>
-								</tr>
-							</tbody>
-						</table>							
-					</div>
+                    <div id="tenant_documents">
+                        Dcoument Details
+                    </div>
                 </div>
             </div>
         </div>
@@ -497,20 +293,7 @@ var debug = {};
 
 <script>
 
-function setProgressVal(id, val) {
-	$("#" + id).progressbar({
-		value: val,
-		change: function () {
-			$("#" + id + " .progress-label").text($("#" + id).progressbar("value") + "%");
-		}				
-	});
-}
 $(function() {
-	$( ".progressbar" ).progressbar({
-		value: false	
-    });
-	setProgressVal('progressbar1', 37); // Sample to set the value
-	setProgressVal('progressbar2', 67); // Sample to set the value
     $("#dialog").dialog({
         autoOpen: false,
         position: {
@@ -530,27 +313,18 @@ $.fn.tabbedDialog = function () {
     this.dialog({
         'autoOpen':false,
         'modal':false,
-        'minWidth':630,
-        'minHeight':300,
+        'minWidth':450,
+        'minHeight':200,
+        'maxHeight' : 200,
         'draggable':true,
         position: {
             my: "left top",
             at: "left bottom",
             of: $("#testing")
     }});
-    this.find('.ui-tab-dialog-close').append($('button.ui-dialog-titlebar-close'));
-    this.find('.ui-tab-dialog-close').css({'position':'absolute','right':'6px', 'top':'6px'});
-	this.find('.ui-dialog-titlebar-close').text("X");
-    this.find('.ui-dialog-titlebar-close').css({
-				"font-size" : "10px",
-				"margin" : "3px 0 0",
-				"height": "20px",
-				"line-height": "0",
-				"position": "absolute",
-				"right": "-5px",
-				"top": "50%",
-				"width": "20px"
-				});
+    this.find('.ui-tab-dialog-close').append($('a.ui-dialog-titlebar-close'));
+    this.find('.ui-tab-dialog-close').css({'position':'absolute','right':'0', 'top':'23px'});
+    this.find('.ui-tab-dialog-close > a').css({'float':'none','padding':'0'});
     var tabul = this.find('ul:first');
     this.parent().addClass('ui-tabs').prepend(tabul).draggable('option','handle',tabul);
     this.siblings('.ui-dialog-titlebar').remove();
