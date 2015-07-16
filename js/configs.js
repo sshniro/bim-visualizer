@@ -34,3 +34,7 @@ var jsonTree = {
     //,"plugins" : [ "checkbox" ]
 };
 var hiddenElements=[];
+var toggleSwitch = false;
+
+// buildingStorey
+// IfcType

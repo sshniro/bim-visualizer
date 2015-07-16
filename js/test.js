@@ -73,11 +73,7 @@ $(function()
                         }
 
                         /* Set the project structure to the json tree */
-                        jsonTree['core']['data'].push({'id': project.oid, 'parent' : parentId,'data':project,
-                            "text":project.name + '&nbsp; <button  type="button" class="btn btn-default btn-xs treeButton" data-id="'
-                            + project.oid +'" aria-label="Right Align"><span class="fa fa-eye" aria-hidden="true"></span> </button>',
-                            "icon":"fa fa-home"});
-                        //jsonTree['core']['data'].push({'id': project.oid, 'parent' : parentId, "text":project.name ,'data':project,"icon":"fa fa-home"});
+                        jsonTree['core']['data'].push({'id': project.oid, 'parent' : parentId, "text":project.name,'data':project,"icon":"fa fa-home"});
                         jsonData['core']['data'].push({'id': project.oid, 'parent' : parentId, "text":project.name,'data':project,'isProject':true});
                     }
                 });
@@ -88,84 +84,6 @@ $(function()
         });
     }
 
-    $("#treeViewDiv").on('click', '.treeButton', function(){
-
-        /* HighLight the object in the Canvas */
-        var type = $(this).data('type');
-        var id = $(this).data('id');
-        if(type == "ifcElement"){
-
-            var sceneNode = o.viewer.scene.findNode($(this).data('id'));
-            if(sceneNode != null){
-                sceneNode.nodeId = sceneNode.id;
-                //o.viewer.getControl("BIMSURFER.Control.ClickSelect").pick(sceneNode);
-                var state = $(this).data('state');
-                if(state == true){
-                    sceneNode.findParentByType("enable").setEnabled(false);
-                    $(this).data('state',"false");
-                }else{
-                    sceneNode.findParentByType("enable").setEnabled(true);
-                    $(this).data('state',true);
-                }
-
-            }
-        }else if(type == "ifcType"){
-            var childElements = getAllChildElements(id);
-            var state = $(this).data('state');
-
-            if(state == true){
-                for(var i=0;i<childElements.length;i++){
-
-                    var childId = childElements[i];
-                    var sceneNode1 = o.viewer.scene.findNode(childId);
-
-                    if(sceneNode1 != null){
-                        sceneNode1.nodeId = sceneNode1.id;
-                        //o.viewer.getControl("BIMSURFER.Control.ClickSelect").pick(sceneNode);
-
-                        sceneNode1.findParentByType("enable").setEnabled(false);
-
-                    }
-                }
-                $(this).data('state',"false");
-            }else{
-                for(var i=0;i<childElements.length;i++){
-
-                    var childId = childElements[i];
-                    var sceneNode1 = o.viewer.scene.findNode(childId);
-
-                    if(sceneNode1 != null){
-                        sceneNode1.nodeId = sceneNode1.id;
-                        //o.viewer.getControl("BIMSURFER.Control.ClickSelect").pick(sceneNode);
-
-                        sceneNode1.findParentByType("enable").setEnabled(true);
-
-                    }
-                }
-                $(this).data('state',true);
-            }
-
-
-        }
-
-    });
-
-    function getAllChildElements(parent){
-        var childElements = [];
-        for(var i = 0; i < jsonTree['core']['data'].length; i++) {
-            var obj = jsonTree['core']['data'][i];
-            if(obj.parent == parent){
-                childElements.push(obj.id);
-            }
-        }
-        console.log(childElements);
-        return childElements;
-    }
-
-    /* */
-    function hideTheElement(id){
-
-    }
     /* If the tree node is selected */
     $('#treeViewDiv').on("changed.jstree", function (e, data) {
 
@@ -200,6 +118,7 @@ $(function()
                         /* HighLight the object in the Canvas */
                         var sceneNode = o.viewer.scene.findNode(jsonData['core']['data'][i]['id']);
                         if(sceneNode != null){
+
                             sceneNode.nodeId = sceneNode.id;
                             o.viewer.getControl("BIMSURFER.Control.ClickSelect").pick(sceneNode);
                         }
@@ -217,17 +136,17 @@ $(function()
 
                         var jsTreeData = jsonTree['core']['data'][k]['id'];
                         var selectedData = data.selected[j];
-                        //
-                        ///* Get all the nodes which are not selected */
-                        //if(selectedData == jsTreeData ){
-                        //    break;
-                        //    //hiddenElements.push(data.selected[j]);
-                        //}
-                        //if(j == (data.selected.length -1)){
-                        //    /* Add to the elements to hide only if it TYPE is a json Element */
-                        //    if(jsonTree['core']['data']['type'] == "ifcElement")
-                        //        hiddenElements.push(data.selected[j]);
-                        //}
+
+                        /* Get all the nodes which are not selected */
+                        if(selectedData == jsTreeData ){
+                            break;
+                            //hiddenElements.push(data.selected[j]);
+                        }
+                        if(j == (data.selected.length -1)){
+                            /* Add to the elements to hide only if it TYPE is a json Element */
+                            if(jsonTree['core']['data']['type'] == "ifcElement")
+                                hiddenElements.push(data.selected[j]);
+                        }
                     }
                 }
 
@@ -362,7 +281,7 @@ $(function()
         o.model = o.bimServerApi.getModel(project.oid, project.lastRevisionId, project.schema, false, function(model){
             ifcModel = model;
             model.getAllOfType("IfcProject", true, function(project){
-            ifcProject = project;
+                ifcProject = project;
             });
         });
 
@@ -424,7 +343,7 @@ $(function()
                 }
             });
         });
-        }
+    }
 
     // Build the Decomposed Tree
     function buildTree(object,parent,node){
@@ -460,17 +379,10 @@ $(function()
                 var id = obj.oid;
 
                 /* Add this building element entry to the Json Tree */
-                //jsonTree['core']['data'].push({'id':id, 'parent' : parentId, "text":name + '&nbsp; <button type="button" class="btn btn-default btn-xs" aria-label="Right Align" onclick="hideTheElement()"><span class="fa fa-eye" aria-hidden="true"></span> </button>', "type" : "buildingStorey",
-                //                                "icon":"fa fa-sort-amount-desc"});
-
-                jsonTree['core']['data'].push({'id': id, 'parent' : parentId,"type" : "buildingStorey",
-                    "text":name + '&nbsp; <button  type="button" class="btn btn-default btn-xs treeButton" data-id="'
-                    + id +'" aria-label="Right Align"><span class="fa fa-eye" aria-hidden="true"></span> </button>',
+                jsonTree['core']['data'].push({'id':id, 'parent' : parentId, "text":name, "type" : "buildingStorey",
                     "icon":"fa fa-sort-amount-desc"});
-
-
                 jsonData['core']['data'].push({'id':id, 'parent' : parentId, "text":name, "type" : "buildingStorey",
-                                                "icon":"fa fa-sort-amount-desc"});
+                    "icon":"fa fa-sort-amount-desc"});
                 /* TODO replace with promise */
                 objCount++;
 
@@ -497,13 +409,7 @@ $(function()
                         }
                         // If the node does not exist
                         if(!nodeExists){
-                            //jsonTree['core']['data'].push({'id':parentId, 'parent' : parent, "text":type + '&nbsp; <button type="button" class="btn btn-default btn-xs" aria-label="Right Align" onclick="hideTheElement(' + parentId + ')"><span class="fa fa-eye" aria-hidden="true"></span> </button>' , "type" : "ifcType" ,"icon":"fa fa-gear"});
-
-                            jsonTree['core']['data'].push({'id': parentId, 'parent' : parent,"type" : "ifcType",
-                                "text": type + '&nbsp; <button  type="button" class="btn btn-default btn-xs treeButton" data-id="'
-                                + parentId +'" " data-state="true" data-type="ifcType" aria-label="Right Align"><span class="fa fa-eye" aria-hidden="true"></span> </button>',
-                                "icon":"fa fa-sort-amount-desc"});
-
+                            jsonTree['core']['data'].push({'id':parentId, 'parent' : parent, "text":type, "type" : "ifcType" ,"icon":"fa fa-gear"});
                             jsonData['core']['data'].push({'id':parentId, 'parent' : parent, "text":type, "type" : "ifcType" , "icon":"fa fa-gear"});
                         }
                         //if the node exists do not append to the json tree
@@ -511,13 +417,7 @@ $(function()
                         /* TODO replace with promise */
                         objCount++;
                         // Now add the object to the tree
-                        //jsonTree['core']['data'].push({'id':objId, 'parent' : parentId, "type" : "ifcElement" , "text":name + '&nbsp; <button type="button" class="btn btn-default btn-xs" aria-label="Right Align" onclick="hideTheElement('+ objId + ')"><span class="fa fa-eye" aria-hidden="true"></span> </button>' ,"icon":"fa fa-circle"});
-
-                        jsonTree['core']['data'].push({'id': objId, 'parent' : parentId,"type" : "ifcElement",
-                            "text": name + '&nbsp; <button  type="button" class="btn btn-default btn-xs treeButton" data-id="'
-                            + objId +'" data-state="true" data-type="ifcElement" aria-label="Right Align"><span class="fa fa-eye" aria-hidden="true"></span> </button>',
-                            "icon":"fa fa-circle"});
-
+                        jsonTree['core']['data'].push({'id':objId, 'parent' : parentId, "type" : "ifcElement" , "text":name,"icon":"fa fa-circle"});
                         jsonData['core']['data'].push({'id':objId, 'parent' : parentId, "type" : "ifcElement" , "text":name,"icon":"fa fa-circle",'data':relatedElement.object})
 
                     })
@@ -527,13 +427,7 @@ $(function()
         }
 
         if(type != "IfcBuildingStorey"){
-            //jsonTree['core']['data'].push({'id': node, 'parent' : parent, "text":name + '&nbsp; <button type="button" class="btn btn-default btn-xs" aria-label="Right Align" onclick="hideTheElement('+node+')"><span class="fa fa-eye" aria-hidden="true"></span> </button>',"icon":"fa fa-sort-amount-desc"});
-
-            jsonTree['core']['data'].push({'id': node, 'parent' : parent,"type" : "ifcElement",
-                "text": name + '&nbsp; <button  type="button" class="btn btn-default btn-xs treeButton" data-id="'
-                + node +'" aria-label="Right Align"><span class="fa fa-eye" aria-hidden="true"></span> </button>',
-                "icon":"fa fa-sort-amount-desc"});
-
+            jsonTree['core']['data'].push({'id': node, 'parent' : parent, "text":name,"icon":"fa fa-sort-amount-desc"});
             jsonData['core']['data'].push({'id':node, 'parent' : parent, "text":name,"icon":"fa fa-circle",'data':object.object});
             /* TODO replace with promise */
             objCount++;
