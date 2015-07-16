@@ -448,34 +448,64 @@ $(function()
 
     // Build the Decomposed Tree
     function buildTree(object,parent,node){
-        var name = object.object['Name'];
+
+        var name = null;
+        if (object.getLongName != null) {
+            if (object.getLongName() != null && object.getLongName() != "") {
+                name = object.getLongName();
+            }
+        }
+        if (name == null) {
+            if (object.getName() != null && object.getName() != "") {
+                name = object.getName();
+            }
+        }
+        if (name == null) {
+            name = "Unknown";
+        }
+
         var type = object.getType();
         var parentId = parent;
 
         if(type == "IfcSpace"){
             ///* TODO replace with promise */
-            objCount++;
-            console.log(objCount);
+            var testId = parentId + type;
+            var obId = object.oid;
+
+            var nodeExists = false;
+            /* Check if the type is already created */
+            for(var i=0;i<jsonTree['core']['data'].length;i++){
+                var jsonObj = jsonTree['core']['data'][i];
+                if(jsonObj.id == testId){
+                    nodeExists = true;
+                    break;
+                }
+            }
+            // If the node does not exist
+            if(!nodeExists){
+                //jsonTree['core']['data'].push({'id':parentId, 'parent' : parent, "text":type + '&nbsp; <button type="button" class="btn btn-default btn-xs" aria-label="Right Align" onclick="hideTheElement(' + parentId + ')"><span class="fa fa-eye" aria-hidden="true"></span> </button>' , "type" : "ifcType" ,"icon":"fa fa-gear"});
+
+                jsonTree['core']['data'].push({'id': testId, 'parent' : parent,"type" : "ifcType",
+                    "text": type + '&nbsp; <button  type="button" class="btn btn-default btn-xs treeButton" data-id="'
+                    + testId +'" " data-state="true" data-type="ifcType" aria-label="Right Align"><span class="fa fa-eye" aria-hidden="true"></span> </button>',
+                    "icon":"fa fa-sort-amount-desc"});
+
+                jsonData['core']['data'].push({'id':testId, 'parent' : parent, "text":type, "type" : "ifcType" , "icon":"fa fa-gear"});
+            }
+
+            jsonTree['core']['data'].push({'id': obId, 'parent' : testId,"type" : "ifcElement",
+                "text": name + '&nbsp; <button  type="button" class="btn btn-default btn-xs treeButton" data-id="'
+                + obId +'" data-state="true" data-type="ifcElement" aria-label="Right Align"><span class="fa fa-eye" aria-hidden="true"></span> </button>',
+                "icon":"fa fa-circle"});
+
+            jsonData['core']['data'].push({'id':obId, 'parent' : testId, "type" : "ifcElement" , "text":name,'data':object.object,"icon":"fa fa-circle"})
+
+
             return;
         }
 
         if(type == "IfcBuildingStorey"){
             (function (obj){
-
-                var name = null;
-                if (obj.getLongName != null) {
-                    if (obj.getLongName() != null && obj.getLongName() != "") {
-                        name = obj.getLongName();
-                    }
-                }
-                if (name == null) {
-                    if (obj.getName() != null && obj.getName() != "") {
-                        name = obj.getName();
-                    }
-                }
-                if (name == null) {
-                    name = "Unknown";
-                }
 
                 var id = obj.oid;
 
@@ -492,7 +522,6 @@ $(function()
                 jsonData['core']['data'].push({'id':id, 'parent' : parentId, "text":name, "type" : "buildingStorey",
                                                 "icon":"fa fa-sort-amount-desc"});
                 /* TODO replace with promise */
-                objCount++;
 
                 obj.getContainsElements(function(relReferencedInSpatialStructure) {
                     relReferencedInSpatialStructure.getRelatedElements(function (relatedElement) {
