@@ -93,13 +93,14 @@ $(function()
         /* HighLight the object in the Canvas */
         var type = $(this).data('type');
         var id = $(this).data('id');
+        var state = $(this).data('state');
         if(type == "ifcElement"){
 
             var sceneNode = o.viewer.scene.findNode($(this).data('id'));
             if(sceneNode != null){
+
                 sceneNode.nodeId = sceneNode.id;
-                //o.viewer.getControl("BIMSURFER.Control.ClickSelect").pick(sceneNode);
-                var state = $(this).data('state');
+
                 if(state == true){
                     sceneNode.findParentByType("enable").setEnabled(false);
                     $(this).data('state',"false");
@@ -111,44 +112,63 @@ $(function()
             }
         }else if(type == "ifcType"){
             var childElements = getAllChildElements(id);
-            var state = $(this).data('state');
 
             if(state == true){
-                for(var i=0;i<childElements.length;i++){
-
-                    var childId = childElements[i];
-                    var sceneNode1 = o.viewer.scene.findNode(childId);
-
-                    if(sceneNode1 != null){
-                        sceneNode1.nodeId = sceneNode1.id;
-                        //o.viewer.getControl("BIMSURFER.Control.ClickSelect").pick(sceneNode);
-
-                        sceneNode1.findParentByType("enable").setEnabled(false);
-
-                    }
-                }
+                hideElements(childElements);
                 $(this).data('state',"false");
             }else{
-                for(var i=0;i<childElements.length;i++){
-
-                    var childId = childElements[i];
-                    var sceneNode1 = o.viewer.scene.findNode(childId);
-
-                    if(sceneNode1 != null){
-                        sceneNode1.nodeId = sceneNode1.id;
-                        //o.viewer.getControl("BIMSURFER.Control.ClickSelect").pick(sceneNode);
-
-                        sceneNode1.findParentByType("enable").setEnabled(true);
-
-                    }
-                }
+                showElements(childElements);
                 $(this).data('state',true);
             }
 
 
+        }else if(type == 'buildingStorey'){
+            // Get All Types initially
+            var types = getAllChildElements(id);
+            if(state == true){
+                for(var j=0; j< types.length;j++){
+                    var childElements = getAllChildElements(types[j])
+                    hideElements(childElements);
+                }
+                $(this).data('state',"false");
+            }else{
+                for(var j=0; j< types.length;j++){
+                    var childElements = getAllChildElements(types[j])
+                    showElements(childElements);
+                }
+                $(this).data('state',true);
+            }
         }
 
     });
+
+    function hideElements(childElements){
+        for(var i=0;i<childElements.length;i++){
+
+            var childId = childElements[i];
+            var sceneNode = o.viewer.scene.findNode(childId);
+
+            if(sceneNode != null){
+                sceneNode.nodeId = sceneNode.id;
+                sceneNode.findParentByType("enable").setEnabled(false);
+            }
+        }
+    }
+
+    function showElements(childElements){
+        for(var i=0;i<childElements.length;i++){
+
+            var childId = childElements[i];
+            var sceneNode = o.viewer.scene.findNode(childId);
+
+            if(sceneNode != null){
+                sceneNode.nodeId = sceneNode.id;
+                sceneNode.findParentByType("enable").setEnabled(true);
+            }
+        }
+    }
+
+
 
     function getAllChildElements(parent){
         var childElements = [];
@@ -465,7 +485,7 @@ $(function()
 
                 jsonTree['core']['data'].push({'id': id, 'parent' : parentId,"type" : "buildingStorey",
                     "text":name + '&nbsp; <button  type="button" class="btn btn-default btn-xs treeButton" data-id="'
-                    + id +'" aria-label="Right Align"><span class="fa fa-eye" aria-hidden="true"></span> </button>',
+                    + id +'" " data-state="true" data-type="buildingStorey" aria-label="Right Align"><span class="fa fa-eye" aria-hidden="true"></span> </button>',
                     "icon":"fa fa-sort-amount-desc"});
 
 
