@@ -73,12 +73,12 @@ $(function()
                         }
 
                         /* Set the project structure to the json tree */
-                        jsonTree['core']['data'].push({'id': project.oid, 'parent' : parentId,'data':project,'type':'project',
+                        jsonTree['core']['data'].push({'id': project.oid, 'parent' : parentId,'data':project,'type':'project', 'name' :project.name ,
                             "text":project.name + '&nbsp; <button  type="button" class="btn btn-default btn-xs treeButton" data-id="'
                             + project.oid +'" aria-label="Right Align"><span class="fa fa-eye" aria-hidden="true"></span> </button>',
                             "icon":"fa fa-home"});
                         //jsonTree['core']['data'].push({'id': project.oid, 'parent' : parentId, "text":project.name ,'data':project,"icon":"fa fa-home"});
-                        jsonData['core']['data'].push({'id': project.oid, 'parent' : parentId, "text":project.name,'data':project,'type':'project'});
+                        jsonData['core']['data'].push({'id': project.oid, 'parent' : parentId, "text":project.name,'name' :project.name ,'data':project,'type':'project'});
                     }
                 });
             }
@@ -537,7 +537,7 @@ $(function()
             if(!nodeExists){
                 //jsonTree['core']['data'].push({'id':parentId, 'parent' : parent, "text":type + '&nbsp; <button type="button" class="btn btn-default btn-xs" aria-label="Right Align" onclick="hideTheElement(' + parentId + ')"><span class="fa fa-eye" aria-hidden="true"></span> </button>' , "type" : "ifcType" ,"icon":"fa fa-gear"});
 
-                jsonTree['core']['data'].push({'id': testId, 'parent' : parent,"type" : "ifcType",
+                jsonTree['core']['data'].push({'id': testId, 'parent' : parent,"type" : "ifcType", 'name' : type,
                     "text": type + '&nbsp; <button  type="button" class="btn btn-default btn-xs treeButton" data-id="'
                     + testId +'" " data-state="true" data-type="ifcType" aria-label="Right Align"><span class="fa fa-eye" aria-hidden="true"></span> </button>',
                     "icon":"fa fa-sort-amount-desc"});
@@ -545,12 +545,12 @@ $(function()
                 jsonData['core']['data'].push({'id':testId, 'parent' : parent, "text":type, "type" : "ifcType" , "icon":"fa fa-gear"});
             }
 
-            jsonTree['core']['data'].push({'id': obId, 'parent' : testId,"type" : "ifcElement",
+            jsonTree['core']['data'].push({'id': obId, 'parent' : testId,"type" : "ifcElement", 'name' : type,
                 "text": name + '&nbsp; <button  type="button" class="btn btn-default btn-xs treeButton" data-id="'
                 + obId +'" data-state="true" data-type="ifcElement" aria-label="Right Align"><span class="fa fa-eye" aria-hidden="true"></span> </button>',
                 "icon":"fa fa-circle"});
 
-            jsonData['core']['data'].push({'id':obId, 'parent' : testId, "type" : "ifcElement" , "text":name,'data':object.object,"icon":"fa fa-circle"})
+            jsonData['core']['data'].push({'id':obId, 'parent' : testId, "type" : "ifcElement" , 'name' : type, "text":name,'data':object.object,"icon":"fa fa-circle"})
             return;
         }
 
@@ -559,13 +559,13 @@ $(function()
 
                 var id = obj.oid;
 
-                jsonTree['core']['data'].push({'id': id, 'parent' : parentId,"type" : "buildingStorey",
+                jsonTree['core']['data'].push({'id': id, 'parent' : parentId,"type" : "buildingStorey", 'name' : name,
                     "text":name + '&nbsp; <button  type="button" class="btn btn-default btn-xs treeButton" data-id="'
                     + id +'" " data-state="true" data-type="buildingStorey" aria-label="Right Align"><span class="fa fa-eye" aria-hidden="true"></span> </button>',
                     "icon":"fa fa-sort-amount-desc"});
 
 
-                jsonData['core']['data'].push({'id':id, 'parent' : parentId, "text":name, "type" : "buildingStorey",
+                jsonData['core']['data'].push({'id':id, 'parent' : parentId, "text":name, 'name' : name, "type" : "buildingStorey",
                                                 "icon":"fa fa-sort-amount-desc"});
                 /* TODO replace with promise */
 
@@ -594,12 +594,12 @@ $(function()
                         if(!nodeExists){
                             //jsonTree['core']['data'].push({'id':parentId, 'parent' : parent, "text":type + '&nbsp; <button type="button" class="btn btn-default btn-xs" aria-label="Right Align" onclick="hideTheElement(' + parentId + ')"><span class="fa fa-eye" aria-hidden="true"></span> </button>' , "type" : "ifcType" ,"icon":"fa fa-gear"});
 
-                            jsonTree['core']['data'].push({'id': parentId, 'parent' : parent,"type" : "ifcType",
+                            jsonTree['core']['data'].push({'id': parentId, 'parent' : parent,"type" : "ifcType", 'name' : type,
                                 "text": type + '&nbsp; <button  type="button" id="'+parentId+'" class="btn btn-default btn-xs treeButton" data-id="'
                                 + parentId +'" " data-state="true" data-type="ifcType" aria-label="Right Align"><span class="fa fa-eye" aria-hidden="true"></span> </button>',
                                 "icon":"fa fa-sort-amount-desc"});
 
-                            jsonData['core']['data'].push({'id':parentId, 'parent' : parent, "text":type, "type" : "ifcType" , "icon":"fa fa-gear"});
+                            jsonData['core']['data'].push({'id':parentId, 'parent' : parent, 'name' : type, "text":type, "type" : "ifcType" , "icon":"fa fa-gear"});
                         }
                         //if the node exists do not append to the json tree
 
@@ -608,12 +608,12 @@ $(function()
                         // Now add the object to the tree
                         //jsonTree['core']['data'].push({'id':objId, 'parent' : parentId, "type" : "ifcElement" , "text":name + '&nbsp; <button type="button" class="btn btn-default btn-xs" aria-label="Right Align" onclick="hideTheElement('+ objId + ')"><span class="fa fa-eye" aria-hidden="true"></span> </button>' ,"icon":"fa fa-circle"});
 
-                        jsonTree['core']['data'].push({'id': objId, 'parent' : parentId,"type" : "ifcElement",
+                        jsonTree['core']['data'].push({'id': objId, 'parent' : parentId,"type" : "ifcElement", 'name' : name,
                             "text": name + '&nbsp; <button  type="button" class="btn btn-default btn-xs treeButton" data-id="'
                             + objId +'" data-state="true" data-type="ifcElement" aria-label="Right Align"><span id="'+objId+'" class="fa fa-eye" aria-hidden="true"></span> </button>',
                             "icon":"fa fa-circle"});
 
-                        jsonData['core']['data'].push({'id':objId, 'parent' : parentId, "type" : "ifcElement" , "text":name,"icon":"fa fa-circle",'data':relatedElement.object})
+                        jsonData['core']['data'].push({'id':objId, 'parent' : parentId, "type" : "ifcElement" , 'name' : name, "text":name,"icon":"fa fa-circle",'data':relatedElement.object})
 
                     })
                 });
@@ -624,12 +624,12 @@ $(function()
         if(type != "IfcBuildingStorey"){
             //jsonTree['core']['data'].push({'id': node, 'parent' : parent, "text":name + '&nbsp; <button type="button" class="btn btn-default btn-xs" aria-label="Right Align" onclick="hideTheElement('+node+')"><span class="fa fa-eye" aria-hidden="true"></span> </button>',"icon":"fa fa-sort-amount-desc"});
 
-            jsonTree['core']['data'].push({'id': node, 'parent' : parent,"type" : type,
+            jsonTree['core']['data'].push({'id': node, 'parent' : parent,"type" : type, 'name' : name,
                 "text": name + '&nbsp; <button  type="button" class="btn btn-default btn-xs treeButton" data-id="'
                 + node +'" data-state="true" data-type="'+type+'" " aria-label="Right Align"><span class="fa fa-eye" aria-hidden="true"></span> </button>',
                 "icon":"fa fa-sort-amount-desc"});
 
-            jsonData['core']['data'].push({'id':node, 'parent' : parent, "text":name,"icon":"fa fa-circle",'data':object.object});
+            jsonData['core']['data'].push({'id':node, 'parent' : parent, "text":name, 'name' : name, "icon":"fa fa-circle",'data':object.object});
             /* TODO replace with promise */
             objCount++;
         }

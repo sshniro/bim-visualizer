@@ -59,7 +59,7 @@ function addDataToDetails(i){
     div.append('<label>IFC Line ID:</label>	'+jsonData['core']['data'][i]['id']+'<br />');
     div.append('<label>IFC Element type:</label> '+jsonData['core']['data'][i]['parent']+ '<br />');
     div.append('<label>IFC Global ID:</label> 763273827_jdkf<br />');
-    div.append('<label>Element Name:</label> sample');
+    div.append('<label>Element Name:</label> ' + jsonData['core']['data'][i]['name']);
     div.append('</p>');
 }
 
