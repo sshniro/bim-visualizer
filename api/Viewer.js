@@ -255,17 +255,6 @@ BIMSURFER.Viewer = BIMSURFER.Class({
 
 							addDataToDetails(i);
 
-                            /* TO DO open only once  */
-							//$("#tenant").dialog("open");
-							//var div = $('#tenant_details');
-							//div.empty();
-
-							//for (var key in jsonData['core']['data'][i]) {
-							//	if (jsonData['core']['data'][i].hasOwnProperty(key)) {
-							//		div.append('<p>'+ key + ' -> '+ jsonData['core']['data'][i][key] + '</p>')
-							//	}
-							//}
-
                             /* Auto open the tree node */
                             $('#treeViewDiv').jstree('open_node', jsonData['core']['data'][i]['parent'], function(e, data) {
                                 $('#treeViewDiv').jstree(('select_node'), jsonData['core']['data'][i]['id']);

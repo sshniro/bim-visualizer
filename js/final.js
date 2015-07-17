@@ -110,35 +110,28 @@ $(function()
                 }else{
                     sceneNode.findParentByType("enable").setEnabled(true);
                     $(this).data('state',true);
+                    $(this).find('span')
+                        .removeClass('fa-eye-slash')
+                        .addClass('fa-eye');
                 }
 
             }
         }else if(type == "ifcType"){
             var childElements = getAllChildElements(id);
-
             if(state == true){
                 hideElements(childElements);
                 $(this).data('state',"false");
-                $(this).find('span.')
+                $(this).find('span')
                     .removeClass('fa-eye')
                     .addClass('fa-eye-slash');
-
-
-                //$('.treeDevView').find('#ID');
-
-
-                //alert($(this).attr('class'));
-                // toggle Icon
-                //$(this).
-                //alert($('"#"'+id+'""').attr("class"));
-                //$('.treeButton .info-box-icon.bg-aqua').removeClass('bg-aqua').addClass('bg-green');
-                //$('.example_infobox .info-box-icon.bg-aqua').toggleClass('bg-aqua bg-green');
             }else{
                 showElements(childElements);
                 $(this).data('state',true);
+                $(this).find('span')
+                    .removeClass('fa-eye-slash')
+                    .addClass('fa-eye');
+
             }
-
-
         }else if(type == 'buildingStorey'){
             // Get All Types initially
             toggleBuildingStorey(id,state,this);
@@ -148,9 +141,7 @@ $(function()
         }else if(type == "IfcSite"){
             toggleIfcSiteVisibility(id,state,this);
         }else if(type == "IfcProject"){
-            console.log("came here");
             toggleProjectVisibility(id,state,this);
-            //toggleBuildingVisibility(id,state,this);
         }
     });
 
@@ -233,6 +224,10 @@ $(function()
             if(sceneNode != null){
                 sceneNode.nodeId = sceneNode.id;
                 sceneNode.findParentByType("enable").setEnabled(false);
+
+                $('#treeViewDiv').find('#'+ childId +'').find('span')
+                    .removeClass('fa-eye')
+                    .addClass('fa-eye-slash');
             }
         }
     }
@@ -246,6 +241,10 @@ $(function()
             if(sceneNode != null){
                 sceneNode.nodeId = sceneNode.id;
                 sceneNode.findParentByType("enable").setEnabled(true);
+
+                $('#treeViewDiv').find('#'+ childId +'').find('span')
+                    .removeClass('fa-eye-slash')
+                    .addClass('fa-eye');
             }
         }
     }
@@ -312,16 +311,6 @@ $(function()
             }
             /* If the node selected is more than one */
             else if(data.selected.length != 0 && data.selected.length != 1 ){
-                /* Iterate through all the Json Tree Nodes */
-                //for(var k=0; k< jsonTree['core']['data'].length ; k++){
-                //    /* Iterate through all the Selected Json Tree Nodes */
-                //    for(var j=0 ; j<data.selected.length ; j++){
-                //
-                //    }
-                //}
-
-                // Hide all the elements which are not selected
-                //getHiddenElements(data.selected);
             }
         }
 
@@ -504,12 +493,6 @@ $(function()
                     queryModel().done(function(){
                         loadTheTree(ifcProject,nodeId,ifcProject.oid);
                     });
-
-                    //setTimeout(function(){
-                    //    /* To Do add some flags to optimize the code */
-                    //    refreshTree();
-                    //    o.viewer.refreshMask();
-                    //}, 2000);
                 }
             });
         });
@@ -627,7 +610,7 @@ $(function()
 
                         jsonTree['core']['data'].push({'id': objId, 'parent' : parentId,"type" : "ifcElement",
                             "text": name + '&nbsp; <button  type="button" class="btn btn-default btn-xs treeButton" data-id="'
-                            + objId +'" data-state="true" data-type="ifcElement" aria-label="Right Align"><span class="fa fa-eye" aria-hidden="true"></span> </button>',
+                            + objId +'" data-state="true" data-type="ifcElement" aria-label="Right Align"><span id="'+objId+'" class="fa fa-eye" aria-hidden="true"></span> </button>',
                             "icon":"fa fa-circle"});
 
                         jsonData['core']['data'].push({'id':objId, 'parent' : parentId, "type" : "ifcElement" , "text":name,"icon":"fa fa-circle",'data':relatedElement.object})
