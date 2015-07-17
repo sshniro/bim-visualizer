@@ -252,16 +252,19 @@ BIMSURFER.Viewer = BIMSURFER.Class({
                     for(var i = 0; i < jsonTree['core']['data'].length; i++) {
                         var obj = jsonTree['core']['data'][i];
                         if(selectedNode == obj.id){
-                            /* TO DO open only once  */
-							$("#tenant").dialog("open");
-							var div = $('#tenant_details');
-							div.empty();
 
-							for (var key in jsonData['core']['data'][i]) {
-								if (jsonData['core']['data'][i].hasOwnProperty(key)) {
-									div.append('<p>'+ key + ' -> '+ jsonData['core']['data'][i][key] + '</p>')
-								}
-							}
+							addDataToDetails(i);
+
+                            /* TO DO open only once  */
+							//$("#tenant").dialog("open");
+							//var div = $('#tenant_details');
+							//div.empty();
+
+							//for (var key in jsonData['core']['data'][i]) {
+							//	if (jsonData['core']['data'][i].hasOwnProperty(key)) {
+							//		div.append('<p>'+ key + ' -> '+ jsonData['core']['data'][i][key] + '</p>')
+							//	}
+							//}
 
                             /* Auto open the tree node */
                             $('#treeViewDiv').jstree('open_node', jsonData['core']['data'][i]['parent'], function(e, data) {

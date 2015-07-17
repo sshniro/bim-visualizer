@@ -235,7 +235,7 @@ var debug = {};
         <div id="testing" class="col-xs-12">
             <div id="tenant">
                 <ul>
-                    <li><a href="#tenant_details_temp">General</a></li>
+                    <li><a href="#tenant_details">General</a></li>
                     <li><a href="#tenant_events_temp">Properties</a></li>
                     <li><a href="#tenant_jobs">Planning</a></li>
 					<li><a href="#tenant_cost">Cost</a></li>
@@ -245,7 +245,7 @@ var debug = {};
 					<li class="ui-tab-dialog-close"> </li>
                 </ul>
                 <div>
-                    <div id="tenant_details_temp">
+                    <div id="tenant_details">
 						<h3>File</h3>
 						<p>
 						<label>Project name:</label>	St. Jones University<br />
@@ -263,64 +263,67 @@ var debug = {};
                     </div>
                     <div id="tenant_events_temp">
                         <div id="object_info_temp" class="col-lg-12">
-							<h3>Identity</h3>
-							<table  class="table table-bordered table-striped dataTable tbl_info"  role="grid" aria-describedby="example1_info" style="width: 100%">
-								<thead>
-									<tr role="row">
-										<th>Propery</th>
-										<th>Value</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr role="row" class="odd">
-										<td>Decipline</td>
-										<td>Architectuaral</td>
-									 </tr>
-									<tr role="row" class="even">
-										<td>Name</td>
-										<td>Sample</td>
-									 </tr>
-								</tbody>
-							</table>
-							<h3>PSet_Revit</h3>
-							<table  class="table table-bordered table-striped dataTable tbl_info" style="width: 100%">
-								<thead>
-									<tr role="row">
-										<th>Propery</th>
-										<th>Value</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr role="row" class="odd">
-										<td>Decipline</td>
-										<td>Architectuaral</td>
-									 </tr>
-									<tr role="row" class="even">
-										<td>Name</td>
-										<td>Sample</td>
-									 </tr>
-								</tbody>
-							</table>
-							<h3>Identity</h3>
-							<table class="table table-bordered table-striped dataTable tbl_info" id="example1" style="width: 100%">
-								<thead>
-									<tr role="row">
-										<th>Propery</th>
-										<th>Value</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr role="row" class="odd">
-										<td>Decipline</td>
-										<td>Architectuaral</td>
-									 </tr>
-									<tr role="row" class="even">
-										<td>Name</td>
-										<td>Sample</td>
-									 </tr>
-								</tbody>
-							</table>								
+							<!--<h3>Identity</h3>-->
+							<!--<table  class="table table-bordered table-striped dataTable tbl_info"  role="grid" aria-describedby="example1_info" style="width: 100%">-->
+								<!--<thead>-->
+									<!--<tr role="row">-->
+										<!--<th>Propery</th>-->
+										<!--<th>Value</th>-->
+									<!--</tr>-->
+								<!--</thead>-->
+								<!--<tbody>-->
+									<!--<tr role="row" class="odd">-->
+										<!--<td>Decipline</td>-->
+										<!--<td>Architectuaral</td>-->
+									 <!--</tr>-->
+									<!--<tr role="row" class="even">-->
+										<!--<td>Name</td>-->
+										<!--<td>Sample</td>-->
+									 <!--</tr>-->
+								<!--</tbody>-->
+							<!--</table>-->
+							<!--<h3>PSet_Revit</h3>-->
+							<!--<table  class="table table-bordered table-striped dataTable tbl_info" style="width: 100%">-->
+								<!--<thead>-->
+									<!--<tr role="row">-->
+										<!--<th>Propery</th>-->
+										<!--<th>Value</th>-->
+									<!--</tr>-->
+								<!--</thead>-->
+								<!--<tbody>-->
+									<!--<tr role="row" class="odd">-->
+										<!--<td>Decipline</td>-->
+										<!--<td>Architectuaral</td>-->
+									 <!--</tr>-->
+									<!--<tr role="row" class="even">-->
+										<!--<td>Name</td>-->
+										<!--<td>Sample</td>-->
+									 <!--</tr>-->
+								<!--</tbody>-->
+							<!--</table>-->
+							<!--<h3>Identity</h3>-->
+							<!--<table class="table table-bordered table-striped dataTable tbl_info" id="example1" style="width: 100%">-->
+								<!--<thead>-->
+									<!--<tr role="row">-->
+										<!--<th>Propery</th>-->
+										<!--<th>Value</th>-->
+									<!--</tr>-->
+								<!--</thead>-->
+								<!--<tbody>-->
+									<!--<tr role="row" class="odd">-->
+										<!--<td>Decipline</td>-->
+										<!--<td>Architectuaral</td>-->
+									 <!--</tr>-->
+									<!--<tr role="row" class="even">-->
+										<!--<td>Name</td>-->
+										<!--<td>Sample</td>-->
+									 <!--</tr>-->
+								<!--</tbody>-->
+							<!--</table>								-->
                         </div>
+						<div id="testingData">
+
+						</div>
                    </div>
                     <div id="tenant_jobs">
 							<h3>Scheduled Related info: sample</h3>
@@ -532,6 +535,7 @@ $.fn.tabbedDialog = function () {
         'modal':false,
         'minWidth':630,
         'minHeight':300,
+        'height':300,
         'draggable':true,
         position: {
             my: "left top",

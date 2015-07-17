@@ -124,7 +124,7 @@ $(function()
                     .addClass('fa-eye-slash');
 
 
-                $('.treeDevView').find('#ID');
+                //$('.treeDevView').find('#ID');
 
 
                 //alert($(this).attr('class'));
@@ -224,8 +224,6 @@ $(function()
         }
     }
 
-
-
     function hideElements(childElements){
         for(var i=0;i<childElements.length;i++){
 
@@ -297,17 +295,8 @@ $(function()
                             }
                         }
 
+                        addDataToDetails(i);
 
-                        /* TODO open only once  */
-                        $("#tenant").dialog("open");
-                        var div = $('#tenant_details');
-                        div.empty();
-
-                        for (var key in jsonData['core']['data'][i]) {
-                            if (jsonData['core']['data'][i].hasOwnProperty(key)) {
-                                div.append('<p>'+ key + ' -> '+ jsonData['core']['data'][i][key] + '</p>')
-                            }
-                        }
                         var selectedNode = {'id':jsonData['core']['data'][i]['id']};
                         nodeSelected(selectedNode);
 
@@ -317,7 +306,6 @@ $(function()
                             sceneNode.nodeId = sceneNode.id;
                             o.viewer.getControl("BIMSURFER.Control.ClickSelect").pick(sceneNode);
                         }
-
                         return;
                     }
                 }
@@ -325,25 +313,12 @@ $(function()
             /* If the node selected is more than one */
             else if(data.selected.length != 0 && data.selected.length != 1 ){
                 /* Iterate through all the Json Tree Nodes */
-                for(var k=0; k< jsonTree['core']['data'].length ; k++){
-                    /* Iterate through all the Selected Json Tree Nodes */
-                    for(var j=0 ; j<data.selected.length ; j++){
-
-                        var jsTreeData = jsonTree['core']['data'][k]['id'];
-                        var selectedData = data.selected[j];
-                        //
-                        ///* Get all the nodes which are not selected */
-                        //if(selectedData == jsTreeData ){
-                        //    break;
-                        //    //hiddenElements.push(data.selected[j]);
-                        //}
-                        //if(j == (data.selected.length -1)){
-                        //    /* Add to the elements to hide only if it TYPE is a json Element */
-                        //    if(jsonTree['core']['data']['type'] == "ifcElement")
-                        //        hiddenElements.push(data.selected[j]);
-                        //}
-                    }
-                }
+                //for(var k=0; k< jsonTree['core']['data'].length ; k++){
+                //    /* Iterate through all the Selected Json Tree Nodes */
+                //    for(var j=0 ; j<data.selected.length ; j++){
+                //
+                //    }
+                //}
 
                 // Hide all the elements which are not selected
                 //getHiddenElements(data.selected);
@@ -693,56 +668,54 @@ $(function()
 
     }
 
-    function showProperty (propertySet, property, headerTr, editable){
-        var tr = $("<tr></tr>");
-        tr.attr("oid", property.oid);
-        tr.attr("psetoid", propertySet.oid);
-        headerTr.after(tr);
-        if (property.changedFields != null && (property.changedFields["NominalValue"] || property.changedFields["Name"])) {
-            tr.addClass("warning");
-        }
-
-        tr.append("<td>" + property.object.Name + "</td>");
-        getValue(tr, property, editable);
-    }
-
-    function showProperties(propertySet, headerTr) {
-        propertySet.getHasProperties(function(property){
-            if (property.object._t == "IfcPropertySingleValue") {
-                showProperty(propertySet, property, headerTr);
-            }
-        });
-    }
-
     function showPropertySet(propertySet) {
-        var headerTr = $("<tr class=\"active\"></tr>");
-        headerTr.attr("oid", propertySet.oid);
-        headerTr.attr("uri", propertySet.object.Name);
-        if (propertySet.changedFields != null && propertySet.changedFields["Name"]) {
-            headerTr.addClass("warning");
-        }
-        $("#object_info table tbody").append(headerTr);
-        var headerTd = $("<td></td>");
-        headerTr.append(headerTd);
+        var finalDiv = $('#testingData');
+        var div = $('<div id="table"></div>');
 
-        headerTd.append("<b>" + propertySet.object.Name + "</b>");
-        showProperties(propertySet, headerTr);
-    }
+        div.append('<h3>'+propertySet.object.Name +'</h3>')
 
-    function getValue(tr, property, editable) {
-        (function (tr) {
-            property.getNominalValue(function(value){
-                var td = $("<td>");
-                var v = value == null ? "" : value._v;
-                var span = $("<span class=\"value nonEditable\">" + v + "</span>");
-                td.append(span);
-                tr.append(td);
+        var table = $('<table class="table table-bordered table-striped dataTable tbl_info" style="width: 100%">');
+        var theader = $("<thead></thead>");
+        var tbody = $("<tbody> </tbody>");
+        var tr = $("<tr></tr>");
+        tr.attr("role","row");
+
+        var th1= ("<th>Property</th>");
+        var th2= ("<th>Value</th>");
+
+        tr.append(th1);
+        tr.append(th2);
+
+        theader.append(tr);
+        table.append(theader);
+
+        (function (propertySet) {
+            propertySet.getHasProperties(function(property){
+                if (property.object._t == "IfcPropertySingleValue") {
+                    var tr3 = $("<tr role=\"row\" class=\"odd\"></tr>");
+                    //tr.append("<td>" + property.object.Name + "</td>");
+                    var td3 = ("<td>" + property.object.Name + "</td>");
+                    property.getNominalValue(function(value){
+                        var v = value == null ? "" : value._v;
+                        var td4 = ("<td>" + v + "</td>");
+                        tr3.append(td3);
+                        tr3.append(td4);
+                        tbody.append(tr3);
+                    });
+                }
             });
-        } )(tr);
+        } )(propertySet);
+
+        table.append(tbody);
+        div.append(table);
+        finalDiv.append(div);
     }
+
+
 
     function nodeSelected(node) {
         $("#object_info table tbody tr").remove();
+        $("#testingData").empty();
         if (node.id != null) {
             o.model.get(node.id, function(product){
                 if(product != null){
