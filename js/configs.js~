@@ -6,9 +6,9 @@ var pass = "admin";
 
 
 ///* Credentials set to the Remote Server uncomment to load from server */
-//var serverUrl = "https://52.74.66.119:9451/bim";
-//var username = "admin@bimserver.org";
-//var pass = "admin";
+var serverUrl = "https://52.74.66.119:9451/bim";
+var username = "admin@bimserver.org";
+var pass = "admin";
 
 /* Global Variable to access the bim server api */
 var bimapi;
@@ -34,15 +34,12 @@ var jsonTree = {
     //,"plugins" : [ "checkbox" ]
 };
 var hiddenElements=[];
+var toggleSwitch = false;
 var loadedProjects = [];
 
 /* From get all of type "ifcProject" */
 var ifcProject;
 var ifcModel;
-
-var server = null;
-var viewer = null;
-var bimServerApi = null;
 
 // buildingStorey
 // IfcType

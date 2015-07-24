@@ -4,16 +4,17 @@ $(function()
     var o = this;
     var objCount = 0;
 
+    /* Identifier for highlighting one object when rendering */
+    var nodeId = null;
     o.server = null;
-    o.viewer = null;
-    o.bimServerApi = null;
 
+    /* Configuration parameter to specify Scene Js Location */
     SceneJS.configure({ pluginPath: "lib/scenejs/plugins" });
 
     /* Connects to the server and loads the BIM Server API */
     connect(serverUrl,username,pass);
 
-    /* Function is used to retreives the url parameters (productId and revisonId )*/
+    /* Function is used to retrieves the url parameters (productId and revisonId )*/
     function getUrlParamValue(name){
         name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
         var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
@@ -53,7 +54,7 @@ $(function()
     }
 
     function showSelectProject() {
-        o.bimServerApi.call("Bimsie1ServiceInterface", "getAllProjects", {onlyActive: true, onlyTopLevel: false}, function(projects){
+        bimServerApi.call("Bimsie1ServiceInterface", "getAllProjects", {onlyActive: true, onlyTopLevel: false}, function(projects){
             /* Read the parameters from the URL provided */
             var projectId = getUrlParamValue("projectId");
 
@@ -77,7 +78,6 @@ $(function()
                             "text":project.name + '&nbsp; <button  type="button" class="btn btn-default btn-xs treeButton" data-id="'
                             + project.oid +'" aria-label="Right Align"><span class="fa fa-eye" aria-hidden="true"></span> </button>',
                             "icon":"fa fa-home"});
-                        //jsonTree['core']['data'].push({'id': project.oid, 'parent' : parentId, "text":project.name ,'data':project,"icon":"fa fa-home"});
                         jsonData['core']['data'].push({'id': project.oid, 'parent' : parentId, "text":project.name,'name' :project.name ,'data':project,'type':'project'});
                     }
                 });
@@ -96,7 +96,7 @@ $(function()
         var state = $(this).data('state');
         if(type == "ifcElement"){
 
-            var sceneNode = o.viewer.scene.findNode($(this).data('id'));
+            var sceneNode = viewer.scene.findNode($(this).data('id'));
             if(sceneNode != null){
 
                 sceneNode.nodeId = sceneNode.id;
@@ -157,7 +157,7 @@ $(function()
     }
 
     function toggleIfcSiteVisibility(id,state,selectedDiv){
-        var sceneNode = o.viewer.scene.findNode(id);
+        var sceneNode = viewer.scene.findNode(id);
         if(sceneNode != null){
 
             sceneNode.nodeId = sceneNode.id;
@@ -219,7 +219,7 @@ $(function()
         for(var i=0;i<childElements.length;i++){
 
             var childId = childElements[i];
-            var sceneNode = o.viewer.scene.findNode(childId);
+            var sceneNode = viewer.scene.findNode(childId);
 
             if(sceneNode != null){
                 sceneNode.nodeId = sceneNode.id;
@@ -236,7 +236,7 @@ $(function()
         for(var i=0;i<childElements.length;i++){
 
             var childId = childElements[i];
-            var sceneNode = o.viewer.scene.findNode(childId);
+            var sceneNode = viewer.scene.findNode(childId);
 
             if(sceneNode != null){
                 sceneNode.nodeId = sceneNode.id;
@@ -300,10 +300,10 @@ $(function()
                         nodeSelected(selectedNode);
 
                         /* HighLight the object in the Canvas */
-                        var sceneNode = o.viewer.scene.findNode(jsonData['core']['data'][i]['id']);
+                        var sceneNode = viewer.scene.findNode(jsonData['core']['data'][i]['id']);
                         if(sceneNode != null){
                             sceneNode.nodeId = sceneNode.id;
-                            o.viewer.getControl("BIMSURFER.Control.ClickSelect").pick(sceneNode);
+                            viewer.getControl("BIMSURFER.Control.ClickSelect").pick(sceneNode);
                         }
                         return;
                     }
@@ -317,15 +317,15 @@ $(function()
     });
 
     function connect(server, email, password) {
-        loadBimServerApi(server, null, function(bimServerApi){
-            o.bimServerApi = bimServerApi;
-            o.bimServerApi.login(email, password, false, function(){
+        loadBimServerApi(server, null, function(bimServerApi1){
+            bimServerApi = bimServerApi1;
+            bimServerApi.login(email, password, false, function(){
                 // $(dialog).dialog('close');
-                o.viewer = new BIMSURFER.Viewer(o.bimServerApi, 'viewport');
+                viewer = new BIMSURFER.Viewer(bimServerApi, 'viewport');
                 resize();
 
-                o.viewer.loadScene(function(){
-                    var clickSelect = o.viewer.getControl("BIMSURFER.Control.ClickSelect");
+                viewer.loadScene(function(){
+                    var clickSelect = viewer.getControl("BIMSURFER.Control.ClickSelect");
                     clickSelect.activate();
                     clickSelect.events.register('select', o.nodeSelected);
                     clickSelect.events.register('unselect', o.nodeUnselected);
@@ -341,9 +341,10 @@ $(function()
         $("#viewport").height(($(window).height() - 98) + "px");
         $("#viewport").css("width", $(window).width() + "px");
         $("#viewport").css("height", ($(window).height() - 98) + "px");
-        o.viewer.resize($('div#viewport').width(), $('div#viewport').height());
+        viewer.resize($('div#viewport').width(), $('div#viewport').height());
     }
 
+    /* Queries the model to retrieve the has contains elemements attribute */
     var queryModel = function () {
         // create a deferred object
         var r = $.Deferred();
@@ -437,14 +438,14 @@ $(function()
     };
 
     function loadProject(project,nodeId) {
-        o.model = o.bimServerApi.getModel(project.oid, project.lastRevisionId, project.schema, false, function(model){
+        o.model = bimServerApi.getModel(project.oid, project.lastRevisionId, project.schema, false, function(model){
             ifcModel = model;
             model.getAllOfType("IfcProject", true, function(project){
             ifcProject = project;
             });
         });
 
-        o.bimServerApi.call("ServiceInterface", "getRevisionSummary", {roid: project.lastRevisionId}, function(summary){
+        bimServerApi.call("ServiceInterface", "getRevisionSummary", {roid: project.lastRevisionId}, function(summary){
             summary.list.forEach(function(item){
                 if (item.name == "IFC Entities") {
                     var toLoad = {};
@@ -468,29 +469,16 @@ $(function()
                             object.trans.mode = 0;
                         });
                     }
-                    var geometryLoader = new GeometryLoader(o.bimServerApi, models, o.viewer);
 
-                    var progressdiv = $("<div class=\"progressdiv\">");
-                    var text = $("<div class=\"text\">");
-                    text.html(project.name);
-                    var progress = $("<div class=\"progress progress-striped\">");
-                    var progressbar = $("<div class=\"progress-bar\">");
-                    progressdiv.append(text);
-                    progressdiv.append(progress);
-                    progress.append(progressbar);
+                    /* Get the Node Id to be selected */
+                    var nodeIda = getUrlParamValue("nodeId");
 
-                    //containerDiv.find(".progressbars").append(progressdiv);
-
-                    geometryLoader.addProgressListener(function(progress){
-                        progressbar.css("width", progress + "%");
-                        if (progress == 100) {
-                            progressdiv.fadeOut(800);
-                        }
-                    });
+                    var geometryLoader = new GeometryLoader(bimServerApi, models, viewer , nodeIda);
                     geometryLoader.setLoadTypes(project.lastRevisionId, project.schema, toLoad);
-                    o.viewer.loadGeometry(geometryLoader);
+                    viewer.loadGeometry(geometryLoader);
 
                     queryModel().done(function(){
+                        //console.log("loaded");
                         loadTheTree(ifcProject,nodeId,ifcProject.oid);
                     });
                 }

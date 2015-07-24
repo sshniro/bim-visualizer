@@ -1,4 +1,4 @@
-function GeometryLoader(bimServerApi, models, viewer) {
+function GeometryLoader(bimServerApi, models, viewer , nodeId) {
 	var o = this;
 	o.models = models;
 	o.bimServerApi = bimServerApi;
@@ -8,6 +8,7 @@ function GeometryLoader(bimServerApi, models, viewer) {
 	o.objectAddedListeners = [];
 	o.prepareReceived = false;
 	o.todo = [];
+	o.selecteNode = '4784406';
 
 	this.addProgressListener = function(progressListener) {
 		o.progressListeners.push(progressListener);
@@ -111,6 +112,16 @@ function GeometryLoader(bimServerApi, models, viewer) {
 			o.viewer.events.trigger('sceneLoaded', [o.viewer.scene]);
 			o.bimServerApi.call("ServiceInterface", "cleanupLongAction", {actionId: o.topicId}, function(){
 			});
+
+			/*  All the objects are loaded  */
+			if(nodeId != null){
+				var sceneNode = viewer.scene.findNode(o.selecteNode);
+				if(sceneNode != null){
+					sceneNode.nodeId = sceneNode.id;
+					viewer.getControl("BIMSURFER.Control.ClickSelect").pick(sceneNode);
+				}
+				console.log('done loading');
+			}
 		}
 	};
 	
@@ -156,7 +167,6 @@ function GeometryLoader(bimServerApi, models, viewer) {
 			if (o.viewer.scene.findNode(objectId) != null) {
 				var result = o.viewer.scene.findNode(objectId)
 				console.log("Node with id " + objectId + " already existed");
-//                o.viewer.scene.destroyNode(roid);
 				return;
 			}
 			var material = BIMSURFER.Constants.materials[type];
