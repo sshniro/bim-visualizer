@@ -253,16 +253,24 @@ BIMSURFER.Viewer = BIMSURFER.Class({
                         var obj = jsonTree['core']['data'][i];
                         if(selectedNode == obj.id){
 
-							addDataToDetails(i);
+							/* The first time the Node getting selected */
+							if(globalSelectedNode == null){
+								globalSelectedNode = selectedNode;
+							}else{
+								$('#treeViewDiv').jstree(('deselect_node'),  globalSelectedNode );
+								globalSelectedNode = selectedNode;
+							}
 
-                            /* Auto open the tree node */
+							/* Auto open the tree node */
                             $('#treeViewDiv').jstree('open_node', jsonData['core']['data'][i]['parent'], function(e, data) {
                                 $('#treeViewDiv').jstree(('select_node'), jsonData['core']['data'][i]['id']);
                             }, true);
-							//TODO Auto close the Tree Node
 
                             var node = {'id':jsonData['core']['data'][i]['id']};
-							nodeSelected1(node);
+
+							/* Code segment to generate the dialog UI */
+							//addDataToDetails(i);
+							//nodeSelected1(node);
 
                         }
                     }

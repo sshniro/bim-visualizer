@@ -206,6 +206,19 @@ var debug = {};
   	<div class="col-xs-3" >
         <div class="col-xs-12">
             <div class="col-lg-12">
+
+                <button type="button" class="btn btn-default" aria-label="Left Align" onclick="backward()">
+                    <span class="glyphicon glyphicon-minus" aria-hidden="true"></span>
+                </button>
+
+                <button type="button" class="btn btn-default" aria-label="Left Align" onclick="forward()">
+                    <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+                </button>
+
+
+                <!--<button onclick="forward()" value="rotate">Forward</button>-->
+                <!--<button onclick="backward()" value="rotate">Backward</button>-->
+
                 <h3>Projects Structure
                     <button type="button" class="btn btn-default" aria-label="Right Align" onclick="refreshTree()">
                         <span class="fa fa-refresh" aria-hidden="true"></span>
@@ -489,6 +502,101 @@ $.fn.tabbedDialog = function () {
 };
 
 $('#tenant').tabbedDialog();
+
+function backward(){
+    inc = 0.5;
+    direction = "backward";
+    allRendered = false;
+}
+
+function forward(){
+    var nodeId = $("#treeViewDiv").jstree("get_selected");
+    var nodeType;
+    globalMatrix=[];
+    inc = 0.5;
+    direction = "forward";
+
+    /* Check the node Type */
+    for(var i = 0; i < jsonTree['core']['data'].length; i++) {
+        var obj = jsonTree['core']['data'][i];
+
+        if(nodeId == obj.id){
+            nodeType = jsonData['core']['data'][i]['type'];
+            break;
+        }
+    }
+
+    if(nodeType == "buildingStorey" ){
+        // Get All Types initially
+        var types = getAllChildElements(nodeId);
+        for(var j=0; j< types.length;j++){
+            var childElements = getAllChildElements(types[j]);
+            for(var k=0;k<childElements.length;k++){
+
+                var childId = childElements[k];
+                globalMatrix.push(childId);
+                var sceneNode = viewer.scene.findNode(childId);
+            }
+
+        }
+    }
+
+//    globalMatrix[0] = nodeId[0];
+    allRendered = false;
+    viewer.scene.on("tick",function(){
+        // Put a switch if anything new to be rendered
+        if(!allRendered){
+            for(var j=0 ; j< globalMatrix.length ; j++){
+                console.log(j);
+                if(j ==71){
+                    console.log("came to the point");
+                }
+
+                var myMatrix = viewer.scene.findNode(globalMatrix[j]);
+
+                if(myMatrix != null){
+                    /* Some weird thing I dont know why */
+                    if(myMatrix.nodes[0].type == "material"){
+                        var modelMatrix  = myMatrix.nodes[0].nodes[0].getModelMatrix();
+                        if(direction == "forward"){
+                            modelMatrix[13] += inc;
+                        }else{
+                            modelMatrix[13] -= inc;
+                        }
+                        myMatrix.nodes[0].nodes[0].setElements(modelMatrix);
+                    }else{
+                        var modelMatrix  = myMatrix.nodes[0].getModelMatrix();
+                        if(direction == "forward"){
+                            modelMatrix[13] += inc;
+                        }else{
+                            modelMatrix[13] -= inc;
+                        }
+                        myMatrix.nodes[0].setElements(modelMatrix);
+                    }
+                }
+
+
+
+            }
+            allRendered = true;
+        }
+    });
+};
+
+
+
+function getAllChildElements(parent){
+    var childElements = [];
+    for(var i = 0; i < jsonTree['core']['data'].length; i++) {
+        var obj = jsonTree['core']['data'][i];
+        if(obj.parent == parent){
+            childElements.push(obj.id);
+        }
+    }
+    console.log(childElements);
+    return childElements;
+}
+
 
 </script>
 

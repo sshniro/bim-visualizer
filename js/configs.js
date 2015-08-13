@@ -1,17 +1,24 @@
 /* Reset the credentials with the server credentials */
 /* Credentials set to the local host */
-var serverUrl = "http://localhost:8080/";
+var serverUrl = "http://127.0.0.1:8080/";
 var username = "admin@bimserver.org";
 var pass = "admin";
 
 
-///* Credentials set to the Remote Server uncomment to load from server */
+///* Credentials set to the Remote Server uncomment to load from remote server */
 //var serverUrl = "https://52.74.66.119:9451/bim";
 //var username = "admin@bimserver.org";
 //var pass = "admin";
 
 /* Global Variable to access the bim server api */
 var bimapi;
+
+/* Testing purpose remove after this*/
+var globalSelectedNode = null;
+var globalMatrix = [];
+var allRendered = false;
+var inc = 0;
+var direction = "forward";
 
 // More global Variables
 //TODO more comments on the variables
@@ -57,14 +64,14 @@ function addDataToDetails(i){
     // Add the Css Elements
     div.append('<h3>File</h3>');
     div.append('<p>');
-    div.append('<label>Project name:</label>	'+ ifcProject.object.Name + '<br />');
+    div.append('<label>Project name:</label>    '+ ifcProject.object.Name + '<br />');
     div.append('<label>IFC file name:</label> modelArc.ifc <br />');
     div.append('<label>File Revision:</label> '+ ifcProject.object._i + '<br />');
     div.append('<label>Checked In on:</label> 22-Jun-2015');
     div.append('</p>');
     div.append('<h3>Element</h3>');
     div.append('<p>');
-    div.append('<label>IFC Line ID:</label>	'+jsonData['core']['data'][i]['id']+'<br />');
+    div.append('<label>IFC Line ID:</label> '+jsonData['core']['data'][i]['id']+'<br />');
     div.append('<label>IFC Element type:</label> '+jsonData['core']['data'][i]['parent']+ '<br />');
     div.append('<label>IFC Global ID:</label>'+jsonData['core']['data'][i]['data']['GlobalId']+'<br />');
     div.append('<label>Element Name:</label> ' + jsonData['core']['data'][i]['name']);
