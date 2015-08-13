@@ -61,6 +61,17 @@ function addDataToDetails(i){
     var div = $('#tenant_details');
     div.empty();
 
+
+    var globalId = "undefined";
+    var objectId = "undefined";
+    if (jsonData['core']['data'][i]['data'].hasOwnProperty('GlobalId')){
+        globalId = jsonData['core']['data'][i]['data']['GlobalId'];
+    }
+    if (jsonData['core']['data'][i]['id']){
+        objectId = jsonData['core']['data'][i]['id'];
+    }
+
+
     // Add the Css Elements
     div.append('<h3>File</h3>');
     div.append('<p>');
@@ -71,9 +82,9 @@ function addDataToDetails(i){
     div.append('</p>');
     div.append('<h3>Element</h3>');
     div.append('<p>');
-    div.append('<label>IFC Line ID:</label> '+jsonData['core']['data'][i]['id']+'<br />');
+    div.append('<label>IFC Line ID:</label> '+ objectId +'<br />');
     div.append('<label>IFC Element type:</label> '+jsonData['core']['data'][i]['parent']+ '<br />');
-    div.append('<label>IFC Global ID:</label>'+jsonData['core']['data'][i]['data']['GlobalId']+'<br />');
+    div.append('<label>IFC Global ID:</label>'+ globalId +'<br />');
     div.append('<label>Element Name:</label> ' + jsonData['core']['data'][i]['name']);
     div.append('</p>');
 }

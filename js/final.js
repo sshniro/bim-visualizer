@@ -75,7 +75,7 @@ $(function()
 
                         /* Set the project structure to the json tree */
                         jsonTree['core']['data'].push({'id': project.oid, 'parent' : parentId,'data':project,'type':'project', 'name' :project.name ,
-                            "text":project.name + '&nbsp; <button  type="button" class="btn btn-default btn-xs treeButton" data-id="'
+                            "text":project.name + '&nbsp; <button  type="button" class="btn btn-default btn-xs treeButton"  align="right" data-id="'
                             + project.oid +'" aria-label="Right Align"><span class="fa fa-eye" aria-hidden="true"></span> </button>',
                             "icon":"fa fa-home"});
                         jsonData['core']['data'].push({'id': project.oid, 'parent' : parentId, "text":project.name,'name' :project.name ,'data':project,'type':'project'});
@@ -337,10 +337,10 @@ $(function()
     }
 
     function resize(){
-        $("#viewport").width($(window).width() + "px");
-        $("#viewport").height(($(window).height() - 98) + "px");
-        $("#viewport").css("width", $(window).width() + "px");
-        $("#viewport").css("height", ($(window).height() - 98) + "px");
+        $("#viewport").width($('#full_screen').width() + "px");
+        $("#viewport").height(($(window).height()) + "px");
+        $("#viewport").css("width", $('#full_screen').width() + "px");
+        $("#viewport").css("height", ($(window).height()) + "px");
         viewer.resize($('div#viewport').width(), $('div#viewport').height());
     }
 
