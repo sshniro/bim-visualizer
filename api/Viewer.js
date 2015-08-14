@@ -261,10 +261,10 @@ BIMSURFER.Viewer = BIMSURFER.Class({
 								globalSelectedNode = selectedNode;
 							}
 
-							/* Auto open the tree node */
-                            $('#treeViewDiv').jstree('open_node', jsonData['core']['data'][i]['parent'], function(e, data) {
-                                $('#treeViewDiv').jstree(('select_node'), jsonData['core']['data'][i]['id']);
-                            }, true);
+                            ///* Auto open the tree node */
+                            //$('#treeViewDiv').jstree('open_node', jsonData['core']['data'][i]['parent'], function(e, data) {
+                            //    $('#treeViewDiv').jstree(('select_node'), jsonData['core']['data'][i]['id']);
+                            //}, true);
 
                             var node = {'id':jsonData['core']['data'][i]['id']};
 

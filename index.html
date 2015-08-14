@@ -1,17 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta charset="utf-8" />
-
 <title>BIMsurfer - Basic viewer</title>
-
 <script type="text/javascript">
-
 var debug = {};
-
-
 </script>
 
     <!-- Default CSS file to the JS Tree -->
@@ -54,19 +48,18 @@ var debug = {};
     <script type="text/javascript" src="js/String.js"></script>
     <script type="text/javascript" src="js/utils.js"></script>
 
+    <!-- Bootrap CSS link -->
     <link rel="stylesheet" href="./css/bootstrap.css" type="text/css" />
 	<link href="./css/dataTables.bootstrap.css" rel="stylesheet" type="text/css" />
 
-    <link rel="stylesheet" href="./css/font-awesome.css" type="text/css" />
-    <!-- Jquery UI css and js , needed for the dialog modal -->
-    <!--<link rel="stylesheet" href="./lib/jquery-ui-1.10.3.custom/css/custom-theme/jquery-ui-1.10.3.custom.css">-->
-	<!--<link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">-->
+    <link rel="stylesheet" href="./css/font-awesome.css" type="text/css" />    
+    <link rel="stylesheet" href="css/popup.css" />  
+
+    <!-- Jquery UI CSS -->
 	<link rel="stylesheet" href="./lib/jquery-ui-1.10.4.custom/css/smoothness/jquery-ui-1.10.4.custom.css">
-    <link rel="stylesheet" href="css/popup.css" />	
-	
+	<!-- Jquery UI JS -->
     <script type="text/javascript" src="./lib/jquery-ui-1.10.4.custom/js/jquery-ui-1.10.4.custom.js"></script>
 
-<!-- <script type="text/javascript" src="./js/example1.js"></script> -->
     <script>
         /* Define the global variables */
 
@@ -76,102 +69,10 @@ var debug = {};
             }
         };
         var treeData="";
-
-
-
         /* This gloabal variable is used to get the total count of objects in a building */
         var totObjects = 0;
         /* Associated with the context switching of Js tree */
         var process = true;
-
-//        new Edit
-        Global = {};
-
-        function Notifier() {
-            var othis = this;
-
-            this.setSelector = function(selector) {
-                var currentmessage = $(othis.selector).find(".message").html();
-                $(othis.selector).hide();
-                othis.selector = selector;
-                if (currentmessage != "" && currentmessage != undefined) {
-                    $(selector).show();
-                    $(selector).find(".message").html(currentmessage).parent().addClass("alert-success");
-                } else {
-                    $(othis.selector).hide();
-                }
-                $(othis.selector).find(".close").click(othis.clear);
-            };
-
-            this.clear = function() {
-                $(othis.selector).find(".message").html("").parent().hide();
-            };
-
-            this.resetStatus = function(){
-                if (othis.lastTimeOut != null) {
-                    clearTimeout(othis.lastTimeOut);
-                    othis.lastTimeOut = null;
-                }
-                $(othis.selector).stop(true, true);
-                $(othis.selector).fadeOut(1000);
-            };
-
-            this.resetStatusQuick = function(){
-                if (othis.lastTimeOut != null) {
-                    clearTimeout(othis.lastTimeOut);
-                    othis.lastTimeOut = null;
-                }
-                $(othis.selector).hide();
-            };
-
-            this.setSuccess = function(status, timeToShow) {
-                if (timeToShow == null) {
-                    timeToShow = 5000;
-                }
-                $(othis.selector).stop(true, true);
-                if (othis.lastTimeOut != null) {
-                    clearTimeout(othis.lastTimeOut);
-                    othis.lastTimeOut = null;
-                }
-                $(othis.selector).find(".message").html(status).parent().removeClass("initialhide").removeClass("alert-danger").removeClass("alert-info").addClass("alert-success").show();
-                var notifier = this;
-                if (timeToShow != -1) {
-                    othis.lastTimeOut = setTimeout(function(){
-                        notifier.resetStatus();
-                    }, timeToShow);
-                }
-            };
-
-            this.setInfo = function(status, timeToShow) {
-                if (timeToShow == null) {
-                    timeToShow = 5000;
-                }
-                $(othis.selector).stop(true, true);
-                if (othis.lastTimeOut != null) {
-                    clearTimeout(othis.lastTimeOut);
-                    othis.lastTimeOut = null;
-                }
-                $(othis.selector).find(".message").html(status).parent().show().removeClass("alert-danger").removeClass("alert-success").addClass("alert-info");
-                var notifier = this;
-                if (timeToShow != -1) {
-                    othis.lastTimeOut = setTimeout(function(){
-                        notifier.resetStatus();
-                    }, timeToShow);
-                }
-            };
-
-            this.setError = function(error) {
-                if (othis.lastTimeOut != null) {
-                    clearTimeout(othis.lastTimeOut);
-                    othis.lastTimeOut = null;
-                }
-                $(othis.selector).find(".message").html(error).parent().removeClass("alert-info").removeClass("alert-success").addClass("alert-danger").show();
-            };
-
-            othis.setSelector(".indexStatus .status");
-        }
-
-        Global.notifier = new Notifier();
 
     </script>
 <script type="text/javascript" src="./js/final.js"></script>
@@ -180,7 +81,6 @@ var debug = {};
 
 
 </head>
-
 <!--<body oncontextmenu="return false;">-->
 <body>
 <!-- Stack the columns on mobile by making one full-width and the other half-width -->
@@ -190,34 +90,42 @@ var debug = {};
         <div class="col-xs-12">
             <div class="col-lg-12">
 
-                <button type="button" class="btn btn-default" aria-label="Left Align" onclick="backward()">
-                    <span class="glyphicon glyphicon-minus" aria-hidden="true"></span>
-                </button>
-
-                <button type="button" class="btn btn-default" aria-label="Left Align" onclick="forward()">
-                    <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
-                </button>
-
-
-                <!--<button onclick="forward()" value="rotate">Forward</button>-->
-                <!--<button onclick="backward()" value="rotate">Backward</button>-->
-
+                <div class="col-lg-12">
+                    <h4 style="text-align: center">Slider Y Axis</h4>
+                    <p style="text-align: center" id="selectedNode"></p>
+                    <div id="slider"></div>
+                    <div id="s2" style="text-align:center">0.00</div>
+                </div>
                 <h3>Projects Structure
                     <button type="button" class="btn btn-default" aria-label="Right Align" onclick="refreshTree()">
                         <span class="fa fa-refresh" aria-hidden="true"></span>
                     </button>
                 </h3>
             </div>
-
             <!-- Div tag to display the json tree view-->
-            <div id="treeViewDiv" class="col-lg-12" style="height: 500px; overflow: auto">
+            <div id="treeViewDiv" class="col-lg-12" style="height: 600px; overflow: auto">
 
             </div>
-
-
-
         </div>
 	</div>
+
+    <script>
+    $(function() {
+        $( "#slider" ).slider({
+            max : 5,
+            min : -5,
+            step: 0.01,
+            change : function(event,ui){
+                $('#s2').html(ui.value);
+                var currentVal = ui.value;
+                inc =  currentVal - prevSliderVal;
+                prevSliderVal = ui.value;
+                move();
+            }
+        });
+
+    });
+    </script>
 
   	<!-- Div for the 3d renderer+ -->
   	<div class="col-xs-9">
@@ -486,18 +394,10 @@ $.fn.tabbedDialog = function () {
 
 $('#tenant').tabbedDialog();
 
-function backward(){
-    inc = 0.5;
-    direction = "backward";
-    allRendered = false;
-}
-
-function forward(){
+function move(){
     var nodeId = $("#treeViewDiv").jstree("get_selected");
     var nodeType;
     globalMatrix=[];
-    inc = 0.5;
-    direction = "forward";
 
     /* Check the node Type */
     for(var i = 0; i < jsonTree['core']['data'].length; i++) {
@@ -531,9 +431,6 @@ function forward(){
         if(!allRendered){
             for(var j=0 ; j< globalMatrix.length ; j++){
                 console.log(j);
-                if(j ==71){
-                    console.log("came to the point");
-                }
 
                 var myMatrix = viewer.scene.findNode(globalMatrix[j]);
 
@@ -541,19 +438,11 @@ function forward(){
                     /* Some weird thing I dont know why */
                     if(myMatrix.nodes[0].type == "material"){
                         var modelMatrix  = myMatrix.nodes[0].nodes[0].getModelMatrix();
-                        if(direction == "forward"){
-                            modelMatrix[13] += inc;
-                        }else{
-                            modelMatrix[13] -= inc;
-                        }
+                        modelMatrix[13] += inc;
                         myMatrix.nodes[0].nodes[0].setElements(modelMatrix);
                     }else{
                         var modelMatrix  = myMatrix.nodes[0].getModelMatrix();
-                        if(direction == "forward"){
-                            modelMatrix[13] += inc;
-                        }else{
-                            modelMatrix[13] -= inc;
-                        }
+                        modelMatrix[13] += inc;
                         myMatrix.nodes[0].setElements(modelMatrix);
                     }
                 }

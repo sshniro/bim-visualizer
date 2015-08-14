@@ -268,6 +268,7 @@ $(function()
 
         if(process){
             console.log(data.selected);
+
             /* If the node selected is zero */
             if(data.selected.length == 0){
                 return;
@@ -294,17 +295,21 @@ $(function()
                             }
                         }
 
-                        addDataToDetails(i);
-
                         var selectedNode = {'id':jsonData['core']['data'][i]['id']};
                         nodeSelected(selectedNode);
 
+                        /* Add the selected node name to the slider text */
+                        $('#selectedNode').html(jsonData['core']['data'][i]['text']);
                         /* HighLight the object in the Canvas */
                         var sceneNode = viewer.scene.findNode(jsonData['core']['data'][i]['id']);
                         if(sceneNode != null){
                             sceneNode.nodeId = sceneNode.id;
                             viewer.getControl("BIMSURFER.Control.ClickSelect").pick(sceneNode);
                         }
+
+                        addDataToDetails(i);
+
+
                         return;
                     }
                 }

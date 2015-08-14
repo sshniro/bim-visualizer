@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="us">
+<head>
+	<meta charset="utf-8">
+	<title>jQuery UI Example Page</title>
+	<link href="css/ui-lightness/jquery-ui-1.10.4.custom.css" rel="stylesheet">
+	<script src="js/jquery-1.10.2.js"></script>
+	<script src="js/jquery-ui-1.10.4.custom.js"></script>
+	<script>
+	$(function() {
+		
+		
+		$( "#slider" ).slider({
+			max : 20,
+			min : -20,
+			change : function(event,ui){
+				$('#s2').html(ui.value);
+			}
+		});
+
+	});
+	</script>
+
+</head>
+<body>
+
+
+<!-- Slider -->
+<h2 class="demoHeaders">Slider</h2>
+<div id="slider"></div>
+<div id="s2"></div>
+
+
+
+</body>
+</html>
