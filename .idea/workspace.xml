@@ -2,665 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="88a5b8dc-b64d-4aa5-a2a7-6df3ef4fed81" name="Default" comment="">
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\css\custom-theme\images\animated-overlay.gif" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\css\custom-theme\images\ui-bg_flat_0_DCDCDC_40x100.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\css\custom-theme\images\ui-bg_flat_0_E7E7E7_40x100.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\css\custom-theme\images\ui-bg_flat_0_aaaaaa_40x100.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\css\custom-theme\images\ui-bg_flat_0_fbf9ee_40x100.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\css\custom-theme\images\ui-bg_flat_0_fef1ec_40x100.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\css\custom-theme\images\ui-bg_flat_0_ffffff_40x100.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\css\custom-theme\images\ui-bg_highlight-soft_10_333_1x100.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\css\custom-theme\images\ui-icons_000000_256x240.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\css\custom-theme\images\ui-icons_3399ff_256x240.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\css\custom-theme\images\ui-icons_cc0000_256x240.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\css\custom-theme\images\ui-icons_ffffff_256x240.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\css\custom-theme\jquery-ui-1.10.3.custom.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\css\custom-theme\jquery-ui-1.10.3.custom.min.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\AUTHORS.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\Gruntfile.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\MIT-LICENSE.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\README.md" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\accordion\collapsible.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\accordion\custom-icons.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\accordion\default.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\accordion\fillspace.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\accordion\hoverintent.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\accordion\index.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\accordion\no-auto-height.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\accordion\sortable.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\addClass\default.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\addClass\index.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\animate\default.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\animate\index.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\autocomplete\categories.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\autocomplete\combobox.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\autocomplete\custom-data.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\autocomplete\default.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\autocomplete\folding.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\autocomplete\images\jquery_32x32.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\autocomplete\images\jqueryui_32x32.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\autocomplete\images\sizzlejs_32x32.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\autocomplete\images\transparent_1x1.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\autocomplete\images\ui-anim_basic_16x16.gif" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\autocomplete\index.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\autocomplete\london.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\autocomplete\maxheight.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\autocomplete\multiple-remote.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\autocomplete\multiple.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\autocomplete\remote-jsonp.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\autocomplete\remote-with-cache.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\autocomplete\remote.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\autocomplete\search.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\autocomplete\xml.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\button\checkbox.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\button\default.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\button\icons.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\button\index.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\button\radio.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\button\splitbutton.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\button\toolbar.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\datepicker\alt-field.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\datepicker\animation.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\datepicker\buttonbar.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\datepicker\date-formats.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\datepicker\date-range.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\datepicker\default.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\datepicker\dropdown-month-year.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\datepicker\icon-trigger.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\datepicker\images\calendar.gif" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\datepicker\index.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\datepicker\inline.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\datepicker\jquery.ui.datepicker-ar.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\datepicker\jquery.ui.datepicker-fr.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\datepicker\jquery.ui.datepicker-he.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\datepicker\jquery.ui.datepicker-zh-TW.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\datepicker\localization.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\datepicker\min-max.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\datepicker\multiple-calendars.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\datepicker\other-months.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\datepicker\show-week.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\demos.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\dialog\animated.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\dialog\default.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\dialog\index.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\dialog\modal-confirmation.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\dialog\modal-form.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\dialog\modal-message.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\dialog\modal.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\draggable\constrain-movement.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\draggable\cursor-style.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\draggable\default.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\draggable\delay-start.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\draggable\events.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\draggable\handle.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\draggable\index.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\draggable\revert.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\draggable\scroll.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\draggable\snap-to.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\draggable\sortable.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\draggable\visual-feedback.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\droppable\accepted-elements.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\droppable\default.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\droppable\images\high_tatras.jpg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\droppable\images\high_tatras2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\droppable\images\high_tatras2_min.jpg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\droppable\images\high_tatras3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\droppable\images\high_tatras3_min.jpg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\droppable\images\high_tatras4.jpg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\droppable\images\high_tatras4_min.jpg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\droppable\images\high_tatras_min.jpg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\droppable\index.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\droppable\photo-manager.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\droppable\propagation.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\droppable\revert.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\droppable\shopping-cart.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\droppable\visual-feedback.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\effect\default.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\effect\easing.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\effect\index.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\hide\default.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\hide\index.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\images\calendar.gif" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\images\demo-config-on-tile.gif" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\images\demo-config-on.gif" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\images\demo-spindown-closed.gif" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\images\demo-spindown-open.gif" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\images\icon-docs-info.gif" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\images\pbar-ani.gif" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\index.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\menu\default.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\menu\icons.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\menu\index.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\position\cycler.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\position\default.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\position\images\earth.jpg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\position\images\flight.jpg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\position\images\rocket.jpg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\position\index.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\progressbar\default.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\progressbar\images\pbar-ani.gif" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\progressbar\indeterminate.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\progressbar\index.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\progressbar\label.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\removeClass\default.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\removeClass\index.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\resizable\animate.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\resizable\aspect-ratio.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\resizable\constrain-area.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\resizable\default.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\resizable\delay-start.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\resizable\helper.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\resizable\index.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\resizable\max-min.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\resizable\snap-to-grid.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\resizable\synchronous-resize.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\resizable\textarea.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\resizable\visual-feedback.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\selectable\default.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\selectable\display-grid.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\selectable\index.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\selectable\serialize.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\show\default.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\show\index.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\slider\colorpicker.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\slider\default.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\slider\hotelrooms.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\slider\index.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\slider\multiple-vertical.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\slider\range-vertical.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\slider\range.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\slider\rangemax.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\slider\rangemin.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\slider\side-scroll.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\slider\slider-vertical.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\slider\steps.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\sortable\connect-lists-through-tabs.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\sortable\connect-lists.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\sortable\default.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\sortable\delay-start.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\sortable\display-grid.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\sortable\empty-lists.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\sortable\index.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\sortable\items.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\sortable\placeholder.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\sortable\portlets.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\spinner\currency.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\spinner\decimal.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\spinner\default.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\spinner\index.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\spinner\latlong.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\spinner\overflow.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\spinner\time.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\switchClass\default.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\switchClass\index.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\tabs\ajax.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\tabs\ajax\content1.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\tabs\ajax\content2.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\tabs\ajax\content3-slow.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\tabs\ajax\content4-broken.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\tabs\bottom.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\tabs\collapsible.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\tabs\default.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\tabs\index.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\tabs\manipulation.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\tabs\mouseover.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\tabs\sortable.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\tabs\vertical.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\toggleClass\default.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\toggleClass\index.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\toggle\default.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\toggle\index.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\tooltip\ajax\content1.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\tooltip\ajax\content2.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\tooltip\custom-animation.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\tooltip\custom-content.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\tooltip\custom-style.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\tooltip\default.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\tooltip\forms.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\tooltip\images\st-stephens.jpg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\tooltip\images\tower-bridge.jpg" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\tooltip\index.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\tooltip\tracking.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\tooltip\video-player.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\widget\default.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\demos\widget\index.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\docs\accordion.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\docs\autocomplete.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\docs\blind-effect.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\docs\bounce-effect.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\docs\button.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\docs\clip-effect.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\docs\datepicker.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\docs\dialog.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\docs\draggable.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\docs\drop-effect.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\docs\droppable.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\docs\explode-effect.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\docs\fade-effect.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\docs\fold-effect.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\docs\highlight-effect.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\docs\jQuery.widget.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\docs\menu.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\docs\mouse.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\docs\position.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\docs\progressbar.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\docs\puff-effect.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\docs\pulsate-effect.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\docs\resizable.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\docs\scale-effect.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\docs\selectable.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\docs\shake-effect.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\docs\size-effect.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\docs\slide-effect.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\docs\slider.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\docs\sortable.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\docs\spinner.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\docs\tabs.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\docs\tooltip.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\docs\transfer-effect.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\external\globalize.culture.de-DE.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\external\globalize.culture.ja-JP.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\external\globalize.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\external\jquery.mousewheel.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\external\jshint.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\external\qunit.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\external\qunit.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\jquery-1.9.1.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\package.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\themes\base\images\animated-overlay.gif" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\themes\base\images\ui-bg_glass_75_dadada_1x400.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\themes\base\images\ui-icons_222222_256x240.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\themes\base\images\ui-icons_2e83ff_256x240.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\themes\base\images\ui-icons_454545_256x240.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\themes\base\images\ui-icons_888888_256x240.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\themes\base\images\ui-icons_cd0a0a_256x240.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\themes\base\jquery-ui.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\themes\base\jquery.ui.accordion.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\themes\base\jquery.ui.all.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\themes\base\jquery.ui.autocomplete.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\themes\base\jquery.ui.base.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\themes\base\jquery.ui.button.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\themes\base\jquery.ui.core.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\themes\base\jquery.ui.datepicker.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\themes\base\jquery.ui.dialog.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\themes\base\jquery.ui.menu.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\themes\base\jquery.ui.progressbar.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\themes\base\jquery.ui.resizable.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\themes\base\jquery.ui.selectable.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\themes\base\jquery.ui.slider.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\themes\base\jquery.ui.spinner.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\themes\base\jquery.ui.tabs.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\themes\base\jquery.ui.theme.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\themes\base\jquery.ui.tooltip.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\themes\base\minified\images\animated-overlay.gif" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\themes\base\minified\images\ui-bg_flat_0_aaaaaa_40x100.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\themes\base\minified\images\ui-bg_flat_75_ffffff_40x100.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\themes\base\minified\images\ui-bg_glass_55_fbf9ee_1x400.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\themes\base\minified\images\ui-bg_glass_65_ffffff_1x400.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\themes\base\minified\images\ui-bg_glass_75_dadada_1x400.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\themes\base\minified\images\ui-bg_glass_75_e6e6e6_1x400.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\themes\base\minified\images\ui-bg_glass_95_fef1ec_1x400.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\themes\base\minified\images\ui-bg_highlight-soft_75_cccccc_1x100.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\themes\base\minified\images\ui-icons_222222_256x240.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\themes\base\minified\images\ui-icons_2e83ff_256x240.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\themes\base\minified\images\ui-icons_454545_256x240.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\themes\base\minified\images\ui-icons_888888_256x240.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\themes\base\minified\images\ui-icons_cd0a0a_256x240.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\themes\base\minified\jquery-ui.min.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\themes\base\minified\jquery.ui.accordion.min.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\themes\base\minified\jquery.ui.autocomplete.min.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\themes\base\minified\jquery.ui.button.min.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\themes\base\minified\jquery.ui.core.min.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\themes\base\minified\jquery.ui.datepicker.min.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\themes\base\minified\jquery.ui.dialog.min.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\themes\base\minified\jquery.ui.menu.min.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\themes\base\minified\jquery.ui.progressbar.min.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\themes\base\minified\jquery.ui.resizable.min.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\themes\base\minified\jquery.ui.selectable.min.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\themes\base\minified\jquery.ui.slider.min.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\themes\base\minified\jquery.ui.spinner.min.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\themes\base\minified\jquery.ui.tabs.min.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\themes\base\minified\jquery.ui.theme.min.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\themes\base\minified\jquery.ui.tooltip.min.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\themes\custom-theme\images\animated-overlay.gif" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\themes\custom-theme\images\ui-bg_flat_0_DCDCDC_40x100.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\themes\custom-theme\images\ui-bg_flat_0_E7E7E7_40x100.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\themes\custom-theme\images\ui-bg_flat_0_aaaaaa_40x100.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\themes\custom-theme\images\ui-bg_flat_0_fbf9ee_40x100.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\themes\custom-theme\images\ui-bg_flat_0_fef1ec_40x100.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\themes\custom-theme\images\ui-bg_flat_0_ffffff_40x100.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\themes\custom-theme\images\ui-bg_highlight-soft_10_333_1x100.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\themes\custom-theme\images\ui-icons_000000_256x240.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\themes\custom-theme\images\ui-icons_3399ff_256x240.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\themes\custom-theme\images\ui-icons_cc0000_256x240.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\themes\custom-theme\images\ui-icons_ffffff_256x240.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\themes\custom-theme\jquery-ui.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\themes\custom-theme\jquery.ui.accordion.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\themes\custom-theme\jquery.ui.all.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\themes\custom-theme\jquery.ui.autocomplete.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\themes\custom-theme\jquery.ui.base.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\themes\custom-theme\jquery.ui.button.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\themes\custom-theme\jquery.ui.core.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\themes\custom-theme\jquery.ui.datepicker.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\themes\custom-theme\jquery.ui.dialog.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\themes\custom-theme\jquery.ui.menu.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\themes\custom-theme\jquery.ui.progressbar.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\themes\custom-theme\jquery.ui.resizable.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\themes\custom-theme\jquery.ui.selectable.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\themes\custom-theme\jquery.ui.slider.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\themes\custom-theme\jquery.ui.spinner.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\themes\custom-theme\jquery.ui.tabs.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\themes\custom-theme\jquery.ui.theme.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\themes\custom-theme\jquery.ui.tooltip.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\themes\custom-theme\minified\images\animated-overlay.gif" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\themes\custom-theme\minified\images\ui-bg_flat_0_DCDCDC_40x100.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\themes\custom-theme\minified\images\ui-bg_flat_0_E7E7E7_40x100.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\themes\custom-theme\minified\images\ui-bg_flat_0_aaaaaa_40x100.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\themes\custom-theme\minified\images\ui-bg_flat_0_fbf9ee_40x100.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\themes\custom-theme\minified\images\ui-bg_flat_0_fef1ec_40x100.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\themes\custom-theme\minified\images\ui-bg_flat_0_ffffff_40x100.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\themes\custom-theme\minified\images\ui-bg_highlight-soft_10_333_1x100.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\themes\custom-theme\minified\images\ui-icons_000000_256x240.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\themes\custom-theme\minified\images\ui-icons_3399ff_256x240.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\themes\custom-theme\minified\images\ui-icons_cc0000_256x240.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\themes\custom-theme\minified\images\ui-icons_ffffff_256x240.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\themes\custom-theme\minified\jquery-ui.min.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\themes\custom-theme\minified\jquery.ui.accordion.min.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\themes\custom-theme\minified\jquery.ui.autocomplete.min.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\themes\custom-theme\minified\jquery.ui.button.min.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\themes\custom-theme\minified\jquery.ui.core.min.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\themes\custom-theme\minified\jquery.ui.datepicker.min.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\themes\custom-theme\minified\jquery.ui.dialog.min.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\themes\custom-theme\minified\jquery.ui.menu.min.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\themes\custom-theme\minified\jquery.ui.progressbar.min.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\themes\custom-theme\minified\jquery.ui.resizable.min.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\themes\custom-theme\minified\jquery.ui.selectable.min.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\themes\custom-theme\minified\jquery.ui.slider.min.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\themes\custom-theme\minified\jquery.ui.spinner.min.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\themes\custom-theme\minified\jquery.ui.tabs.min.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\themes\custom-theme\minified\jquery.ui.theme.min.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\themes\custom-theme\minified\jquery.ui.tooltip.min.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui.accordion.jquery.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui.autocomplete.jquery.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui.button.jquery.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui.core.jquery.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui.datepicker.jquery.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui.dialog.jquery.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui.draggable.jquery.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui.droppable.jquery.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui.effect-blind.jquery.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui.effect-bounce.jquery.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui.effect-clip.jquery.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui.effect-drop.jquery.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui.effect-explode.jquery.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui.effect-fade.jquery.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui.effect-fold.jquery.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui.effect-highlight.jquery.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui.effect-pulsate.jquery.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui.effect-scale.jquery.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui.effect-shake.jquery.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui.effect-slide.jquery.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui.effect-transfer.jquery.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui.effect.jquery.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui.menu.jquery.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui.mouse.jquery.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui.position.jquery.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui.progressbar.jquery.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui.resizable.jquery.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui.selectable.jquery.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui.slider.jquery.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui.sortable.jquery.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui.spinner.jquery.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui.tabs.jquery.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui.tooltip.jquery.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui.widget.jquery.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\i18n\jquery-ui-i18n.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\i18n\jquery.ui.datepicker-af.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\i18n\jquery.ui.datepicker-ar-DZ.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\i18n\jquery.ui.datepicker-ar.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\i18n\jquery.ui.datepicker-az.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\i18n\jquery.ui.datepicker-be.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\i18n\jquery.ui.datepicker-bg.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\i18n\jquery.ui.datepicker-bs.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\i18n\jquery.ui.datepicker-ca.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\i18n\jquery.ui.datepicker-cs.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\i18n\jquery.ui.datepicker-cy-GB.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\i18n\jquery.ui.datepicker-da.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\i18n\jquery.ui.datepicker-de.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\i18n\jquery.ui.datepicker-el.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\i18n\jquery.ui.datepicker-en-AU.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\i18n\jquery.ui.datepicker-en-GB.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\i18n\jquery.ui.datepicker-en-NZ.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\i18n\jquery.ui.datepicker-eo.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\i18n\jquery.ui.datepicker-es.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\i18n\jquery.ui.datepicker-et.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\i18n\jquery.ui.datepicker-eu.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\i18n\jquery.ui.datepicker-fa.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\i18n\jquery.ui.datepicker-fi.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\i18n\jquery.ui.datepicker-fo.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\i18n\jquery.ui.datepicker-fr-CA.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\i18n\jquery.ui.datepicker-fr-CH.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\i18n\jquery.ui.datepicker-fr.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\i18n\jquery.ui.datepicker-gl.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\i18n\jquery.ui.datepicker-he.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\i18n\jquery.ui.datepicker-hi.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\i18n\jquery.ui.datepicker-hr.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\i18n\jquery.ui.datepicker-hu.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\i18n\jquery.ui.datepicker-hy.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\i18n\jquery.ui.datepicker-id.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\i18n\jquery.ui.datepicker-is.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\i18n\jquery.ui.datepicker-it.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\i18n\jquery.ui.datepicker-ja.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\i18n\jquery.ui.datepicker-ka.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\i18n\jquery.ui.datepicker-kk.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\i18n\jquery.ui.datepicker-km.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\i18n\jquery.ui.datepicker-ko.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\i18n\jquery.ui.datepicker-ky.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\i18n\jquery.ui.datepicker-lb.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\i18n\jquery.ui.datepicker-lt.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\i18n\jquery.ui.datepicker-lv.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\i18n\jquery.ui.datepicker-mk.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\i18n\jquery.ui.datepicker-ml.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\i18n\jquery.ui.datepicker-ms.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\i18n\jquery.ui.datepicker-nb.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\i18n\jquery.ui.datepicker-nl-BE.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\i18n\jquery.ui.datepicker-nl.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\i18n\jquery.ui.datepicker-nn.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\i18n\jquery.ui.datepicker-no.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\i18n\jquery.ui.datepicker-pl.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\i18n\jquery.ui.datepicker-pt-BR.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\i18n\jquery.ui.datepicker-pt.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\i18n\jquery.ui.datepicker-rm.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\i18n\jquery.ui.datepicker-ro.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\i18n\jquery.ui.datepicker-ru.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\i18n\jquery.ui.datepicker-sk.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\i18n\jquery.ui.datepicker-sl.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\i18n\jquery.ui.datepicker-sq.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\i18n\jquery.ui.datepicker-sr-SR.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\i18n\jquery.ui.datepicker-sr.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\i18n\jquery.ui.datepicker-sv.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\i18n\jquery.ui.datepicker-ta.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\i18n\jquery.ui.datepicker-th.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\i18n\jquery.ui.datepicker-tj.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\i18n\jquery.ui.datepicker-tr.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\i18n\jquery.ui.datepicker-uk.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\i18n\jquery.ui.datepicker-vi.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\i18n\jquery.ui.datepicker-zh-CN.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\i18n\jquery.ui.datepicker-zh-HK.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\i18n\jquery.ui.datepicker-zh-TW.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\jquery-ui.custom.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\jquery.ui.accordion.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\jquery.ui.autocomplete.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\jquery.ui.button.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\jquery.ui.core.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\jquery.ui.datepicker.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\jquery.ui.dialog.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\jquery.ui.draggable.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\jquery.ui.droppable.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\jquery.ui.effect-blind.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\jquery.ui.effect-bounce.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\jquery.ui.effect-clip.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\jquery.ui.effect-drop.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\jquery.ui.effect-explode.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\jquery.ui.effect-fade.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\jquery.ui.effect-fold.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\jquery.ui.effect-highlight.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\jquery.ui.effect-pulsate.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\jquery.ui.effect-scale.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\jquery.ui.effect-shake.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\jquery.ui.effect-slide.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\jquery.ui.effect-transfer.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\jquery.ui.effect.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\jquery.ui.menu.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\jquery.ui.mouse.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\jquery.ui.position.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\jquery.ui.progressbar.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\jquery.ui.resizable.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\jquery.ui.selectable.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\jquery.ui.slider.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\jquery.ui.sortable.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\jquery.ui.spinner.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\jquery.ui.tabs.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\jquery.ui.tooltip.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\jquery.ui.widget.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\minified\i18n\jquery-ui-i18n.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-af.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-ar-DZ.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-ar.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-az.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-be.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-bg.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-bs.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-ca.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-cs.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-cy-GB.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-da.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-de.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-el.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-en-AU.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-en-GB.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-en-NZ.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-eo.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-es.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-et.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-eu.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-fa.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-fi.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-fo.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-fr-CA.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-fr-CH.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-fr.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-gl.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-he.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-hi.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-hr.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-hu.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-hy.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-id.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-is.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-it.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-ja.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-ka.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-kk.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-km.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-ko.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-ky.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-lb.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-lt.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-lv.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-mk.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-ml.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-ms.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-nb.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-nl-BE.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-nl.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-nn.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-no.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-pl.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-pt-BR.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-pt.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-rm.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-ro.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-ru.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-sk.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-sl.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-sq.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-sr-SR.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-sr.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-sv.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-ta.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-th.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-tj.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-tr.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-uk.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-vi.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-zh-CN.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-zh-HK.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\minified\i18n\jquery.ui.datepicker-zh-TW.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\minified\jquery-ui.custom.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\minified\jquery.ui.accordion.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\minified\jquery.ui.autocomplete.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\minified\jquery.ui.button.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\minified\jquery.ui.core.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\minified\jquery.ui.datepicker.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\minified\jquery.ui.dialog.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\minified\jquery.ui.draggable.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\minified\jquery.ui.droppable.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\minified\jquery.ui.effect-blind.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\minified\jquery.ui.effect-bounce.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\minified\jquery.ui.effect-clip.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\minified\jquery.ui.effect-drop.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\minified\jquery.ui.effect-explode.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\minified\jquery.ui.effect-fade.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\minified\jquery.ui.effect-fold.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\minified\jquery.ui.effect-highlight.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\minified\jquery.ui.effect-pulsate.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\minified\jquery.ui.effect-scale.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\minified\jquery.ui.effect-shake.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\minified\jquery.ui.effect-slide.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\minified\jquery.ui.effect-transfer.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\minified\jquery.ui.effect.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\minified\jquery.ui.menu.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\minified\jquery.ui.mouse.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\minified\jquery.ui.position.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\minified\jquery.ui.progressbar.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\minified\jquery.ui.resizable.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\minified\jquery.ui.selectable.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\minified\jquery.ui.slider.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\minified\jquery.ui.sortable.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\minified\jquery.ui.spinner.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\minified\jquery.ui.tabs.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\minified\jquery.ui.tooltip.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\development-bundle\ui\minified\jquery.ui.widget.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\index.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\js\jquery-1.9.1.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\js\jquery-ui-1.10.3.custom.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\niro\Desktop\dev\dev-bim-surfer\lib\jquery-ui-1.10.3.custom\js\jquery-ui-1.10.3.custom.min.js" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/jquery-ui-1.10.4.custom/css/smoothness/images/ui-bg_flat_0_aaaaaa_40x100.png" afterPath="$PROJECT_DIR$/lib/jquery-ui-1.10.4.custom/css/smoothness/images/ui-bg_flat_0_aaaaaa_40x100.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/jquery-ui-1.10.4.custom/css/smoothness/images/ui-bg_flat_75_ffffff_40x100.png" afterPath="$PROJECT_DIR$/lib/jquery-ui-1.10.4.custom/css/smoothness/images/ui-bg_flat_75_ffffff_40x100.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/jquery-ui-1.10.4.custom/css/smoothness/images/ui-bg_glass_55_fbf9ee_1x400.png" afterPath="$PROJECT_DIR$/lib/jquery-ui-1.10.4.custom/css/smoothness/images/ui-bg_glass_55_fbf9ee_1x400.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/jquery-ui-1.10.4.custom/css/smoothness/images/ui-bg_glass_65_ffffff_1x400.png" afterPath="$PROJECT_DIR$/lib/jquery-ui-1.10.4.custom/css/smoothness/images/ui-bg_glass_65_ffffff_1x400.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/jquery-ui-1.10.4.custom/css/smoothness/images/ui-bg_glass_75_dadada_1x400.png" afterPath="$PROJECT_DIR$/lib/jquery-ui-1.10.4.custom/css/smoothness/images/ui-bg_glass_75_dadada_1x400.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/jquery-ui-1.10.4.custom/css/smoothness/images/ui-bg_glass_75_e6e6e6_1x400.png" afterPath="$PROJECT_DIR$/lib/jquery-ui-1.10.4.custom/css/smoothness/images/ui-bg_glass_75_e6e6e6_1x400.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/jquery-ui-1.10.4.custom/css/smoothness/images/ui-bg_glass_95_fef1ec_1x400.png" afterPath="$PROJECT_DIR$/lib/jquery-ui-1.10.4.custom/css/smoothness/images/ui-bg_glass_95_fef1ec_1x400.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/jquery-ui-1.10.4.custom/css/smoothness/images/ui-bg_highlight-soft_75_cccccc_1x100.png" afterPath="$PROJECT_DIR$/lib/jquery-ui-1.10.4.custom/css/smoothness/images/ui-bg_highlight-soft_75_cccccc_1x100.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api/Viewer.js" afterPath="$PROJECT_DIR$/api/Viewer.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/configs.js" afterPath="$PROJECT_DIR$/js/configs.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/final.js" afterPath="$PROJECT_DIR$/js/final.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/jquery-ui-1.10.4.custom/js/jquery-1.10.2.js" afterPath="$PROJECT_DIR$/lib/jquery-ui-1.10.4.custom/js/jquery-1.10.2.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/jquery-ui-1.10.4.custom/css/smoothness/jquery-ui-1.10.4.custom.css" afterPath="$PROJECT_DIR$/lib/jquery-ui-1.10.4.custom/css/smoothness/jquery-ui-1.10.4.custom.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/jquery-ui-1.10.4.custom/js/jquery-ui-1.10.4.custom.js" afterPath="$PROJECT_DIR$/lib/jquery-ui-1.10.4.custom/js/jquery-ui-1.10.4.custom.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/jquery-ui-1.10.4.custom/css/smoothness/jquery-ui-1.10.4.custom.min.css" afterPath="$PROJECT_DIR$/lib/jquery-ui-1.10.4.custom/css/smoothness/jquery-ui-1.10.4.custom.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/jquery-ui-1.10.4.custom/js/jquery-ui-1.10.4.custom.min.js" afterPath="$PROJECT_DIR$/lib/jquery-ui-1.10.4.custom/js/jquery-ui-1.10.4.custom.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="dev-bim-surfer.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -682,15 +24,15 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="121" column="29" selection-start-line="121" selection-start-column="16" selection-end-line="121" selection-end-column="29" />
+            <state vertical-scroll-proportion="0.5903614">
+              <caret line="106" column="55" selection-start-line="106" selection-start-column="55" selection-end-line="106" selection-end-column="55" />
               <folding>
-                <element signature="n#style#0;n#h4#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#h5#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#div#2;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -704,10 +46,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="final.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="final.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/final.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.44810542">
+            <state vertical-scroll-proportion="0.0">
               <caret line="265" column="38" selection-start-line="265" selection-start-column="38" selection-end-line="265" selection-end-column="38" />
               <folding>
                 <marker date="1439461385487" expanded="true" signature="27440:27451" placeholder="..." />
@@ -1109,15 +451,15 @@
       <workItem from="1435977597520" duration="7715000" />
       <workItem from="1439440989414" duration="5225000" />
       <workItem from="1439458945891" duration="3163000" />
-      <workItem from="1439541380025" duration="71000" />
+      <workItem from="1439541380025" duration="978000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20225000" />
+    <option name="totallyTimeSpent" value="21132000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1199,9 +541,9 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="121" column="29" selection-start-line="121" selection-start-column="16" selection-end-line="121" selection-end-column="29" />
           <folding>
-            <element signature="n#style#0;n#h4#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h5#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#div#2;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -1240,9 +582,9 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="436" column="27" selection-start-line="435" selection-start-column="26" selection-end-line="435" selection-end-column="28" />
           <folding>
-            <element signature="n#style#0;n#h4#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h5#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#div#2;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -1259,6 +601,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1266,6 +609,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="1443" column="39" selection-start-line="1443" selection-start-column="39" selection-end-line="1443" selection-end-column="39" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1295,9 +639,9 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="n#style#0;n#h4#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h5#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#div#2;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -1314,6 +658,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="1434" column="35" selection-start-line="1434" selection-start-column="20" selection-end-line="1434" selection-end-column="35" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1339,9 +684,9 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="275" column="11" selection-start-line="275" selection-start-column="11" selection-end-line="275" selection-end-column="11" />
           <folding>
-            <element signature="n#style#0;n#h4#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h5#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#div#2;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -1372,6 +717,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="1443" column="39" selection-start-line="1443" selection-start-column="39" selection-end-line="1443" selection-end-column="39" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1379,6 +725,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="269" column="0" selection-start-line="269" selection-start-column="0" selection-end-line="269" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1393,14 +740,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/js/final.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="121" column="29" selection-start-line="121" selection-start-column="16" selection-end-line="121" selection-end-column="29" />
+          <caret line="265" column="38" selection-start-line="265" selection-start-column="38" selection-end-line="265" selection-end-column="38" />
           <folding>
-            <element signature="n#style#0;n#h4#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <marker date="1439461385487" expanded="true" signature="27440:27451" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5903614">
+          <caret line="106" column="55" selection-start-line="106" selection-start-column="55" selection-end-line="106" selection-end-column="55" />
+          <folding>
+            <element signature="n#style#0;n#h5#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#div#2;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -1409,16 +766,6 @@
             <element signature="n#div#5;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#div#6;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#style#0;n#div#2;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/final.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.44810542">
-          <caret line="265" column="38" selection-start-line="265" selection-start-column="38" selection-end-line="265" selection-end-column="38" />
-          <folding>
-            <marker date="1439461385487" expanded="true" signature="27440:27451" placeholder="..." />
           </folding>
         </state>
       </provider>
