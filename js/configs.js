@@ -51,6 +51,9 @@ var server = null;
 var viewer = null;
 var bimServerApi = null;
 
+/* Associated with the context switching of Js tree */
+var process = true;
+
 // buildingStorey
 // IfcType
 
