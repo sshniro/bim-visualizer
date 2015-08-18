@@ -143,8 +143,8 @@ var debug = {};
     <script>
     $(function() {
         $( "#slider" ).slider({
-            max : 5,
-            min : -5,
+            max : 15,
+            min : -15,
             step: 0.01,
             change : function(event,ui){
 
@@ -560,14 +560,48 @@ function getAllChildElements(parent){
             }
         }else{
             var nodeId = $("#treeViewDiv").jstree("get_selected");
+            var existingBuildingStorey = false;
             for(var i = 0; i < sliderPositions.storeys.length; i++) {
                 if(nodeId == sliderPositions.storeys[i]['id']){
                     sliderSwitch = false;
                     $("#slider").slider('value',sliderPositions.storeys[i]['prevSliderVal']);
+                    $('#s2').html(sliderPositions.storeys[i]['prevSliderVal']);
                     sliderSwitch = true;
+                    existingBuildingStorey = true;
                     break;
                 }
             }
+
+            /* A new building has been loaded so add those building storeys to the slider*/
+            if(!existingBuildingStorey){
+                for(var i = 0; i < jsonTree['core']['data'].length; i++) {
+                    if(jsonTree['core']['data'][i]['type'] == "buildingStorey"){
+
+                        var nodeExists = false;
+
+                        for(var j = 0; j < sliderPositions.storeys.length; j++) {
+                            if(sliderPositions.storeys[j]['id'] == jsonTree['core']['data'][i]['id']){
+                                nodeExists = true;
+                                break;
+                            }
+                        }
+
+                        if(!nodeExists){
+                            var pos = {
+                                id : jsonTree['core']['data'][i]['id'],
+                                pos : 0,
+                                prevSliderVal : 0
+                            };
+                            sliderPositions.storeys.push(pos);
+                        }
+                    }
+                }
+                sliderSwitch = false;
+                $("#slider").slider('value',0);
+                $('#s2').html(0);
+                sliderSwitch = true;
+            }
+
         }
     }
 
