@@ -249,8 +249,6 @@ $(function()
         }
     }
 
-
-
     function getAllChildElements(parent){
         var childElements = [];
         for(var i = 0; i < jsonTree['core']['data'].length; i++) {
@@ -275,11 +273,13 @@ $(function()
             }
             /* If the node selected is only one */
             else if(data.selected.length == 1 ){
-                /* Find the node of the project selected */
 
+                /* Find the node of the project selected */
                 for(var i = 0; i < jsonTree['core']['data'].length; i++) {
                     var obj = jsonTree['core']['data'][i];
                     if(data.selected == obj.id){
+
+                        /* If the selected node is a project load the project in the canvas */
                         if(jsonData['core']['data'][i]['type'] == "project" ){
                             refreshTree();
                             var projectLoaded = false;
@@ -295,6 +295,12 @@ $(function()
                             }
                         }
 
+                        /* If the selected node is a IfcBuildingStorey set the slider positions */
+                        if(jsonData['core']['data'][i]['type'] == "buildingStorey" ){
+                            //set slider posistion
+                            setSliderPositions();
+                        }
+
                         var selectedNode = {'id':jsonData['core']['data'][i]['id']};
                         nodeSelected(selectedNode);
 
@@ -307,9 +313,8 @@ $(function()
                             viewer.getControl("BIMSURFER.Control.ClickSelect").pick(sceneNode);
                         }
 
+                        /* Create the pop up dialog box */
                         addDataToDetails(i);
-
-
                         return;
                     }
                 }

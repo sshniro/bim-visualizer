@@ -67,12 +67,15 @@ function addDataToDetails(i){
 
     var globalId = "undefined";
     var objectId = "undefined";
-    if (jsonData['core']['data'][i]['data'].hasOwnProperty('GlobalId')){
-        globalId = jsonData['core']['data'][i]['data']['GlobalId'];
+    if(jsonData['core']['data'][i].hasOwnProperty('data')){
+        if (jsonData['core']['data'][i]['data'].hasOwnProperty('GlobalId')){
+            globalId = jsonData['core']['data'][i]['data']['GlobalId'];
+        }
+        if (jsonData['core']['data'][i]['id']){
+            objectId = jsonData['core']['data'][i]['id'];
+        }
     }
-    if (jsonData['core']['data'][i]['id']){
-        objectId = jsonData['core']['data'][i]['id'];
-    }
+
 
 
     // Add the Css Elements
