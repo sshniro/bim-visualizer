@@ -60,6 +60,7 @@ var debug = {};
 	<!-- Jquery UI JS -->
     <script type="text/javascript" src="./lib/jquery-ui-1.10.4.custom/js/jquery-ui-1.10.4.custom.js"></script>
 
+
     <script>
         /* Define the global variables */
 
@@ -94,40 +95,32 @@ var debug = {};
 
             <div class="col-lg-12">
 
-                <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-                    <div class="panel panel-default">
-                        <div class="panel-heading" role="tab" id="headingThree">
-                            <h4 class="panel-title">
-                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                    Slider Bar
-                                </a>
-                            </h4>
-                        </div>
-                        <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
-                            <div class="panel-body">
+                <!--<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">-->
+                    <!--<div class="panel panel-default">-->
+                        <!--<div class="panel-heading" role="tab" id="headingThree">-->
+                            <!--<h4 class="panel-title">-->
+                                <!--<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">-->
+                                    <!--Slider Bar-->
+                                <!--</a>-->
+                            <!--</h4>-->
+                        <!--</div>-->
+                        <!--<div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">-->
+                            <!--<div class="panel-body">-->
+                                <!--&lt;!&ndash;<div class="col-lg-12">&ndash;&gt;-->
+                                    <!--&lt;!&ndash;<h5 style="text-align: center">Transperancy</h5>&ndash;&gt;-->
+                                    <!--&lt;!&ndash;<p style="text-align: center" id="selectedNode1"></p>&ndash;&gt;-->
+                                    <!--&lt;!&ndash;<div id="slider3"></div>&ndash;&gt;-->
+                                    <!--&lt;!&ndash;<div id="s3" style="text-align:center">0.00</div>&ndash;&gt;-->
+                                <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</div>-->
 
 
-                                <div class="col-lg-12">
-                                    <h5 style="text-align: center">Slider Y Axis</h5>
-                                    <p style="text-align: center" id="selectedNode"></p>
-                                    <div id="slider"></div>
-                                    <div id="s2" style="text-align:center">0.00</div>
-                                </div>
-
-                                <!--<div class="col-lg-12">-->
-                                    <!--<h5 style="text-align: center">Transperancy</h5>-->
-                                    <!--<p style="text-align: center" id="selectedNode1"></p>-->
-                                    <!--<div id="slider3"></div>-->
-                                    <!--<div id="s3" style="text-align:center">0.00</div>-->
-                                <!--</div>-->
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
 
-                <h3>Projects Structure
+                <h3>Project Tree
                     <button type="button" class="btn btn-default" aria-label="Right Align" onclick="refreshTree()">
                         <span class="fa fa-refresh" aria-hidden="true"></span>
                     </button>
@@ -141,6 +134,15 @@ var debug = {};
 	</div>
 
     <script>
+
+        $(function() {
+            $( "#slider5" ).slider({
+                max : 15,
+                min : -15,
+                step: 0.01
+            });
+        });
+
     $(function() {
         $( "#slider" ).slider({
             max : 15,
@@ -208,6 +210,29 @@ var debug = {};
 
   	<!-- Div for the 3d renderer+ -->
   	<div class="col-xs-9">
+
+        <div id="topnav" class="col-xs-12"  style="!important;padding: 0px">
+            <div class="panel panel-default">
+                <div class="panel-body" style="!important;padding: 0px" >
+
+                    <div  class="col-xs-2" style="!important;border-right-style:solid;border-color:#999;" >
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" id="popup-checkbox" checked> InfoBox
+                            </label>
+                        </div>
+                    </div>
+
+                    <div  class="col-xs-3" style="!important;border-right-style:solid;border-color:#999;padding-top: 8px" >
+                            <div id="slider"></div>
+                            <div id="s2" style="text-align:center">0.00</div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
 
         <div id="parent" class="col-xs-12">
             <div id="dialog" title="Selected Object">

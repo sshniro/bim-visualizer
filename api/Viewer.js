@@ -269,8 +269,12 @@ BIMSURFER.Viewer = BIMSURFER.Class({
                             var node = {'id':jsonData['core']['data'][i]['id']};
 
 							/* Code segment to generate the dialog UI */
-							//addDataToDetails(i);
-							//nodeSelected1(node);
+							/* Create the pop up dialog box */
+							if($('#popup-checkbox').is(':checked')){
+								addDataToDetails(i);
+								nodeSelected1(node);
+							}
+
 
                         }
                     }

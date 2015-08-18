@@ -146,6 +146,18 @@ $(function()
     });
 
     function toggleProjectVisibility(id,state,selectedDiv){
+        if(state == true){
+            $(selectedDiv).data('state',"false");
+            $(selectedDiv).find('span')
+                .removeClass('fa-eye')
+                .addClass('fa-eye-slash');
+        }else{
+            $(selectedDiv).data('state',true);
+            $(selectedDiv).find('span')
+                .removeClass('fa-eye-slash')
+                .addClass('fa-eye');
+        }
+
         var sites = getAllChildElements(id);
         for(var i=0;i<sites.length;i++){
             toggleIfcSiteVisibility(sites[i],state,selectedDiv);
@@ -157,6 +169,18 @@ $(function()
     }
 
     function toggleIfcSiteVisibility(id,state,selectedDiv){
+        if(state == true){
+            $(selectedDiv).data('state',"false");
+            $(selectedDiv).find('span')
+                .removeClass('fa-eye')
+                .addClass('fa-eye-slash');
+        }else{
+            $(selectedDiv).data('state',true);
+            $(selectedDiv).find('span')
+                .removeClass('fa-eye-slash')
+                .addClass('fa-eye');
+        }
+
         var sceneNode = viewer.scene.findNode(id);
         if(sceneNode != null){
 
@@ -174,6 +198,17 @@ $(function()
     }
 
     function toggleBuildingVisibility(id,state,selectedDiv){
+        if(state == true){
+            $(selectedDiv).data('state',"false");
+            $(selectedDiv).find('span')
+                .removeClass('fa-eye')
+                .addClass('fa-eye-slash');
+        }else{
+            $(selectedDiv).data('state',true);
+            $(selectedDiv).find('span')
+                .removeClass('fa-eye-slash')
+                .addClass('fa-eye');
+        }
         // get all Ifc Storeys
         var storeys = getAllChildElements(id);
         if(state== true){
@@ -314,7 +349,10 @@ $(function()
                         }
 
                         /* Create the pop up dialog box */
-                        addDataToDetails(i);
+                        if($('#popup-checkbox').is(':checked')){
+                            addDataToDetails(i);
+                        }
+
                         return;
                     }
                 }
