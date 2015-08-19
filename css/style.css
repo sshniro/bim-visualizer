@@ -367,7 +367,8 @@
 .jstree-default .jstree-node {
   min-height: 24px;
   line-height: 24px;
-  margin-left: 24px;
+  /* TODO Changed form 24 to 15 */
+  margin-left: 15px;
   min-width: 24px;
 }
 .jstree-default .jstree-anchor {
