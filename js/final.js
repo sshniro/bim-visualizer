@@ -292,7 +292,7 @@ $(function()
                 childElements.push(obj.id);
             }
         }
-        console.log(childElements);
+        //console.log(childElements);
         return childElements;
     }
 
@@ -349,7 +349,7 @@ $(function()
                         }
 
                         /* Create the pop up dialog box */
-                        if($('#popup-checkbox').is(':checked')){
+                        if(showInfoBox){
                             addDataToDetails(i);
                         }
 

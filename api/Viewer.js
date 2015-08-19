@@ -270,7 +270,7 @@ BIMSURFER.Viewer = BIMSURFER.Class({
 
 							/* Code segment to generate the dialog UI */
 							/* Create the pop up dialog box */
-							if($('#popup-checkbox').is(':checked')){
+							if(showInfoBox){
 								addDataToDetails(i);
 								nodeSelected1(node);
 							}

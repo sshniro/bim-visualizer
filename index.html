@@ -8,6 +8,14 @@
 var debug = {};
 </script>
 
+
+    <!-- Jquery UI CSS -->
+    <link rel="stylesheet" href="./lib/noUiSlider.8.0.2/nouislider.css">
+    <link rel="stylesheet" href="./lib/noUiSlider.8.0.2/nouislider.pips.css">
+    <!-- Jquery UI JS -->
+    <script type="text/javascript" src="./lib/noUiSlider.8.0.2/nouislider.js"></script>
+
+
     <!-- Default CSS file to the JS Tree -->
     <link rel="stylesheet" href="css/style.min.css" />
     <!-- Jquery import -->
@@ -61,6 +69,8 @@ var debug = {};
     <script type="text/javascript" src="./lib/jquery-ui-1.10.4.custom/js/jquery-ui-1.10.4.custom.js"></script>
 
 
+
+
     <script>
         /* Define the global variables */
 
@@ -76,6 +86,7 @@ var debug = {};
         var treeData="";
         /* This gloabal variable is used to get the total count of objects in a building */
         var totObjects = 0;
+        var showInfoBox = true;
 
     </script>
 
@@ -94,6 +105,10 @@ var debug = {};
         <div class="col-xs-12">
 
             <div class="col-lg-12">
+
+            <!--<div id="sliderx"></div>-->
+
+
 
                 <!--<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">-->
                     <!--<div class="panel panel-default">-->
@@ -133,27 +148,115 @@ var debug = {};
         </div>
 	</div>
 
-    <script>
 
-        $(function() {
-            $( "#slider5" ).slider({
-                max : 15,
-                min : -15,
-                step: 0.01
+  	<!-- Div for the 3d renderer+ -->
+  	<div class="col-xs-9">
+
+        <div id="topnav" class="col-xs-12"  style="!important;padding: 0px">
+            <div class="panel panel-default">
+                <div class="panel-body" style="!important;padding: 0px;height: 75px" >
+
+                    <div  class="col-xs-6" style="height: 60px" >
+                        <!--<div class="checkbox">-->
+                            <!--<label>-->
+                                <!--<input type="checkbox" id="popup-checkbox" checked> InfoBox-->
+                            <!--</label>-->
+                        <!--</div>-->
+
+                        <div class="col-lg-3">
+                            <button type="button" class="btn btn-default btn-sm" id="infoBoxVisibility" style="margin-top: 5px">
+                                Info Box <span class="fa fa-check" aria-hidden="true"></span>
+                            </button>
+                        </div>
+
+                        <div class="col-lg-9">
+                            <span class="label label-default">X Axis Slider</span>
+                            <div id="sliderx"></div>
+                        </div>
+
+
+                    </div>
+
+                    <div  class="col-xs-6" style="height: 60px" >
+
+                        <div class="col-lg-5">
+                            <span class="label label-default">Opacity Slider</span>
+                            <div id="opacitySlider"></div>
+                        </div>
+
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <script >
+            var slider = document.getElementById('sliderx');
+            var opacitySlider = document.getElementById('opacitySlider');
+
+            noUiSlider.create(opacitySlider, {
+                start: [ 1 ],
+                connect: 'lower',
+                behaviour: 'tap',
+                range: {
+                    'min': [   0 ],
+                    'max': [ 1 ]
+                },
+                pips: {
+                    mode: 'values',
+                    values: [0,1],
+                    density: 20
+                }
             });
-        });
 
-    $(function() {
-        $( "#slider" ).slider({
-            max : 15,
-            min : -15,
-            step: 0.01,
-            change : function(event,ui){
+            noUiSlider.create(slider, {
+                start: [ 0 ],
+                connect: 'lower',
+                behaviour: 'tap',
+                step : 0.2,
+                range: {
+                    'min': [   -20 ],
+                    'max': [ 20 ]
+                },
+                pips: {
+                    mode: 'values',
+                    values: [-20,0,20],
+                    density: 8
+                }
+            });
 
+
+            var tipHandles = slider.getElementsByClassName('noUi-handle'), tooltips = [];
+
+            // Add divs to the slider handles.
+            for ( var i = 0; i < tipHandles.length; i++ ){
+                tooltips[i] = document.createElement('div');
+                tipHandles[i].appendChild(tooltips[i]);
+            }
+
+            // Add a class for styling
+            tooltips[0].className += 'tooltip';
+            // Add additional markup
+            tooltips[0].innerHTML = '<strong>Value: </strong><span></span>';
+            // Replace the tooltip reference with the span we just added
+            tooltips[0] = tooltips[0].getElementsByTagName('span')[0];
+
+//            // When the slider changes, write the value to the tooltips.
+//            slider.noUiSlider.on('update', function( values, handle ){
+//                tooltips[handle].innerHTML = values[handle];
+//            });
+
+
+
+            slider.noUiSlider.on('update', function( values, handle ) {
+                tooltips[handle].innerHTML = values[handle];
+//                alert( slider.noUiSlider.get() );
                 if(sliderSwitch){
                     /* Check if the current node selected is a buildingstorey */
                     var nodeId = $("#treeViewDiv").jstree("get_selected");
                     var obj;
+                    var nodeType;
                     /* Check the node Type */
                     for(var i = 0; i < jsonTree['core']['data'].length; i++) {
                         obj = jsonTree['core']['data'][i];
@@ -175,62 +278,16 @@ var debug = {};
                     }
 
 
-                    $('#s2').html(ui.value);
-                    var currentVal = ui.value;
+                    $('#s2').html("Value : " +slider.noUiSlider.get());
+                    var currentVal = slider.noUiSlider.get();
                     inc =  currentVal - sliderPositions.storeys[i]['prevSliderVal'];
-                    prevSliderVal = ui.value;
-                    sliderPositions.storeys[i]['prevSliderVal'] =  ui.value;
+                    prevSliderVal = slider.noUiSlider.get();
+                    sliderPositions.storeys[i]['prevSliderVal'] =  slider.noUiSlider.get();
                     move(inc);
                 }
-            }
-        });
+            });
 
-    });
-
-    function storeySliderPosition(){
-
-    }
-
-//    $(function() {
-//        $( "#slider3" ).slider({
-//            max : 1,
-//            min : 0,
-//            step: 0.01,
-//            change : function(event,ui){
-//                $('#s3').html(ui.value);
-//                var currentVal = ui.value;
-//                inc =  currentVal - prevSliderVal;
-//                prevSliderVal = ui.value;
-////                move();
-//            }
-//        });
-//
-//    });
-    </script>
-
-  	<!-- Div for the 3d renderer+ -->
-  	<div class="col-xs-9">
-
-        <div id="topnav" class="col-xs-12"  style="!important;padding: 0px">
-            <div class="panel panel-default">
-                <div class="panel-body" style="!important;padding: 0px" >
-
-                    <div  class="col-xs-2" style="!important;border-right-style:solid;border-color:#999;" >
-                        <div class="checkbox">
-                            <label>
-                                <input type="checkbox" id="popup-checkbox" checked> InfoBox
-                            </label>
-                        </div>
-                    </div>
-
-                    <div  class="col-xs-3" style="!important;border-right-style:solid;border-color:#999;padding-top: 8px" >
-                            <div id="slider"></div>
-                            <div id="s2" style="text-align:center">0.00</div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
+        </script>
 
 
 
@@ -590,7 +647,8 @@ function getAllChildElements(parent){
                 if(nodeId == sliderPositions.storeys[i]['id']){
                     sliderSwitch = false;
                     $("#slider").slider('value',sliderPositions.storeys[i]['prevSliderVal']);
-                    $('#s2').html(sliderPositions.storeys[i]['prevSliderVal']);
+                    slider.noUiSlider.set([sliderPositions.storeys[i]['prevSliderVal']]);
+                    $('#s2').html("Value : " +sliderPositions.storeys[i]['prevSliderVal']);
                     sliderSwitch = true;
                     existingBuildingStorey = true;
                     break;
@@ -623,12 +681,28 @@ function getAllChildElements(parent){
                 }
                 sliderSwitch = false;
                 $("#slider").slider('value',0);
-                $('#s2').html(0);
+                slider.noUiSlider.set([0]);
+                $('#s2').html("Value : " +0);
                 sliderSwitch = true;
             }
 
         }
     }
+
+$("#infoBoxVisibility").on('click', function(){
+    if(showInfoBox){
+        showInfoBox = false;
+        $(this).find('span')
+                .removeClass('fa-check')
+                .addClass('fa-close');
+    }else{
+        showInfoBox = true;
+        $(this).find('span')
+                .removeClass('fa-close')
+                .addClass('fa-check');
+    }
+
+});
 
 
 </script>
