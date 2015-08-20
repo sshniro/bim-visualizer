@@ -672,7 +672,6 @@ function move(inc){
 
 //    globalMatrix[0] = nodeId[0];
     allRendered = false;
-    allOpacityRendered = false;
     viewer.scene.on("tick",function(){
         // Put a switch if anything new to be rendered
         if(!allRendered){
@@ -695,22 +694,6 @@ function move(inc){
                 }
             }
             allRendered = true;
-        }
-
-        if(!allOpacityRendered){
-            for(var j=0 ; j< globalMatrix.length ; j++){
-                var myMatrix = viewer.scene.findNode(globalMatrix[j]);
-
-                if(myMatrix != null){
-                    /* Some weird thing I dont know why */
-                    if(myMatrix.nodes[0].type == "material"){
-                        myMatrix.nodes[0].setAlpha(inc);
-                    }else{
-                        myMatrix.parent.setAlpha(inc);
-                    }
-                }
-            }
-            allOpacityRendered = true;
         }
     });
 };
