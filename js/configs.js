@@ -1,14 +1,14 @@
 /* Reset the credentials with the server credentials */
 /* Credentials set to the local host */
-var serverUrl = "http://127.0.0.1:8080/";
-var username = "admin@bimserver.org";
-var pass = "admin";
+//var serverUrl = "http://127.0.0.1:8080/";
+//var username = "admin@bimserver.org";
+//var pass = "admin";
 
 
 ///* Credentials set to the Remote Server uncomment to load from remote server */
-//var serverUrl = "https://52.74.66.119:9451/bim";
-//var username = "admin@bimserver.org";
-//var pass = "admin";
+var serverUrl = "https://52.74.66.119:9451/bim";
+var username = "admin@bimserver.org";
+var pass = "admin";
 
 /* Global Variable to access the bim server api */
 var bimapi;
