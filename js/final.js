@@ -94,6 +94,8 @@ $(function()
         var type = $(this).data('type');
         var id = $(this).data('id');
         var state = $(this).data('state');
+
+        /*  Toggle the ifcElement Visisbility  */
         if(type == "ifcElement"){
 
             var sceneNode = viewer.scene.findNode($(this).data('id'));
@@ -215,7 +217,9 @@ $(function()
             for(var k=0;k<storeys.length;k++){
                 var types = getAllChildElements(storeys[k]);
                 for(var j=0; j< types.length;j++){
-                    var childElements = getAllChildElements(types[j])
+                    //var childElements = getAllChildElements(types[j])
+                    var childElements = [];
+                    childElements = getAllChildElements1(types[j],childElements);
                     hideElements(childElements);
                 }
             }
@@ -224,7 +228,9 @@ $(function()
             for(var k=0;k<storeys.length;k++){
                 var types = getAllChildElements(storeys[k]);
                 for(var j=0; j< types.length;j++){
-                    var childElements = getAllChildElements(types[j])
+                    //var childElements = getAllChildElements(types[j])
+                    var childElements = [];
+                    childElements = getAllChildElements1(types[j],childElements);
                     showElements(childElements);
                 }
             }
@@ -237,13 +243,17 @@ $(function()
         var types = getAllChildElements(id);
         if(state == true){
             for(var j=0; j< types.length;j++){
-                var childElements = getAllChildElements(types[j])
+                //var childElements = getAllChildElements(types[j])
+                var childElements = [];
+                childElements = getAllChildElements1(types[j],childElements);
                 hideElements(childElements);
             }
             $(selectedDiv).data('state',"false");
         }else{
             for(var j=0; j< types.length;j++){
-                var childElements = getAllChildElements(types[j])
+                //var childElements = getAllChildElements(types[j])
+                var childElements = [];
+                childElements = getAllChildElements1(types[j],childElements);
                 showElements(childElements);
             }
             $(selectedDiv).data('state',true);
@@ -291,6 +301,21 @@ $(function()
             if(obj.parent == parent){
                 childElements.push(obj.id);
             }
+        }
+        //console.log(childElements);
+        return childElements;
+    }
+
+    function getAllChildElements1(parent,childElements){
+        //var childElements = [];
+        for(var i = 0; i < jsonTree['core']['data'].length; i++) {
+            var obj = jsonTree['core']['data'][i];
+            if(obj.parent == parent){
+                childElements.push(obj.id);
+                getAllChildElements1(obj.id,childElements,true);
+
+            }
+
         }
         //console.log(childElements);
         return childElements;
@@ -555,6 +580,8 @@ $(function()
         var type = object.getType();
         var parentId = parent;
 
+
+
         if(type == "IfcSpace"){
             ///* TODO replace with promise */
             var testId = parentId + type;
@@ -569,7 +596,7 @@ $(function()
                     break;
                 }
             }
-            // If the node does not exist
+            // If the type node does not exist (ifcSpace) create the ifc space node
             if(!nodeExists){
                 //jsonTree['core']['data'].push({'id':parentId, 'parent' : parent, "text":type + '&nbsp; <button type="button" class="btn btn-default btn-xs" aria-label="Right Align" onclick="hideTheElement(' + parentId + ')"><span class="fa fa-eye" aria-hidden="true"></span> </button>' , "type" : "ifcType" ,"icon":"fa fa-gear"});
 
@@ -581,12 +608,62 @@ $(function()
                 jsonData['core']['data'].push({'id':testId, 'parent' : parent, "text":type, "type" : "ifcType" , "icon":"fa fa-gear"});
             }
 
-            jsonTree['core']['data'].push({'id': obId, 'parent' : testId,"type" : "ifcElement", 'name' : type,
+            jsonTree['core']['data'].push({'id': obId, 'parent' : testId,"type" : "ifcElement", 'baseType' : "ifcSpace" , 'name' : type,
                 "text": name + '&nbsp; <button  type="button" class="btn btn-default btn-xs treeButton" data-id="'
                 + obId +'" data-state="true" data-type="ifcElement" aria-label="Right Align"><span class="fa fa-eye" aria-hidden="true"></span> </button>',
                 "icon":"fa fa-circle"});
 
-            jsonData['core']['data'].push({'id':obId, 'parent' : testId, "type" : "ifcElement" , 'name' : type, "text":name,'data':object.object,"icon":"fa fa-circle"})
+            jsonData['core']['data'].push({'id':obId, 'parent' : testId, "type" : "ifcElement" , 'baseType' : "ifcSpace" ,'name' : type, "text":name,'data':object.object,"icon":"fa fa-circle"})
+
+
+            object.getContainsElements(function(relReferencedInSpatialStructure) {
+                relReferencedInSpatialStructure.getRelatedElements(function (relatedElement) {
+
+                    // get the id of parent
+                    var nodeExists = false;
+                    var parent = object.oid;
+                    var type = relatedElement.getType();
+                    var name = relatedElement.getName();
+
+                    var parentId = parent + type;
+                    var objId = relatedElement.oid;
+
+
+                    /* Check if the type is already created */
+                    for(var i=0;i<jsonTree['core']['data'].length;i++){
+                        var jsonObj = jsonTree['core']['data'][i];
+                        if(jsonObj.id == parentId){
+                            nodeExists = true;
+                            break;
+                        }
+                    }
+                    // If the node does not exist
+                    if(!nodeExists){
+                        //jsonTree['core']['data'].push({'id':parentId, 'parent' : parent, "text":type + '&nbsp; <button type="button" class="btn btn-default btn-xs" aria-label="Right Align" onclick="hideTheElement(' + parentId + ')"><span class="fa fa-eye" aria-hidden="true"></span> </button>' , "type" : "ifcType" ,"icon":"fa fa-gear"});
+
+                        jsonTree['core']['data'].push({'id': parentId, 'parent' : parent,"type" : "ifcType", 'name' : type,
+                            "text": type + '&nbsp; <button  type="button" id="'+parentId+'" class="btn btn-default btn-xs treeButton" data-id="'
+                            + parentId +'" " data-state="true" data-type="ifcType" aria-label="Right Align"><span class="fa fa-eye" aria-hidden="true"></span> </button>',
+                            "icon":"fa fa-sort-amount-desc"});
+
+                        jsonData['core']['data'].push({'id':parentId, 'parent' : parent, 'name' : type, "text":type, "type" : "ifcType" , "icon":"fa fa-gear"});
+                    }
+                    //if the node exists do not append to the json tree
+
+                    /* TODO replace with promise */
+                    objCount++;
+                    // Now add the object to the tree
+                    //jsonTree['core']['data'].push({'id':objId, 'parent' : parentId, "type" : "ifcElement" , "text":name + '&nbsp; <button type="button" class="btn btn-default btn-xs" aria-label="Right Align" onclick="hideTheElement('+ objId + ')"><span class="fa fa-eye" aria-hidden="true"></span> </button>' ,"icon":"fa fa-circle"});
+
+                    jsonTree['core']['data'].push({'id': objId, 'parent' : parentId,"type" : "ifcElement", 'name' : name,
+                        "text": name + '&nbsp; <button  type="button" class="btn btn-default btn-xs treeButton" data-id="'
+                        + objId +'" data-state="true" data-type="ifcElement" aria-label="Right Align"><span id="'+objId+'" class="fa fa-eye" aria-hidden="true"></span> </button>',
+                        "icon":"fa fa-circle"});
+
+                    jsonData['core']['data'].push({'id':objId, 'parent' : parentId, "type" : "ifcElement" , 'name' : name, "text":name,"icon":"fa fa-circle",'data':relatedElement.object})
+
+                })
+            });
             return;
         }
 
@@ -613,6 +690,10 @@ $(function()
                         var parent = obj.oid;
                         var type = relatedElement.getType();
                         var name = relatedElement.getName();
+
+                        if(type == "IfcStair"){
+                            console.log("ifcStair")
+                        }
 
                         var parentId = parent + type;
                         var objId = relatedElement.oid;
@@ -651,6 +732,13 @@ $(function()
 
                         jsonData['core']['data'].push({'id':objId, 'parent' : parentId, "type" : "ifcElement" , 'name' : name, "text":name,"icon":"fa fa-circle",'data':relatedElement.object})
 
+
+                        relatedElement.getIsDecomposedBy(function(isDecomposedBy){
+                            isDecomposedByVar = isDecomposedBy;
+                            isDecomposedBy.getRelatedObjects(function(relatedObject){
+                                buildTree(relatedObject,objId,relatedObject.oid);
+                            });
+                        });
                     })
                 });
 

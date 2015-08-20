@@ -78,6 +78,7 @@ var debug = {};
             storeys : []
         };
         var sliderSwitch = true;
+        var opacitySliderSwitch = true;
         var ifcSpaceData = {
             "core": {
                 "data": []
@@ -171,6 +172,7 @@ var debug = {};
 
                         <div class="col-lg-9">
                             <span class="label label-default">X Axis Slider</span>
+                            <span class="label label-default">Value</span>
                             <div id="sliderx"></div>
                         </div>
 
@@ -199,6 +201,7 @@ var debug = {};
                 start: [ 1 ],
                 connect: 'lower',
                 behaviour: 'tap',
+                step : 0.1,
                 range: {
                     'min': [   0 ],
                     'max': [ 1 ]
@@ -211,18 +214,55 @@ var debug = {};
             });
 
             opacitySlider.noUiSlider.on('update', function( values, handle ) {
-                var nodeId = $("#treeViewDiv").jstree("get_selected");
+//                var nodeId = $("#treeViewDiv").jstree("get_selected");
                 if(viewer != null){
-                    var myMatrix = viewer.scene.findNode(nodeId);
 
-                    if(myMatrix != null){
-                        /* Some weird thing I dont know why */
-                        if(myMatrix.nodes[0].type == "material"){
-                            myMatrix.nodes[0].setAlpha(opacitySlider.noUiSlider.get());
-                        }else{
-                            myMatrix.parent.setAlpha(opacitySlider.noUiSlider.get());
+                    if(opacitySliderSwitch){
+                        var nodeId = $("#treeViewDiv").jstree("get_selected");
+                        var obj;
+                        var nodeType;
+                        /* Check the node Type */
+                        for(var i = 0; i < jsonTree['core']['data'].length; i++) {
+                            obj = jsonTree['core']['data'][i];
+
+                            if(nodeId == obj.id){
+                                nodeType = jsonData['core']['data'][i]['type'];
+                                break;
+                            }
                         }
+
+                        var posId ;
+                        if(nodeType == "buildingStorey" ){
+                            for(var i = 0; i < sliderPositions.storeys.length; i++) {
+                                if(sliderPositions.storeys[i]['id'] == obj.id ){
+                                    posId = i;
+                                    break;
+                                }
+                            }
+                        }
+                        sliderPositions.storeys[i]['opacityVal'] = opacitySlider.noUiSlider.get();
+                        changeVisibility(opacitySlider.noUiSlider.get());
+
+
+
+
                     }
+
+
+
+
+
+
+//                    var myMatrix = viewer.scene.findNode(nodeId);
+//
+//                    if(myMatrix != null){
+//                        /* Some weird thing I dont know why */
+//                        if(myMatrix.nodes[0].type == "material"){
+//                            myMatrix.nodes[0].setAlpha(opacitySlider.noUiSlider.get());
+//                        }else{
+//                            myMatrix.parent.setAlpha(opacitySlider.noUiSlider.get());
+//                        }
+//                    }
                 }
 
             });
@@ -547,6 +587,58 @@ $.fn.tabbedDialog = function () {
 
 $('#tenant').tabbedDialog();
 
+function changeVisibility(inc){
+    var nodeId = $("#treeViewDiv").jstree("get_selected");
+    var nodeType;
+    globalMatrix=[];
+
+    /* Check the node Type */
+    for(var i = 0; i < jsonTree['core']['data'].length; i++) {
+        var obj = jsonTree['core']['data'][i];
+
+        if(nodeId == obj.id){
+            nodeType = jsonData['core']['data'][i]['type'];
+            break;
+        }
+    }
+
+    if(nodeType == "buildingStorey" ){
+        // Get All Types initially
+        var types = getAllChildElements(nodeId);
+        for(var j=0; j< types.length;j++){
+            var childElements = [];
+            childElements = getAllChildElements1(types[j],childElements);
+            for(var k=0;k<childElements.length;k++){
+
+                var childId = childElements[k];
+                globalMatrix.push(childId);
+                var sceneNode = viewer.scene.findNode(childId);
+            }
+
+        }
+    }
+
+    allOpacityRendered = false;
+    viewer.scene.on("tick",function(){
+        if(!allOpacityRendered){
+            for(var j=0 ; j< globalMatrix.length ; j++){
+                var myMatrix = viewer.scene.findNode(globalMatrix[j]);
+
+                if(myMatrix != null){
+                    /* Some weird thing I dont know why */
+                    if(myMatrix.nodes[0].type == "material"){
+                        myMatrix.nodes[0].setAlpha(inc);
+                    }else{
+                        myMatrix.parent.setAlpha(inc);
+                    }
+                }
+            }
+            allOpacityRendered = true;
+        }
+    });
+};
+
+
 function move(inc){
     var nodeId = $("#treeViewDiv").jstree("get_selected");
     var nodeType;
@@ -566,7 +658,8 @@ function move(inc){
         // Get All Types initially
         var types = getAllChildElements(nodeId);
         for(var j=0; j< types.length;j++){
-            var childElements = getAllChildElements(types[j]);
+            var childElements = [];
+            childElements = getAllChildElements1(types[j],childElements);
             for(var k=0;k<childElements.length;k++){
 
                 var childId = childElements[k];
@@ -579,12 +672,11 @@ function move(inc){
 
 //    globalMatrix[0] = nodeId[0];
     allRendered = false;
+    allOpacityRendered = false;
     viewer.scene.on("tick",function(){
         // Put a switch if anything new to be rendered
         if(!allRendered){
             for(var j=0 ; j< globalMatrix.length ; j++){
-                console.log(j);
-
                 var myMatrix = viewer.scene.findNode(globalMatrix[j]);
 
                 if(myMatrix != null){
@@ -604,6 +696,22 @@ function move(inc){
             }
             allRendered = true;
         }
+
+        if(!allOpacityRendered){
+            for(var j=0 ; j< globalMatrix.length ; j++){
+                var myMatrix = viewer.scene.findNode(globalMatrix[j]);
+
+                if(myMatrix != null){
+                    /* Some weird thing I dont know why */
+                    if(myMatrix.nodes[0].type == "material"){
+                        myMatrix.nodes[0].setAlpha(inc);
+                    }else{
+                        myMatrix.parent.setAlpha(inc);
+                    }
+                }
+            }
+            allOpacityRendered = true;
+        }
     });
 };
 
@@ -619,15 +727,31 @@ function getAllChildElements(parent){
     return childElements;
 }
 
+
+function getAllChildElements1(parent,childElements){
+    //var childElements = [];
+    for(var i = 0; i < jsonTree['core']['data'].length; i++) {
+        var obj = jsonTree['core']['data'][i];
+        if(obj.parent == parent){
+            childElements.push(obj.id);
+            getAllChildElements1(obj.id,childElements,true);
+
+        }
+
+    }
+    //console.log(childElements);
+    return childElements;
+}
+
     function setSliderPositions(){
-        console.log('came to position');
         if(sliderPositions.storeys.length == 0){
             for(var i = 0; i < jsonTree['core']['data'].length; i++) {
                 if(jsonTree['core']['data'][i]['type'] == "buildingStorey"){
                     var pos = {
                         id : jsonTree['core']['data'][i]['id'],
                         pos : 0,
-                        prevSliderVal : 0
+                        prevSliderVal : 0,
+                        opacityVal : 1
                     };
                     sliderPositions.storeys.push(pos);
                 }
@@ -638,10 +762,16 @@ function getAllChildElements(parent){
             for(var i = 0; i < sliderPositions.storeys.length; i++) {
                 if(nodeId == sliderPositions.storeys[i]['id']){
                     sliderSwitch = false;
-                    $("#slider").slider('value',sliderPositions.storeys[i]['prevSliderVal']);
                     slider.noUiSlider.set([sliderPositions.storeys[i]['prevSliderVal']]);
                     $('#s2').html("Value : " +sliderPositions.storeys[i]['prevSliderVal']);
                     sliderSwitch = true;
+
+
+                    opacitySliderSwitch = false;
+                    opacitySlider.noUiSlider.set([sliderPositions.storeys[i]['opacityVal']]);
+                    $('#s2').html("Value : " +sliderPositions.storeys[i]['opacityVal']);
+                    opacitySliderSwitch = true;
+
                     existingBuildingStorey = true;
                     break;
                 }
@@ -672,10 +802,14 @@ function getAllChildElements(parent){
                     }
                 }
                 sliderSwitch = false;
-                $("#slider").slider('value',0);
                 slider.noUiSlider.set([0]);
                 $('#s2').html("Value : " +0);
                 sliderSwitch = true;
+
+                opacitySliderSwitch = false;
+                opacitySlider.noUiSlider.set([1]);
+                $('#s2').html("Value : " +0);
+                opacitySliderSwitch = true;
             }
 
         }

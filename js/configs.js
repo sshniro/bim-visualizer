@@ -17,6 +17,7 @@ var bimapi;
 var globalSelectedNode = null;
 var globalMatrix = [];
 var allRendered = false;
+var allOpacityRendered = false;
 var inc = 0;
 var prevSliderVal = 0;
 

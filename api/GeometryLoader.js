@@ -192,6 +192,7 @@ function GeometryLoader(bimServerApi, models, viewer , nodeId) {
 			var flags = {
 				type : "flags",
 				flags : {
+					// TODO set it to true to make the building transparent
 					transparent : hasTransparency
 				},
 				nodes : [{
