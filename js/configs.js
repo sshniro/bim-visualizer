@@ -46,7 +46,7 @@ var loadedProjects = [];
 
 /* From get all of type "ifcProject" */
 var ifcProject;
-var ifcModel;
+var ifcModel={data:[]};
 
 var server = null;
 var viewer = null;
@@ -144,29 +144,35 @@ function showPropertySet1(propertySet) {
 function nodeSelected1(node) {
     $("#object_info table tbody tr").remove();
     $("#testingData").empty();
-    if (node.id != null) {
-        ifcModel.get(node.id, function(product){
-            if(product != null){
-                if (product.oid == node.id) {
-                    var tr = $("<tr></tr>");
-                    tr.append("<b>" + product.object._t + "</b>");
-                    if (product.object.Name != null) {
-                        tr.append("<b>" + product.object.Name + "</b>");
-                    }
-                    $("#object_info table tbody").append(tr);
-                    product.getIsDefinedBy(function(isDefinedBy){
-                        if (isDefinedBy.object._t == "IfcRelDefinesByProperties") {
-                            isDefinedBy.getRelatingPropertyDefinition(function(propertySet){
-                                if (propertySet.object._t == "IfcPropertySet") {
-                                    showPropertySet1(propertySet);
-                                }
-                            });
+
+    for(var i =0 ; i< ifcModel['data'].length ; i++){
+        if (node.id != null) {
+            ifcModel['data'][i].get(node.id, function(product){
+                if(product != null){
+                    if (product.oid == node.id) {
+                        var tr = $("<tr></tr>");
+                        tr.append("<b>" + product.object._t + "</b>");
+                        if (product.object.Name != null) {
+                            tr.append("<b>" + product.object.Name + "</b>");
                         }
-                    });
+                        $("#object_info table tbody").append(tr);
+                        product.getIsDefinedBy(function(isDefinedBy){
+                            if (isDefinedBy.object._t == "IfcRelDefinesByProperties") {
+                                isDefinedBy.getRelatingPropertyDefinition(function(propertySet){
+                                    if (propertySet.object._t == "IfcPropertySet") {
+                                        showPropertySet1(propertySet);
+                                    }
+                                });
+                            }
+                        });
+                    }
                 }
-            }
-        });
+            });
+        }
+
     }
+
+
 }
 
 //        new Edit

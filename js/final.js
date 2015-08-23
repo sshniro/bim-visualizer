@@ -501,7 +501,7 @@ $(function()
             ]
         };
 
-        ifcModel.query(preLoadQuery, function(loaded){}).done(function(){
+        o.model.query(preLoadQuery, function(loaded){}).done(function(){
             setTimeout(function(){
                 /* To Do add some flags to optimize the code */
                 promise.fire();
@@ -512,7 +512,14 @@ $(function()
 
     function loadProject(project,nodeId) {
         o.model = bimServerApi.getModel(project.oid, project.lastRevisionId, project.schema, false, function(model){
-            ifcModel = model;
+            var modelAlreadyExists= false;
+            for(var i =0 ; i< ifcModel['data'].length ; i++){
+                if(model.poid == ifcModel['data'][i]['poid'] && model.riod == ifcModel['data'][i]['roid'])
+                    modelAlreadyExists = true;
+            }
+            if(!modelAlreadyExists){
+                ifcModel['data'].push(model);
+            }
             model.getAllOfType("IfcProject", true, function(project){
             ifcProject = project;
             });
@@ -823,29 +830,37 @@ $(function()
     function nodeSelected(node) {
         $("#object_info table tbody tr").remove();
         $("#testingData").empty();
-        if (node.id != null) {
-            o.model.get(node.id, function(product){
-                if(product != null){
-                    if (product.oid == node.id) {
-                        var tr = $("<tr></tr>");
-                        tr.append("<b>" + product.object._t + "</b>");
-                        if (product.object.Name != null) {
-                            tr.append("<b>" + product.object.Name + "</b>");
-                        }
-                        $("#object_info table tbody").append(tr);
-                        product.getIsDefinedBy(function(isDefinedBy){
-                            if (isDefinedBy.object._t == "IfcRelDefinesByProperties") {
-                                isDefinedBy.getRelatingPropertyDefinition(function(propertySet){
-                                    if (propertySet.object._t == "IfcPropertySet") {
-                                        showPropertySet(propertySet);
-                                    }
-                                });
+
+        for(var i =0 ; i< ifcModel['data'].length ; i++){
+            if (node.id != null) {
+                ifcModel['data'][i].get(node.id, function(product){
+                    if(product != null){
+                        if (product.oid == node.id) {
+                            var tr = $("<tr></tr>");
+                            tr.append("<b>" + product.object._t + "</b>");
+                            if (product.object.Name != null) {
+                                tr.append("<b>" + product.object.Name + "</b>");
                             }
-                        });
+                            $("#object_info table tbody").append(tr);
+                            product.getIsDefinedBy(function(isDefinedBy){
+                                if (isDefinedBy.object._t == "IfcRelDefinesByProperties") {
+                                    isDefinedBy.getRelatingPropertyDefinition(function(propertySet){
+                                        if (propertySet.object._t == "IfcPropertySet") {
+                                            showPropertySet(propertySet);
+                                        }
+                                    });
+                                }
+                            });
+                        }
                     }
-                }
-            });
+                });
+
+            }
         }
+
+
+
+
     }
 
     function nodeUnselected(node) {
