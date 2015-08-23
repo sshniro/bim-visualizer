@@ -6,7 +6,7 @@
 
 
 ///* Credentials set to the Remote Server uncomment to load from remote server */
-var serverUrl = "https://demo.bimaas.uk:9451/bim";
+var serverUrl = "https://52.74.66.119:9451/bim";
 var username = "admin@bimserver.org";
 var pass = "admin";
 
