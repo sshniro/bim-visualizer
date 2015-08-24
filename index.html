@@ -59,6 +59,7 @@ var debug = {};
 
     <script type="text/javascript" src="js/String.js"></script>
     <script type="text/javascript" src="js/utils.js"></script>
+	<script type="text/javascript" src="js/chatcomment.js"></script>
 
     <!-- Bootrap CSS link -->
     <link rel="stylesheet" href="./css/bootstrap.css" type="text/css" />
@@ -349,7 +350,7 @@ var debug = {};
 					<li><a href="#tenant_cost">Cost</a></li>
 					<li><a href="#tenant_maintenance">Maintenance</a></li>
 					<li><a href="#tenant_documents">Documents</a></li>
-					<li><a href="#tenant_discussion">Discussion</a></li>
+					<li><a href="#tenant_discussion" onclick="loadHistory()">Discussion</a></li>
 					<li class="ui-tab-dialog-close"> </li>
                 </ul>
                 <div>
@@ -420,6 +421,13 @@ var debug = {};
 									You better believe it!
 								  </div><!-- /.direct-chat-text -->
 								</div><!-- /.direct-chat-msg -->
+								<div class="old"></div>
+
+								<div class="p"></div>
+								<div class="new"></div>
+
+
+
 							  </div><!--/.direct-chat-messages-->
 							</div><!-- /.box-body -->
 							<div class="box-footer">
@@ -427,7 +435,9 @@ var debug = {};
 								<div class="input-group">
 								  <input type="text" class="form-control" placeholder="Type Message ..." name="message">
 								  <span class="input-group-btn">
-									<button class="btn btn-primary btn-flat" type="button">Send</button>
+									<button class="btn btn-primary btn-flat" id="chatButton" type="button" >Send</button>
+								  	
+								  
 								  </span>
 								</div>
 							  </form>
