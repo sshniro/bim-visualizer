@@ -107,29 +107,29 @@ bimapi = function BimServerApi(baseUrl, notifier) {
 			// Let's do the callback here, saves us 2 roundtrips to the server, and no body is going to use the schema's that soon... (we hope)
 			callback(this, serverInfo);
 
-			//othis.schemas["ifc2x3tc1"] = ifc23tc1.classes;
-			//othis.addSubtypesToSchema(ifc23tc1.classes);
-            //
-			//othis.schemas["ifc4"] = ifc4.classes;
-			//othis.addSubtypesToSchema(ifc4.classes);
-			$.ajax({
-				dataType: "json",
-				url: othis.baseUrl + "/js/ifc2x3tc1.js?_v=" + versionString,
-				cache: true,
-				success: function(result){
-					othis.schemas["ifc2x3tc1"] = result.classes;
-					othis.addSubtypesToSchema(result.classes);
-					$.ajax({
-						dataType: "json",
-						url: othis.baseUrl + "/js/ifc4.js?_v=" + versionString,
-						cache: true,
-						success: function(result){
-							othis.schemas["ifc4"] = result.classes;
-							othis.addSubtypesToSchema(result.classes);
-						}
-					});
-				}
-			});
+			othis.schemas["ifc2x3tc1"] = ifc23tc1.classes;
+			othis.addSubtypesToSchema(ifc23tc1.classes);
+
+			othis.schemas["ifc4"] = ifc4.classes;
+			othis.addSubtypesToSchema(ifc4.classes);
+			//$.ajax({
+			//	dataType: "json",
+			//	url: othis.baseUrl + "/js/ifc2x3tc1.js?_v=" + versionString,
+			//	cache: true,
+			//	success: function(result){
+			//		othis.schemas["ifc2x3tc1"] = result.classes;
+			//		othis.addSubtypesToSchema(result.classes);
+			//		$.ajax({
+			//			dataType: "json",
+			//			url: othis.baseUrl + "/js/ifc4.js?_v=" + versionString,
+			//			cache: true,
+			//			success: function(result){
+			//				othis.schemas["ifc4"] = result.classes;
+			//				othis.addSubtypesToSchema(result.classes);
+			//			}
+			//		});
+			//	}
+			//});
 		});
 	};
 

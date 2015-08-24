@@ -141,15 +141,15 @@ function showPropertySet1(propertySet) {
 
 
 
-function nodeSelected1(node) {
+function nodeSelected1(id) {
     $("#object_info table tbody tr").remove();
     $("#testingData").empty();
 
     for(var i =0 ; i< ifcModel['data'].length ; i++){
-        if (node.id != null) {
-            ifcModel['data'][i].get(node.id, function(product){
+        if (id != null) {
+            ifcModel['data'][i].get(id, function(product){
                 if(product != null){
-                    if (product.oid == node.id) {
+                    if (product.oid == id) {
                         var tr = $("<tr></tr>");
                         tr.append("<b>" + product.object._t + "</b>");
                         if (product.object.Name != null) {
@@ -263,4 +263,20 @@ function Notifier() {
 }
 
 Global.notifier = new Notifier();
+
+function testFunction(id){
+    for(var i = 0; i < jsonTree['core']['data'].length; i++) {
+        var obj = jsonTree['core']['data'][i];
+        if(id == obj.id){
+            var node = {'id':obj.id};
+
+            /* Code segment to generate the dialog UI */
+            /* Create the pop up dialog box */
+            if(showInfoBox){
+                addDataToDetails(i);
+                nodeSelected1(obj.id);
+            }
+        }
+    }
+}
 

@@ -114,14 +114,14 @@ function GeometryLoader(bimServerApi, models, viewer , nodeId) {
 			});
 
 			/*  All the objects are loaded  */
-			if(nodeId != null){
-				var sceneNode = viewer.scene.findNode(o.selecteNode);
-				if(sceneNode != null){
-					sceneNode.nodeId = sceneNode.id;
-					viewer.getControl("BIMSURFER.Control.ClickSelect").pick(sceneNode);
-				}
-				console.log('done loading');
-			}
+			//if(nodeId != null){
+			//	var sceneNode = viewer.scene.findNode(o.selecteNode);
+			//	if(sceneNode != null){
+			//		sceneNode.nodeId = sceneNode.id;
+			//		viewer.getControl("BIMSURFER.Control.ClickSelect").pick(sceneNode);
+			//	}
+			//	console.log('done loading');
+			//}
 		}
 	};
 	

@@ -245,40 +245,48 @@ BIMSURFER.Viewer = BIMSURFER.Class({
 		}, lastDown);
 		this.events.register('mouseUp', function(e) {
 			if(((e.offsetX > this.x) ? (e.offsetX - this.x < 5) : (this.x - e.offsetX < 5)) &&	((e.offsetY > this.y) ? (e.offsetY - this.y < 5) : (this.y - e.offsetY < 5))) {
-				this.scene.pick(this.x, this.y, {rayPick: true});
+				var hit = this.scene.pick(this.x, this.y, {rayPick: true});
+
+				testFunction(hit.nodeId);
+
+				if(hit != null){
+					var sceneNode = viewer.scene.findNode(hit.nodeId);
+					if(sceneNode != null){
+						sceneNode.nodeId = sceneNode.id;
+						viewer.getControl("BIMSURFER.Control.ClickSelect").pick(sceneNode);
+					}
+				}
 
                 /* Set the object data to the div */
-                if(selectedNode != null){
-                    for(var i = 0; i < jsonTree['core']['data'].length; i++) {
-                        var obj = jsonTree['core']['data'][i];
-                        if(selectedNode == obj.id){
-
-							/* The first time the Node getting selected */
-							if(globalSelectedNode == null){
-								globalSelectedNode = selectedNode;
-							}else{
-								$('#treeViewDiv').jstree(('deselect_node'),  globalSelectedNode );
-								globalSelectedNode = selectedNode;
-							}
-
-                            ///* Auto open the tree node */
-                            //$('#treeViewDiv').jstree('open_node', jsonData['core']['data'][i]['parent'], function(e, data) {
-                            //    $('#treeViewDiv').jstree(('select_node'), jsonData['core']['data'][i]['id']);
-                            //}, true);
-
-                            var node = {'id':jsonData['core']['data'][i]['id']};
-
-							/* Code segment to generate the dialog UI */
-							/* Create the pop up dialog box */
-							if(showInfoBox){
-								addDataToDetails(i);
-								nodeSelected1(node);
-							}
-
-
-                        }
-                    }
-                }
+                //if(selectedNode != null){
+                //    for(var i = 0; i < jsonTree['core']['data'].length; i++) {
+                //        var obj = jsonTree['core']['data'][i];
+                //        if(selectedNode == obj.id){
+                //
+					//		/* The first time the Node getting selected */
+					//		//if(globalSelectedNode == null){
+					//		//	globalSelectedNode = selectedNode;
+					//		//}else{
+					//		//	$('#treeViewDiv').jstree(('deselect_node'),  globalSelectedNode );
+					//		//	globalSelectedNode = selectedNode;
+					//		//}
+                //
+                //            ///* Auto open the tree node */
+                //            //$('#treeViewDiv').jstree('open_node', jsonData['core']['data'][i]['parent'], function(e, data) {
+                //            //    $('#treeViewDiv').jstree(('select_node'), jsonData['core']['data'][i]['id']);
+                //            //}, true);
+                //
+                //            var node = {'id':obj.id};
+                //
+					//		/* Code segment to generate the dialog UI */
+					//		/* Create the pop up dialog box */
+					//		if(showInfoBox){
+					//			addDataToDetails(i);
+					//			nodeSelected1(obj.id);
+					//		}
+                //        }
+                //    }
+                //}
 
 			}
 		}, lastDown);
