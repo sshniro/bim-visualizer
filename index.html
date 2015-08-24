@@ -821,6 +821,25 @@ $("#infoBoxVisibility").on('click', function(){
 
 });
 
+    function setOpacitySliderPosition(id){
+        var myMatrix = viewer.scene.findNode(id);
+
+        if(myMatrix != null){
+            var alpha = 1;
+            /* Some weird thing I dont know why */
+            if(myMatrix.nodes[0].type == "material"){
+                alpha = myMatrix.nodes[0].getAlpha();
+            }else{
+                alpha = myMatrix.parent.getAlpha();
+            }
+
+            opacitySliderSwitch = false;
+            opacitySlider.noUiSlider.set([alpha]);
+            $('#s2').html("Value : " +alpha);
+            opacitySliderSwitch = true;
+        }
+    }
+
 
 </script>
 

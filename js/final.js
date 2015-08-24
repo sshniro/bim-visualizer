@@ -53,15 +53,89 @@ $(function()
         });
     }
 
+    function loadQueryProjects(projects,projectIds,revisionIds){
+        projects.forEach(function(project){
+            if(project.lastRevisionId != -1)
+            {
+                var parentId = project.parentId;
+                /* If parent id is -1 its a main project so replace with # for the js tree */
+                if(parentId == -1){
+                    parentId = "#";
+                }
+
+                for(var i=0;i<projectIds.length;i++){
+                    var pId = parseInt(project.oid );
+                    if(projectIds[i] == pId){
+                        /* Add it to the json structure */
+                        project.lastRevisionId = revisionIds[i];
+
+                        //jsonTree['core']['data'].push({'id': project.oid, 'parent' : parentId, "text":project.name,'data':project,"icon":"fa fa-home"});
+                        //jsonData['core']['data'].push({'id': project.oid, 'parent' : parentId, "text":project.name,'data':project,'isProject':true});
+
+
+                        /* Set the project structure to the json tree */
+                        jsonTree['core']['data'].push({'id': project.oid, 'parent' : parentId,'data':project,'type':'project', 'name' :project.name ,
+                            "text":project.name + '&nbsp; <button  type="button" class="btn btn-default btn-xs treeButton"  align="right" data-id="'
+                            + project.oid +'" aria-label="Right Align"><span class="fa fa-eye" aria-hidden="true"></span> </button>',
+                            "icon":"fa fa-home"});
+                        jsonData['core']['data'].push({'id': project.oid, 'parent' : parentId, "text":project.name,'name' :project.name ,'data':project,'type':'project'});
+
+                    }
+                }
+
+                //var id = parseInt(projectId);
+                //var pId = parseInt(project.oid );
+                //if( id === pId){
+                //    /* Set the project structure to the json tree */
+                //    //var subProjects = project.subProjects;
+                //    var length = project.subProjects.length
+                //    jsonTree['core']['data'].push({'id': project.oid, 'parent' : parentId, "text":project.name,'data':project,"icon":"fa fa-home"});
+                //    jsonData['core']['data'].push({'id': project.oid, 'parent' : parentId, "text":project.name,'data':project,'isProject':true});
+                //
+                //    if( length != 0 ){
+                //        /* Again loop through all the elements to get the sub projects */
+                //        for(var j =0 ; j < length ; j++){
+                //            setAllRelatedProjects(projects,project.subProjects[j]);
+                //        }
+                //    }
+                //}
+            }
+        });
+    }
+
+
+
     function showSelectProject() {
         bimServerApi.call("Bimsie1ServiceInterface", "getAllProjects", {onlyActive: true, onlyTopLevel: false}, function(projects){
             /* Read the parameters from the URL provided */
             var projectId = getUrlParamValue("projectId");
+            var revisionId = getUrlParamValue("revisionId");
 
             //If the attribute is not empty then load the project
             if(projectId != ""){
-                projectId = parseInt(projectId);
-                setAllRelatedProjects(projects,projectId);
+
+                // Split the string by commas
+                var projectIds = projectId.split(",");
+                var revisionIds = revisionId.split(",");
+
+                // Check if the project id and the revision id length are the same
+                    // if not put an alert and load all the projects
+                if(projectIds.length == revisionIds.length){
+                    // parse all project ids and revision ids
+                    // if any exception occurs alert and load all projects
+                    for(var i=0;i<projectIds.length;i++){
+                        projectIds[i] = parseInt(projectIds[i]);
+                        revisionIds[i] = parseInt(revisionIds[i]);
+                    }
+
+                    loadQueryProjects(projects,projectIds,revisionIds);
+
+                }else{
+                    alert("query parameter specified is incorrect");
+                }
+
+                //projectId = parseInt(projectId);
+                //setAllRelatedProjects(projects,projectId);
             }else{
                 /* TODO Add an alert if no project Id is given  */
                 projects.forEach(function(project){
@@ -358,7 +432,13 @@ $(function()
                         /* If the selected node is a IfcBuildingStorey set the slider positions */
                         if(jsonData['core']['data'][i]['type'] == "buildingStorey" ){
                             //set slider posistion
-                            setSliderPositions();
+                            setSliderPositions(jsonData['core']['data'][i]['id']);
+                        }
+
+                        /* If the selected node is a IfcBuildingStorey set the slider positions */
+                        if(jsonData['core']['data'][i]['type'] == "ifcElement" ){
+                            //set slider posistion
+                            setOpacitySliderPosition();
                         }
 
                         var selectedNode = {'id':jsonData['core']['data'][i]['id']};
