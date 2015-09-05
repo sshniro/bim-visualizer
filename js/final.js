@@ -441,8 +441,8 @@ $(function()
                             setOpacitySliderPosition();
                         }
 
-                        var selectedNode = {'id':jsonData['core']['data'][i]['id']};
-                        nodeSelected(selectedNode);
+                        //var selectedNode = {'id':jsonData['core']['data'][i]['id']};
+                        nodeSelected1(jsonData['core']['data'][i]['id']);
 
                         /* Add the selected node name to the slider text */
                         $('#selectedNode').html(jsonData['core']['data'][i]['text']);
@@ -859,87 +859,6 @@ $(function()
         var promise = new Promise();
         buildTree(ifcProject,parent,ifcProject.oid);
         return promise;
-
-    }
-
-    function showPropertySet(propertySet) {
-        var finalDiv = $('#testingData');
-        var div = $('<div id="table"></div>');
-
-        div.append('<h3>'+propertySet.object.Name +'</h3>')
-
-        var table = $('<table class="table table-bordered table-striped dataTable tbl_info" style="width: 100%">');
-        var theader = $("<thead></thead>");
-        var tbody = $("<tbody> </tbody>");
-        var tr = $("<tr></tr>");
-        tr.attr("role","row");
-
-        var th1= ("<th>Property</th>");
-        var th2= ("<th>Value</th>");
-
-        tr.append(th1);
-        tr.append(th2);
-
-        theader.append(tr);
-        table.append(theader);
-
-        (function (propertySet) {
-            propertySet.getHasProperties(function(property){
-                if (property.object._t == "IfcPropertySingleValue") {
-                    var tr3 = $("<tr role=\"row\" class=\"odd\"></tr>");
-                    //tr.append("<td>" + property.object.Name + "</td>");
-                    var td3 = ("<td>" + property.object.Name + "</td>");
-                    property.getNominalValue(function(value){
-                        var v = value == null ? "" : value._v;
-                        var td4 = ("<td>" + v + "</td>");
-                        tr3.append(td3);
-                        tr3.append(td4);
-                        tbody.append(tr3);
-                    });
-                }
-            });
-        } )(propertySet);
-
-        table.append(tbody);
-        div.append(table);
-        finalDiv.append(div);
-    }
-
-
-
-    function nodeSelected(node) {
-        $("#object_info table tbody tr").remove();
-        $("#testingData").empty();
-
-        for(var i =0 ; i< ifcModel['data'].length ; i++){
-            if (node.id != null) {
-                ifcModel['data'][i].get(node.id, function(product){
-                    if(product != null){
-                        if (product.oid == node.id) {
-                            var tr = $("<tr></tr>");
-                            tr.append("<b>" + product.object._t + "</b>");
-                            if (product.object.Name != null) {
-                                tr.append("<b>" + product.object.Name + "</b>");
-                            }
-                            $("#object_info table tbody").append(tr);
-                            product.getIsDefinedBy(function(isDefinedBy){
-                                if (isDefinedBy.object._t == "IfcRelDefinesByProperties") {
-                                    isDefinedBy.getRelatingPropertyDefinition(function(propertySet){
-                                        if (propertySet.object._t == "IfcPropertySet") {
-                                            showPropertySet(propertySet);
-                                        }
-                                    });
-                                }
-                            });
-                        }
-                    }
-                });
-
-            }
-        }
-
-
-
 
     }
 
