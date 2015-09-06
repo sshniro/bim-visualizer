@@ -14,12 +14,15 @@ var pass = "admin";
 var bimapi;
 
 /* Testing purpose remove after this*/
-var globalSelectedNode = null;
 var globalMatrix = [];
 var allRendered = false;
 var allOpacityRendered = false;
 var inc = 0;
 var prevSliderVal = 0;
+
+var sliderPositions = {
+    storeys : []
+};
 
 // More global Variables
 //TODO more comments on the variables

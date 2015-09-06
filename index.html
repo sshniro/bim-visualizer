@@ -14,6 +14,7 @@ var debug = {};
     <link rel="stylesheet" href="./lib/noUiSlider.8.0.2/nouislider.pips.css">
     <!-- Jquery UI JS -->
     <script type="text/javascript" src="./lib/noUiSlider.8.0.2/nouislider.js"></script>
+    <script type="text/javascript" src="./js/slidercontrol.js"></script>
 
     <!-- Adding the schema files -->
     <script type="text/javascript" src="./js/ifc2x3tc1.js"></script>
@@ -73,26 +74,11 @@ var debug = {};
 	<!-- Jquery UI JS -->
     <script type="text/javascript" src="./lib/jquery-ui-1.10.4.custom/js/jquery-ui-1.10.4.custom.js"></script>
 
-
-
-
-
     <script>
         /* Define the global variables */
 
-        var sliderPositions = {
-            storeys : []
-        };
         var sliderSwitch = true;
         var opacitySliderSwitch = true;
-        var ifcSpaceData = {
-            "core": {
-                "data": []
-            }
-        };
-        var treeData="";
-        /* This gloabal variable is used to get the total count of objects in a building */
-        var totObjects = 0;
         var showInfoBox = true;
 
     </script>
@@ -110,38 +96,7 @@ var debug = {};
     <!-- Div for the project tree viewer -->
   	<div class="col-xs-3" >
         <div class="col-xs-12">
-
             <div class="col-lg-12">
-
-            <!--<div id="sliderx"></div>-->
-
-
-
-                <!--<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">-->
-                    <!--<div class="panel panel-default">-->
-                        <!--<div class="panel-heading" role="tab" id="headingThree">-->
-                            <!--<h4 class="panel-title">-->
-                                <!--<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">-->
-                                    <!--Slider Bar-->
-                                <!--</a>-->
-                            <!--</h4>-->
-                        <!--</div>-->
-                        <!--<div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">-->
-                            <!--<div class="panel-body">-->
-                                <!--&lt;!&ndash;<div class="col-lg-12">&ndash;&gt;-->
-                                    <!--&lt;!&ndash;<h5 style="text-align: center">Transperancy</h5>&ndash;&gt;-->
-                                    <!--&lt;!&ndash;<p style="text-align: center" id="selectedNode1"></p>&ndash;&gt;-->
-                                    <!--&lt;!&ndash;<div id="slider3"></div>&ndash;&gt;-->
-                                    <!--&lt;!&ndash;<div id="s3" style="text-align:center">0.00</div>&ndash;&gt;-->
-                                <!--&lt;!&ndash;</div>&ndash;&gt;-->
-                            <!--</div>-->
-                        <!--</div>-->
-                    <!--</div>-->
-                <!--</div>-->
-
-
-
-
                 <h3>Project Tree
                     <button type="button" class="btn btn-default" aria-label="Right Align" onclick="refreshTree()">
                         <span class="fa fa-refresh" aria-hidden="true"></span>
@@ -162,27 +117,13 @@ var debug = {};
         <div id="topnav" class="col-xs-12"  style="!important;padding: 0px">
             <div class="panel panel-default">
                 <div class="panel-body" style="!important;padding: 0px;height: 75px" >
-
                     <div  class="col-xs-2" style="height: 60px" >
                             <button type="button" class="btn btn-default btn-sm" id="infoBoxVisibility" style="margin-top: 5px">
                                 Info Box <span class="fa fa-check" aria-hidden="true"></span>
                             </button>
 
                     </div>
-
                     <div  class="col-xs-9" style="height: 60px" >
-                        <!--<div class="checkbox">-->
-                            <!--<label>-->
-                                <!--<input type="checkbox" id="popup-checkbox" checked> InfoBox-->
-                            <!--</label>-->
-                        <!--</div>-->
-
-                        <!--<div class="col-xs-2">-->
-                            <!--<button type="button" class="btn btn-default btn-sm" id="infoBoxVisibility" style="margin-top: 5px">-->
-                                <!--Info Box <span class="fa fa-check" aria-hidden="true"></span>-->
-                            <!--</button>-->
-                        <!--</div>-->
-
                         <div class="col-xs-6">
                             <span class="label label-default">X Axis Slider</span>
                             <span class="label label-default">Value</span>
@@ -193,147 +134,11 @@ var debug = {};
                             <span class="label label-default">Opacity Slider</span>
                             <div id="opacitySlider"></div>
                         </div>
-
                     </div>
-
-                    <!--<div  class="col-xs-5" style="height: 60px" >-->
-
-                        <!-- -->
-
-
-                    <!--</div>-->
-
                 </div>
             </div>
         </div>
 
-        <script >
-            var slider = document.getElementById('sliderx');
-            var opacitySlider = document.getElementById('opacitySlider');
-
-            noUiSlider.create(opacitySlider, {
-                start: [ 1 ],
-                connect: 'lower',
-                behaviour: 'tap',
-                step : 0.1,
-                range: {
-                    'min': [   0 ],
-                    'max': [ 1 ]
-                },
-                pips: {
-                    mode: 'values',
-                    values: [0,1],
-                    density: 20
-                }
-            });
-
-            opacitySlider.noUiSlider.on('update', function( values, handle ) {
-//                var nodeId = $("#treeViewDiv").jstree("get_selected");
-                if(viewer != null){
-
-                    if(opacitySliderSwitch){
-                        var nodeId = $("#treeViewDiv").jstree("get_selected");
-                        var obj;
-                        var nodeType;
-                        /* Check the node Type */
-                        for(var i = 0; i < jsonTree['core']['data'].length; i++) {
-                            obj = jsonTree['core']['data'][i];
-
-                            if(nodeId == obj.id){
-                                nodeType = jsonData['core']['data'][i]['type'];
-                                break;
-                            }
-                        }
-
-                        var posId ;
-                        if(nodeType == "buildingStorey" ){
-                            for(var i = 0; i < sliderPositions.storeys.length; i++) {
-                                if(sliderPositions.storeys[i]['id'] == obj.id ){
-                                    posId = i;
-                                    break;
-                                }
-                            }
-                        }
-                        sliderPositions.storeys[i]['opacityVal'] = opacitySlider.noUiSlider.get();
-                        changeVisibility(opacitySlider.noUiSlider.get());
-
-
-
-
-                    }
-
-
-
-
-
-
-//                    var myMatrix = viewer.scene.findNode(nodeId);
-//
-//                    if(myMatrix != null){
-//                        /* Some weird thing I dont know why */
-//                        if(myMatrix.nodes[0].type == "material"){
-//                            myMatrix.nodes[0].setAlpha(opacitySlider.noUiSlider.get());
-//                        }else{
-//                            myMatrix.parent.setAlpha(opacitySlider.noUiSlider.get());
-//                        }
-//                    }
-                }
-
-            });
-
-            noUiSlider.create(slider, {
-                start: [ 0 ],
-                connect: 'lower',
-                behaviour: 'tap',
-                step : 0.2,
-                range: {
-                    'min': [   -20 ],
-                    'max': [ 20 ]
-                },
-                pips: {
-                    mode: 'values',
-                    values: [-20,0,20],
-                    density: 8
-                }
-            });
-
-            slider.noUiSlider.on('update', function( values, handle ) {
-                if(sliderSwitch){
-                    /* Check if the current node selected is a buildingstorey */
-                    var nodeId = $("#treeViewDiv").jstree("get_selected");
-                    var obj;
-                    var nodeType;
-                    /* Check the node Type */
-                    for(var i = 0; i < jsonTree['core']['data'].length; i++) {
-                        obj = jsonTree['core']['data'][i];
-
-                        if(nodeId == obj.id){
-                            nodeType = jsonData['core']['data'][i]['type'];
-                            break;
-                        }
-                    }
-
-                    var posId ;
-                    if(nodeType == "buildingStorey" ){
-                        for(var i = 0; i < sliderPositions.storeys.length; i++) {
-                            if(sliderPositions.storeys[i]['id'] == obj.id ){
-                                posId = i;
-                                break;
-                            }
-                        }
-                    }
-
-
-                    $('#s2').html("Value : " +slider.noUiSlider.get());
-                    var currentVal = slider.noUiSlider.get();
-                    inc =  currentVal - sliderPositions.storeys[i]['prevSliderVal'];
-                    prevSliderVal = slider.noUiSlider.get();
-                    sliderPositions.storeys[i]['prevSliderVal'] =  slider.noUiSlider.get();
-                    move(inc);
-                }
-            });
-
-        </script>
 
 
 
@@ -610,216 +415,7 @@ $.fn.tabbedDialog = function () {
 
 $('#tenant').tabbedDialog();
 
-function changeVisibility(inc){
-    var nodeId = $("#treeViewDiv").jstree("get_selected");
-    var nodeType;
-    globalMatrix=[];
 
-    /* Check the node Type */
-    for(var i = 0; i < jsonTree['core']['data'].length; i++) {
-        var obj = jsonTree['core']['data'][i];
-
-        if(nodeId == obj.id){
-            nodeType = jsonData['core']['data'][i]['type'];
-            break;
-        }
-    }
-
-    if(nodeType == "buildingStorey" ){
-        // Get All Types initially
-        var types = getAllChildElements(nodeId);
-        for(var j=0; j< types.length;j++){
-            var childElements = [];
-            childElements = getAllChildElements1(types[j],childElements);
-            for(var k=0;k<childElements.length;k++){
-
-                var childId = childElements[k];
-                globalMatrix.push(childId);
-                var sceneNode = viewer.scene.findNode(childId);
-            }
-
-        }
-    }
-
-    allOpacityRendered = false;
-    viewer.scene.on("tick",function(){
-        if(!allOpacityRendered){
-            for(var j=0 ; j< globalMatrix.length ; j++){
-                var myMatrix = viewer.scene.findNode(globalMatrix[j]);
-
-                if(myMatrix != null){
-                    /* Some weird thing I dont know why */
-                    if(myMatrix.nodes[0].type == "material"){
-                        myMatrix.nodes[0].setAlpha(inc);
-                    }else{
-                        myMatrix.parent.setAlpha(inc);
-                    }
-                }
-            }
-            allOpacityRendered = true;
-        }
-    });
-};
-
-
-function move(inc){
-    var nodeId = $("#treeViewDiv").jstree("get_selected");
-    var nodeType;
-    globalMatrix=[];
-
-    /* Check the node Type */
-    for(var i = 0; i < jsonTree['core']['data'].length; i++) {
-        var obj = jsonTree['core']['data'][i];
-
-        if(nodeId == obj.id){
-            nodeType = jsonData['core']['data'][i]['type'];
-            break;
-        }
-    }
-
-    if(nodeType == "buildingStorey" ){
-        // Get All Types initially
-        var types = getAllChildElements(nodeId);
-        for(var j=0; j< types.length;j++){
-            var childElements = [];
-            childElements = getAllChildElements1(types[j],childElements);
-            for(var k=0;k<childElements.length;k++){
-
-                var childId = childElements[k];
-                globalMatrix.push(childId);
-                var sceneNode = viewer.scene.findNode(childId);
-            }
-
-        }
-    }
-
-//    globalMatrix[0] = nodeId[0];
-    allRendered = false;
-    viewer.scene.on("tick",function(){
-        // Put a switch if anything new to be rendered
-        if(!allRendered){
-            for(var j=0 ; j< globalMatrix.length ; j++){
-                var myMatrix = viewer.scene.findNode(globalMatrix[j]);
-
-                if(myMatrix != null){
-                    /* Some weird thing I dont know why */
-                    if(myMatrix.nodes[0].type == "material"){
-                        var modelMatrix  = myMatrix.nodes[0].nodes[0].getModelMatrix();
-                        modelMatrix[13] += inc;
-                        myMatrix.nodes[0].nodes[0].setElements(modelMatrix);
-//                        myMatrix.nodes[0].setAlpha(0.5);
-                    }else{
-                        var modelMatrix  = myMatrix.nodes[0].getModelMatrix();
-                        modelMatrix[13] += inc;
-                        myMatrix.nodes[0].setElements(modelMatrix);
-//                        myMatrix.parent.setAlpha(0.5);
-                    }
-                }
-            }
-            allRendered = true;
-        }
-    });
-};
-
-function getAllChildElements(parent){
-    var childElements = [];
-    for(var i = 0; i < jsonTree['core']['data'].length; i++) {
-        var obj = jsonTree['core']['data'][i];
-        if(obj.parent == parent){
-            childElements.push(obj.id);
-        }
-    }
-    console.log(childElements);
-    return childElements;
-}
-
-
-function getAllChildElements1(parent,childElements){
-    //var childElements = [];
-    for(var i = 0; i < jsonTree['core']['data'].length; i++) {
-        var obj = jsonTree['core']['data'][i];
-        if(obj.parent == parent){
-            childElements.push(obj.id);
-            getAllChildElements1(obj.id,childElements,true);
-
-        }
-
-    }
-    //console.log(childElements);
-    return childElements;
-}
-
-    function setSliderPositions(){
-        if(sliderPositions.storeys.length == 0){
-            for(var i = 0; i < jsonTree['core']['data'].length; i++) {
-                if(jsonTree['core']['data'][i]['type'] == "buildingStorey"){
-                    var pos = {
-                        id : jsonTree['core']['data'][i]['id'],
-                        pos : 0,
-                        prevSliderVal : 0,
-                        opacityVal : 1
-                    };
-                    sliderPositions.storeys.push(pos);
-                }
-            }
-        }else{
-            var nodeId = $("#treeViewDiv").jstree("get_selected");
-            var existingBuildingStorey = false;
-            for(var i = 0; i < sliderPositions.storeys.length; i++) {
-                if(nodeId == sliderPositions.storeys[i]['id']){
-                    sliderSwitch = false;
-                    slider.noUiSlider.set([sliderPositions.storeys[i]['prevSliderVal']]);
-                    $('#s2').html("Value : " +sliderPositions.storeys[i]['prevSliderVal']);
-                    sliderSwitch = true;
-
-
-                    opacitySliderSwitch = false;
-                    opacitySlider.noUiSlider.set([sliderPositions.storeys[i]['opacityVal']]);
-                    $('#s2').html("Value : " +sliderPositions.storeys[i]['opacityVal']);
-                    opacitySliderSwitch = true;
-
-                    existingBuildingStorey = true;
-                    break;
-                }
-            }
-
-            /* A new building has been loaded so add those building storeys to the slider*/
-            if(!existingBuildingStorey){
-                for(var i = 0; i < jsonTree['core']['data'].length; i++) {
-                    if(jsonTree['core']['data'][i]['type'] == "buildingStorey"){
-
-                        var nodeExists = false;
-
-                        for(var j = 0; j < sliderPositions.storeys.length; j++) {
-                            if(sliderPositions.storeys[j]['id'] == jsonTree['core']['data'][i]['id']){
-                                nodeExists = true;
-                                break;
-                            }
-                        }
-
-                        if(!nodeExists){
-                            var pos = {
-                                id : jsonTree['core']['data'][i]['id'],
-                                pos : 0,
-                                prevSliderVal : 0
-                            };
-                            sliderPositions.storeys.push(pos);
-                        }
-                    }
-                }
-                sliderSwitch = false;
-                slider.noUiSlider.set([0]);
-                $('#s2').html("Value : " +0);
-                sliderSwitch = true;
-
-                opacitySliderSwitch = false;
-                opacitySlider.noUiSlider.set([1]);
-                $('#s2').html("Value : " +0);
-                opacitySliderSwitch = true;
-            }
-
-        }
-    }
 
 $("#infoBoxVisibility").on('click', function(){
     if(showInfoBox){
@@ -836,26 +432,116 @@ $("#infoBoxVisibility").on('click', function(){
 
 });
 
-    function setOpacitySliderPosition(id){
-        var myMatrix = viewer.scene.findNode(id);
 
-        if(myMatrix != null){
-            var alpha = 1;
-            /* Some weird thing I dont know why */
-            if(myMatrix.nodes[0].type == "material"){
-                alpha = myMatrix.nodes[0].getAlpha();
-            }else{
-                alpha = myMatrix.parent.getAlpha();
+
+</script>
+
+<!-- Slider controls scripts -->
+<script >
+    var slider = document.getElementById('sliderx');
+    var opacitySlider = document.getElementById('opacitySlider');
+
+    noUiSlider.create(opacitySlider, {
+        start: [ 1 ],
+        connect: 'lower',
+        behaviour: 'tap',
+        step : 0.1,
+        range: {
+            'min': [   0 ],
+            'max': [ 1 ]
+        },
+        pips: {
+            mode: 'values',
+            values: [0,1],
+            density: 20
+        }
+    });
+
+    opacitySlider.noUiSlider.on('update', function( values, handle ) {
+//                var nodeId = $("#treeViewDiv").jstree("get_selected");
+        if(viewer != null){
+
+            if(opacitySliderSwitch){
+                var nodeId = $("#treeViewDiv").jstree("get_selected");
+                var obj;
+                var nodeType;
+                /* Check the node Type */
+                for(var i = 0; i < jsonTree['core']['data'].length; i++) {
+                    obj = jsonTree['core']['data'][i];
+
+                    if(nodeId == obj.id){
+                        nodeType = jsonData['core']['data'][i]['type'];
+                        break;
+                    }
+                }
+
+                var posId ;
+                if(nodeType == "buildingStorey" ){
+                    for(var i = 0; i < sliderPositions.storeys.length; i++) {
+                        if(sliderPositions.storeys[i]['id'] == obj.id ){
+                            posId = i;
+                            break;
+                        }
+                    }
+                }
+                sliderPositions.storeys[i]['opacityVal'] = opacitySlider.noUiSlider.get();
+                changeVisibility(opacitySlider.noUiSlider.get());
+            }
+        }
+
+    });
+
+    noUiSlider.create(slider, {
+        start: [ 0 ],
+        connect: 'lower',
+        behaviour: 'tap',
+        step : 0.2,
+        range: {
+            'min': [   -20 ],
+            'max': [ 20 ]
+        },
+        pips: {
+            mode: 'values',
+            values: [-20,0,20],
+            density: 8
+        }
+    });
+
+    slider.noUiSlider.on('update', function( values, handle ) {
+        if(sliderSwitch){
+            /* Check if the current node selected is a buildingstorey */
+            var nodeId = $("#treeViewDiv").jstree("get_selected");
+            var obj;
+            var nodeType;
+            /* Check the node Type */
+            for(var i = 0; i < jsonTree['core']['data'].length; i++) {
+                obj = jsonTree['core']['data'][i];
+
+                if(nodeId == obj.id){
+                    nodeType = jsonData['core']['data'][i]['type'];
+                    break;
+                }
             }
 
-            opacitySliderSwitch = false;
-            opacitySlider.noUiSlider.set([alpha]);
-            $('#s2').html("Value : " +alpha);
-            opacitySliderSwitch = true;
+            var posId ;
+            if(nodeType == "buildingStorey" ){
+                for(var i = 0; i < sliderPositions.storeys.length; i++) {
+                    if(sliderPositions.storeys[i]['id'] == obj.id ){
+                        posId = i;
+                        break;
+                    }
+                }
+            }
+
+
+            $('#s2').html("Value : " +slider.noUiSlider.get());
+            var currentVal = slider.noUiSlider.get();
+            inc =  currentVal - sliderPositions.storeys[i]['prevSliderVal'];
+            prevSliderVal = slider.noUiSlider.get();
+            sliderPositions.storeys[i]['prevSliderVal'] =  slider.noUiSlider.get();
+            move(inc);
         }
-    }
-
-
+    });
 </script>
 
 </body>
