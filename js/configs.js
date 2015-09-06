@@ -50,22 +50,6 @@ var jsonTree = {
 
 
 
-$(function () {
-    //$("#plugins4").jstree({
-    //    "plugins" : [ "search" ]
-    //});
-    var to = false;
-    $('#plugins4_q').keyup(function () {
-        if(to) { clearTimeout(to); }
-        to = setTimeout(function () {
-            var v = $('#plugins4_q').val();
-            $('#treeViewDiv').jstree(true).search(v);
-        }, 250);
-    });
-});
-
-
-
 
 
 
