@@ -126,21 +126,19 @@ var debug = {};
                     <div  class="col-xs-9" style="height: 60px" >
                         <div class="col-xs-6">
                             <span class="label label-default">X Axis Slider</span>
-                            <span class="label label-default">Value</span>
+                            <span class="label label-default" id="xSliderVal">Value</span>
                             <div id="sliderx"></div>
                         </div>
 
                         <div class="col-xs-6">
                             <span class="label label-default">Opacity Slider</span>
+                            <span class="label label-default" id="opacitySliderVal">Value</span>
                             <div id="opacitySlider"></div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
-
-
 
         <div id="parent" class="col-xs-12">
             <div id="dialog" title="Selected Object">
@@ -485,6 +483,7 @@ $("#infoBoxVisibility").on('click', function(){
                     }
                 }
                 sliderPositions.storeys[i]['opacityVal'] = opacitySlider.noUiSlider.get();
+                $('#opacitySliderVal').html("Value : " +opacitySlider.noUiSlider.get());
                 changeVisibility(opacitySlider.noUiSlider.get());
             }
         }
@@ -534,7 +533,7 @@ $("#infoBoxVisibility").on('click', function(){
             }
 
 
-            $('#s2').html("Value : " +slider.noUiSlider.get());
+            $('#xSliderVal').html("Value : " +slider.noUiSlider.get());
             var currentVal = slider.noUiSlider.get();
             inc =  currentVal - sliderPositions.storeys[i]['prevSliderVal'];
             prevSliderVal = slider.noUiSlider.get();

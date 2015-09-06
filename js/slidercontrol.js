@@ -80,7 +80,6 @@ function move(inc){
         }
     }
 
-//    globalMatrix[0] = nodeId[0];
     allRendered = false;
     viewer.scene.on("tick",function(){
         // Put a switch if anything new to be rendered
@@ -94,19 +93,17 @@ function move(inc){
                         var modelMatrix  = myMatrix.nodes[0].nodes[0].getModelMatrix();
                         modelMatrix[13] += inc;
                         myMatrix.nodes[0].nodes[0].setElements(modelMatrix);
-//                        myMatrix.nodes[0].setAlpha(0.5);
                     }else{
                         var modelMatrix  = myMatrix.nodes[0].getModelMatrix();
                         modelMatrix[13] += inc;
                         myMatrix.nodes[0].setElements(modelMatrix);
-//                        myMatrix.parent.setAlpha(0.5);
                     }
                 }
             }
             allRendered = true;
         }
     });
-};
+}
 
 function getAllChildElements(parent){
     var childElements = [];
@@ -154,13 +151,13 @@ function setSliderPositions(){
             if(nodeId == sliderPositions.storeys[i]['id']){
                 sliderSwitch = false;
                 slider.noUiSlider.set([sliderPositions.storeys[i]['prevSliderVal']]);
-                $('#s2').html("Value : " +sliderPositions.storeys[i]['prevSliderVal']);
+                $('#xSliderVal').html("Value : " +sliderPositions.storeys[i]['prevSliderVal']);
                 sliderSwitch = true;
 
 
                 opacitySliderSwitch = false;
                 opacitySlider.noUiSlider.set([sliderPositions.storeys[i]['opacityVal']]);
-                $('#s2').html("Value : " +sliderPositions.storeys[i]['opacityVal']);
+                $('#opacitySliderVal').html("Value : " +sliderPositions.storeys[i]['opacityVal']);
                 opacitySliderSwitch = true;
 
                 existingBuildingStorey = true;
@@ -194,12 +191,12 @@ function setSliderPositions(){
             }
             sliderSwitch = false;
             slider.noUiSlider.set([0]);
-            $('#s2').html("Value : " +0);
+            $('#xSliderVal').html("Value : " + 0);
             sliderSwitch = true;
 
             opacitySliderSwitch = false;
             opacitySlider.noUiSlider.set([1]);
-            $('#s2').html("Value : " +0);
+            $('#opacitySliderVal').html("Value : " + 0);
             opacitySliderSwitch = true;
         }
 
@@ -220,7 +217,7 @@ function setOpacitySliderPosition(id){
 
         opacitySliderSwitch = false;
         opacitySlider.noUiSlider.set([alpha]);
-        $('#s2').html("Value : " +alpha);
+        $('#opacitySliderVal').html("Value : " + alpha);
         opacitySliderSwitch = true;
     }
 }

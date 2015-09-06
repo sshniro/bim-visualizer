@@ -611,9 +611,6 @@ $(function()
                     var toLoad = {};
 
                     item.types.forEach(function(type){
-                        /* get the total count of the IFC Entities */
-                        totObjects += type.count;
-
                         toLoad[type.name] = {mode: 0};
                         if(BIMSURFER.Constants.defaultTypes.indexOf(type.name) != -1) {
                         }
@@ -638,7 +635,6 @@ $(function()
                     viewer.loadGeometry(geometryLoader);
 
                     queryModel().done(function(){
-                        //console.log("loaded");
                         loadTheTree(ifcProject,nodeId,ifcProject.oid);
                     });
                 }
