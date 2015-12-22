@@ -10,6 +10,10 @@ function GeometryLoader(bimServerApi, models, viewer , nodeId) {
 	o.todo = [];
 	o.selecteNode = '4784406';
 
+    var spinner = null;
+    var spinner_div = 0;
+    spinner_div = $('#progress_bar').get(0);
+
 	this.addProgressListener = function(progressListener) {
 		o.progressListeners.push(progressListener);
 	};
@@ -103,6 +107,14 @@ function GeometryLoader(bimServerApi, models, viewer , nodeId) {
 				});
 				o.viewer.SYSTEM.events.trigger('progressChanged', [progress]);
 				o.state.lastProgress = progress;
+                $('#totObjects').html("Loaded : " + progress + " %");
+
+                if(spinner == null) {
+                    spinner = new Spinner(opts).spin(spinner_div);
+                } else {
+                    spinner.spin(spinner_div);
+                }
+
 			}
 		} else {
 			o.viewer.SYSTEM.events.trigger('progressDone');
@@ -112,6 +124,7 @@ function GeometryLoader(bimServerApi, models, viewer , nodeId) {
 			o.viewer.events.trigger('sceneLoaded', [o.viewer.scene]);
 			o.bimServerApi.call("ServiceInterface", "cleanupLongAction", {actionId: o.topicId}, function(){
 			});
+            spinner.stop(spinner_div);
 
 			/*  All the objects are loaded  */
 			//if(nodeId != null){
